@@ -1,5 +1,8 @@
 ### Hi Folks 👋
 
+<div align="center">
+   <img src="https://i.postimg.cc/cLwSk2V5/IMG-20210324-WA0014.jpg" height ="250px"> 
+</div>
 
 My name is Baraka Mshindi Mulumia and I'm a full-stack Engeneer. I am from Kenya currently Living in Nairobi.
 
@@ -18,9 +21,7 @@ My name is Baraka Mshindi Mulumia and I'm a full-stack Engeneer. I am from Kenya
 - ⚡ Fun fact: ...
 -->
 
-<div align="center">
-   <img src="https://i.postimg.cc/cLwSk2V5/IMG-20210324-WA0014.jpg" height ="280px"> 
-</div>
+
 
 
 ![Baraka Mulumia GitHub Stats](https://github-readme-stats.vercel.app/api?username=barakamulumia&show_icons=true&theme=nightowl)
