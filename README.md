@@ -19,7 +19,7 @@ My name is Baraka Mshindi Mulumia and I'm a full-stack Engeneer. I am from Kenya
 -->
 
 <div align="center">
-   <img src="https://i.postimg.cc/cLwSk2V5/IMG-20210324-WA0014.jpg"> 
+   <img src="https://i.postimg.cc/cLwSk2V5/IMG-20210324-WA0014.jpg" height ="280px"> 
 </div>
 
 
