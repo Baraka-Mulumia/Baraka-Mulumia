@@ -3,28 +3,31 @@
  </h1>
 
 <div align="center">
-   <img src="https://i.postimg.cc/D0QJvtFp/i-m.jpg" height ="200px" style="border-radius: 30px"/> 
+   <kbd>
+   <img src="https://i.postimg.cc/D0QJvtFp/i-m.jpg" height ="200px"/> 
+   </kbd>
 </div>
 
 
 
 <h1 align="center">
- 💁‍♂️I'm Baraka Mulumia⚡ 
+  😍 ♂️ I'm Baraka Mulumia 
 </h1>
 <h2 align="center">
   🖥🖥 A Software Developer ✔
 </h2>
  
-### I am from Kenya currently Living in Nairobi.
-#### 👀  I'm a Full-Stack Software Developer, Coding Trainer, Tech Mentor and most of all a tech enthusiast.
-##### ⚡  My biggest drive is being able to create amazing software products to shape the future
-##### 🌱  I'm Currently working on major projects with
-  1. **ReactJs**
-  2. **NextJs**
-  3. **ReactNative**
-  4. **Dart & Flutter**
-  5. **NodeJs**
-  6. **MongoDB**
+### From Kenya currently Living in Nairobi.
+#### 👀  I'm a Full-Stack Software *Developer, IT Trainer, Tech mentor, Open-Source Contributor* and most of all a *Tech Enthusiast*.
+##### ⚡  My biggest drive is being able to create amazing software products to shape the future and make the world a better place
+##### 🌱  Currently working on major projects with  👇 
+
+  1. **ReactJs**   ✔
+  2. **NextJs**  ✔
+  3. **ReactNative** ✍️ 
+  4. **Dart & Flutter** ✍️ 
+  5. **NodeJs** ✔
+  6. **MongoDB** ✔
 
 
 
