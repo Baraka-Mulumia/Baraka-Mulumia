@@ -3,25 +3,32 @@
  </h1>
 
 <div align="center">
-   <img src="https://i.postimg.cc/cLwSk2V5/IMG-20210324-WA0014.jpg" height ="200px"> 
+   <img src="https://i.postimg.cc/D0QJvtFp/i-m.jpg" height ="200px"> 
 </div>
 
 
-## My name is Baraka Mshindi Mulumia and I'm a full-stack Engeneer. 
+### I'M
+<h1 align="center">
+  ⚡Baraka Mulumia⚡ 
+</h1>
+<h2 align="center">
+  ⚡ A Software Developer ⚡ 
+</h2>
+ 
 ### I am from Kenya currently Living in Nairobi.
+#### 👀  I'm a Full-Stack Software Developer, Coding Trainer, Tech Mentor and most of all a tech enthusiast.
+##### ⚡  My biggest drive is being able to create amazing software products to shape the future
+##### 🌱  I'm Currently working on major projects with
+  1. **ReactJs**
+  2. **NextJs**
+  3. **ReactNative**
+  4. **Dart & Flutter**
+  5. **NodeJs**
+  6. **MongoDB**
 
 
 
-<!--
-**barakamulumia/barakamulumia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
-
-
+📫 How to reach me: nitawangu@gmail.com
 
 ![Baraka Mulumia GitHub Stats](https://github-readme-stats.vercel.app/api?username=barakamulumia&show_icons=true&theme=nightowl)
 
