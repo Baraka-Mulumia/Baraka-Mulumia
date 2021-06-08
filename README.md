@@ -3,16 +3,16 @@
  </h1>
 
 <div align="center">
-   <img src="https://i.postimg.cc/D0QJvtFp/i-m.jpg" height ="200px"> 
+   <img src="https://i.postimg.cc/D0QJvtFp/i-m.jpg" height ="200px" style="border-radius: 30px"/> 
 </div>
 
 
-### I'M
+
 <h1 align="center">
-  ⚡Baraka Mulumia⚡ 
+ 💁‍♂️I'm Baraka Mulumia⚡ 
 </h1>
 <h2 align="center">
-  ⚡ A Software Developer ⚡ 
+  🖥🖥 A Software Developer ✔
 </h2>
  
 ### I am from Kenya currently Living in Nairobi.
@@ -28,7 +28,7 @@
 
 
 
-📫 How to reach me: nitawangu@gmail.com
+📫 How to reach me: mulumia.baraka@gmail.com
 
 ![Baraka Mulumia GitHub Stats](https://github-readme-stats.vercel.app/api?username=barakamulumia&show_icons=true&theme=nightowl)
 
