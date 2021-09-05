@@ -1,17 +1,17 @@
 <h1 align="center">
-   Hi Folks 👋
+   👋 Hello To The Developer Community
  </h1>
 
 <div align="center">
    <kbd>
-   <img src="https://i.postimg.cc/D0QJvtFp/i-m.jpg" height ="200px"/> 
+   <img src="https://i.postimg.cc/MKC8dZkZ/baraka-mulumia-denim.jpg" height ="200px"/> 
    </kbd>
 </div>
 
 
 
 <h1 align="center">
-  😍 ♂️ I'm Baraka Mulumia 
+  I'm Baraka Mulumia 
 </h1>
 <h2 align="center">
   🖥🖥 A Software Developer ✔
@@ -37,3 +37,5 @@
 
 
 With love 𝐹𝓇𝑜𝓂 [Baraka M Mulumia](https://github.com/iambaraka)
+
+__Falling in Love with code is being a part of a forever ongoing probles solving journey__
