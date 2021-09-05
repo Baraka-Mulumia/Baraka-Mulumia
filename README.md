@@ -8,14 +8,9 @@
    </kbd>
 </div>
 
-
-
 <h1 align="center">
   I'm Baraka Mulumia 
 </h1>
-<h2 align="center">
-  🖥🖥 A Software Developer ✔
-</h2>
  
 ### From Kenya currently Living in Nairobi.
 #### 👀  I'm a Full-Stack Software *Developer, IT Trainer, Tech mentor, Open-Source Contributor* and most of all a *Tech Enthusiast*.
@@ -30,12 +25,14 @@
   6. **MongoDB** ✔
 
 
+<div align="center">
 
 📫 How to reach me: mulumia.baraka@gmail.com
 
 ![Baraka Mulumia GitHub Stats](https://github-readme-stats.vercel.app/api?username=iambaraka&show_icons=true&theme=nightowl)
 
 
-With love 𝐹𝓇𝑜𝓂 [Baraka M Mulumia](https://github.com/iambaraka)
+Keeping the coding dream alive 𝐹𝓇𝑜𝓂 [Baraka M Mulumia](https://github.com/iambaraka)
 
 __Falling in Love with code is being a part of a forever ongoing probles solving journey__
+</div>
