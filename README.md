@@ -11,7 +11,7 @@
 </div>
 
 <h1 align="center">
-  I'm Baraka Mulumia 
+ 𝓗𝓮𝔂 𝓽𝓱𝓮𝓻𝓮, I'm Baraka Mulumia 
 </h1>
  
 ### From Kenya currently Living in Nairobi.
