@@ -4,7 +4,7 @@
 
 <div align="center">
    <kbd>
-   <img src="https://i.postimg.cc/MKC8dZkZ/baraka-mulumia-denim.jpg" height ="200px"/> 
+   <img src="https://raw.githubusercontent.com/iambaraka/iambaraka/main/Baraka%20Mulumia%202021-09-19%20at%2015.01.34.jpeg" height ="200px"/> 
    </kbd>
 </div>
 
