@@ -1,5 +1,7 @@
 <h1 align="center">
-   👋 Hello To The Developer Community
+   ANY SUFFICIENTLY ADVANCED TECHNOLOGY
+   </br>
+   IS INDISTINGUISHABLE FROM MAGIC
  </h1>
 
 <div align="center">
