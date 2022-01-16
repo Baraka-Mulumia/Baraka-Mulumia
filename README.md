@@ -1,9 +1,3 @@
-<h1 align="center">
-   ANY SUFFICIENTLY ADVANCED TECHNOLOGY
-   </br>
-   IS INDISTINGUISHABLE FROM MAGIC
- </h1>
-
 <div align="center">
    <kbd>
    <img src="https://raw.githubusercontent.com/iambaraka/iambaraka/main/Baraka%20Mulumia%202021-09-19%20at%2015.01.34.jpeg" height ="300px"/> 
