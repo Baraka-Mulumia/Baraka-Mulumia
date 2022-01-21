@@ -1,6 +1,6 @@
 <div align="center">
    <kbd>
-   <img src="https://raw.githubusercontent.com/iambaraka/iambaraka/main/Baraka%20Mulumia%202021-09-19%20at%2015.01.34.jpeg" height ="300px"/> 
+   <img src="https://github.com/barakamulumia/barakamulumia/blob/main/profile-image-2.png?raw=true" height ="300px"/> 
    </kbd>
 </div>
 
