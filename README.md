@@ -25,7 +25,7 @@
 
 📫 How to reach me: mulumia.baraka@gmail.com
 
-![Baraka Mulumia GitHub Stats](https://github-readme-stats.vercel.app/api?username=barakamulumia&show_icons=true&theme=nightowl)
+![Baraka Mulumia GitHub Stats](https://github-readme-stats.vercel.app/api?username=Baraka-Mulumia&show_icons=true&theme=nightowl)
 
 
 Keeping the coding dream alive 𝐹𝓇𝑜𝓂 [Baraka M Mulumia](https://github.com/iambaraka)
