@@ -8,16 +8,15 @@
  𝓗𝓮𝔂 𝓽𝓱𝓮𝓻𝓮, So good to see you here 😉😉
 </h1>
  
-### 👀  Me , Baraka Mulumia and I  are  Full-Stack Software Developers
+### 👀  Me , Baraka Mulumia and I  are  Software Developers
 #### ⚡  My biggest drive is being able to create amazing software products to shape the future and make the world a better place
 #### 🌱  Currently working on major projects with  👇 
 
   1. **ReactJs**   ✔
   2. **NextJs**  ✔
   3. **ReactNative** ✍️ 
-  4. **Dart & Flutter** ✍️ 
-  5. **NodeJs** ✔
-  6. **MongoDB** ✔
+  4. **NodeJs** ✔
+  5. **MongoDB** ✔
 
 
 <div align="center">
