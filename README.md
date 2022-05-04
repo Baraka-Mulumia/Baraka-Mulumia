@@ -1,18 +1,12 @@
-<div align="center">
-   <kbd>
-   <img src="https://github.com/barakamulumia/barakamulumia/blob/main/profile-image-2.png?raw=true" height ="300px"/> 
-   </kbd>
-</div>
-
 # Hi 👋 My name is Baraka Mulumia
 ## Front End Developer | SaaS Engineer | Creative Coder
 
 Me, Baraka Mulumia, Myself and I 💝💞❣️Coding, But Hey Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do.
 
-* 🌍  I'm based in Nairobi Kenya* 
-* 🖥️  See my portfolio at [https://barakamulumia.vercel.app/](http://barakamulumia.vercel.app/)*
-* ✉️  You can contact me at [mulumia.baraka@gmail.com](mailto:mulumia.baraka@gmail.com)* 
-* 🤝  I'm open to collaborating on intresting SaaS projects to help solve real world problems* 
+* 🌍  I'm based in Nairobi Kenya 
+* 🖥️  See my portfolio at [https://barakamulumia.vercel.app/](http://barakamulumia.vercel.app/)
+* ✉️  You can contact me at [mulumia.baraka@gmail.com](mailto:mulumia.baraka@gmail.com)
+* 🤝  I'm open to collaborating on intresting SaaS projects to help solve real world problems
 * ⚡  I'm secretely in love with JavaScript, But hey, don't tell anyone!!
 
 <a href="https://www.twitter.com/barakamulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/twitter/follow/barakamulumia?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917"/>
