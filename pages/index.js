@@ -1,5 +1,6 @@
-import { Box, Center, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 
+import { HeroSection } from "../components/sections";
 import NavBar from "../components/NavBar";
 
 export default function Home() {
@@ -7,13 +8,20 @@ export default function Home() {
         <Box>
             <Box w={"full"} py={3} position={"relative"}>
                 <NavBar />
-                <Box height={"calc(100vh - 100px)"} mx={"auto"} mt={"80px"} maxW={"1280px"}>
-                    <VStack justify={"center"} h={"full"}>
-                        <Text variant={"heading1"}>Baraka Mulumia</Text>
-                        <Text variant={"heading2"}>With Love</Text>
-                    </VStack>
-                </Box>
+                <VStack justify={"center"} align={"stretch"} h={"full"} w={"full"}>
+                    <SectionWrapper mt={"80px"}>
+                        <HeroSection />
+                    </SectionWrapper>
+                </VStack>
             </Box>
         </Box>
     );
 }
+
+const SectionWrapper = ({ children, ...props }) => {
+    return (
+        <Flex justify={"center"} align={"center"} minHeight={"calc(100vh - 100px)"} {...props}>
+            {children}
+        </Flex>
+    );
+};
