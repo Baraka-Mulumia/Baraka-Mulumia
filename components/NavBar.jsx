@@ -5,27 +5,22 @@ import {
     Divider,
     Drawer,
     DrawerBody,
-    DrawerCloseButton,
     DrawerContent,
-    DrawerFooter,
     DrawerHeader,
     DrawerOverlay,
     Flex,
-    Icon,
     IconButton,
     Text,
     VStack,
     useColorMode,
     useColorModeValue,
     useDisclosure,
-    useMediaQuery,
 } from "@chakra-ui/react";
 import { MdMenu, MdOutlineClose, MdOutlineLightMode } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
 
 import { FaMoon } from "react-icons/fa";
 import Link from "next/link";
-import { transparentize } from "@chakra-ui/theme-tools";
 
 const navItems = ["Home", "About Me", "Projects", "Lets Connect"];
 
@@ -88,14 +83,53 @@ function SideBar() {
     );
 }
 
+const MobileNavItem = ({ label, index }) => (
+    <Box
+        cursor={"pointer"}
+        borderBottomWidth={index !== navItems.length - 1 ? "1px" : 0}
+        py={2}
+        borderBottomColor={"gray.300"}
+    >
+        <Text variant={"navLink"} fontWeight={500}>
+            {label}
+        </Text>
+    </Box>
+);
+
+const DesktopNavItem = ({ label, index }) => {
+    const primaryColor = useColorModeValue("primary.dark.100", "primary.light.100");
+    return (
+        <Box
+            cursor={"pointer"}
+            _hover={{
+                _after: {
+                    width: "100%",
+                },
+            }}
+            _after={{
+                content: "''",
+                display: "block",
+                width: 0,
+                height: "2px",
+                background: primaryColor,
+                transition: "width .3s",
+            }}
+            py={1}
+        >
+            <Text variant={"navLink"} size={"lg"} fontWeight={400}>
+                {label}
+            </Text>
+        </Box>
+    );
+};
+
 const NavBar = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     const themeIconColor = useColorModeValue("primary.dark.200", "primary.light.200");
-    const [isDesktop] = useMediaQuery("(min-width: 640px)");
     const [isScroll, setIsScroll] = useState(false);
 
-    const color = useColorModeValue("backgrounds.light.200", "backgrounds.dark.200");
-
+    const navBgOnScroll = useColorModeValue("backgrounds.light.200", "backgrounds.dark.200");
+    const navBg = useColorModeValue("backgrounds.light.100", "backgrounds.dark.100");
     const changeBg = () => {
         const windowPosition = window.scrollY;
         if (windowPosition >= 100) {
@@ -113,7 +147,14 @@ const NavBar = () => {
     }, []);
 
     return (
-        <Box position={"fixed"} top={0} left={0} w={"full"} bg={isScroll ? color : "transparent"}>
+        <Box
+            position={"fixed"}
+            zIndex={1000}
+            top={0}
+            left={0}
+            w={"full"}
+            bg={isScroll ? navBgOnScroll : navBg}
+        >
             <Flex
                 align={"center"}
                 justify={"space-between"}
@@ -123,12 +164,12 @@ const NavBar = () => {
                 mx={"auto"}
                 maxW={"1280px"}
             >
-                <Box display={{ base: "block", md: "none" }}>
+                <Box display={{ base: "block", md: "none" }} zIndex={1001}>
                     <SideBar />
                 </Box>
                 <Flex align={"center"}>
                     <Avatar
-                        src={"/image-assets/Baraka-Mulumia.png"}
+                        src={"/image-assets/03-Baraka-Mulumia.png"}
                         title={"Baraka Mulumia"}
                         size={"sm"}
                     />
@@ -177,42 +218,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-const MobileNavItem = ({ label, index }) => (
-    <Box
-        cursor={"pointer"}
-        borderBottomWidth={index !== navItems.length - 1 ? "1px" : 0}
-        py={2}
-        borderBottomColor={"gray.300"}
-    >
-        <Text variant={"navLink"} fontWeight={300}>
-            {label}
-        </Text>
-    </Box>
-);
-const DesktopNavItem = ({ label, index }) => {
-    const primaryColor = useColorModeValue("primary.dark.100", "primary.light.100");
-    return (
-        <Box
-            cursor={"pointer"}
-            _hover={{
-                _after: {
-                    width: "100%",
-                },
-            }}
-            _after={{
-                content: "''",
-                display: "block",
-                width: 0,
-                height: "2px",
-                background: primaryColor,
-                transition: "width .3s",
-            }}
-            py={1}
-        >
-            <Text variant={"navLink"} size={"lg"} fontWeight={400}>
-                {label}
-            </Text>
-        </Box>
-    );
-};
