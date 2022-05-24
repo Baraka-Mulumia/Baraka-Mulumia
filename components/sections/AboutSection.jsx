@@ -85,7 +85,7 @@ const AboutSection = () => {
                 <Text fontSize={"6xl"} fontWeight={600}>
                     About Me
                 </Text>
-                <Text maxW={"600px"} size={"xl"} textAlign={"justify"}>
+                <Text maxW={"600px"} size={"xl"} textAlign={"center"}>
                     An amazing problem solver who enjoys creating things that live on the internet
                     and is enthusiastic about building amazing software products. My Favorite
                     technologies are
