@@ -69,7 +69,7 @@ const HeroSection = () => {
                     _hover={{ textDecoration: "none" }}
                 >
                     <Button colorScheme={"red"}>
-                        <Text fontWeight={700} px={6}>
+                        <Text variant={"cWhiteBlack"} px={6}>
                             Check CV Here
                         </Text>
                     </Button>
