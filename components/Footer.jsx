@@ -4,7 +4,6 @@ import ExternalLink from "./subcomponents/ExternalLink";
 
 const Footer = () => {
     const borderColor = useColorModeValue("primary.dark.200", "primary.light.200");
-    const linkColor = useColorModeValue("text.light.subtext", "text.dark.subtext");
 
     return (
         <Box py={10}>

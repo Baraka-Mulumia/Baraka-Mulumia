@@ -90,7 +90,7 @@ const AboutSection = () => {
                     and is enthusiastic about building amazing software products. My Favorite
                     technologies are
                     <Text as={"span"} fontWeight={600}>
-                        JavasScript, ReactJs, NodeJS and NextJS
+                        JavaScript, ReactJs, NodeJS and NextJS
                     </Text>
                 </Text>
                 <Box>
