@@ -19,9 +19,10 @@ export default function Home() {
                     {/* <SectionWrapper align={"start"}>
                         <ProjectsSection />
                     </SectionWrapper>
-                    <SectionWrapper align={"start"}>
+                      */}
+                    <SectionWrapper align={"start"} minHeight={"fit-content"}>
                         <ContactSection />
-                    </SectionWrapper> */}
+                    </SectionWrapper>
                 </VStack>
                 <Footer />
             </Box>
