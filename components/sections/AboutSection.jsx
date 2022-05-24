@@ -85,11 +85,11 @@ const AboutSection = () => {
                 <Text fontSize={"6xl"} fontWeight={600}>
                     About Me
                 </Text>
-                <Text maxW={"600px"} size={"xl"} textAlign={"center"}>
+                <Text maxW={"600px"} size={"xl"} textAlign={"center"} variant={"textPrimary"}>
                     An amazing problem solver who enjoys creating things that live on the internet
                     and is enthusiastic about building amazing software products. My Favorite
                     technologies are
-                    <Text variant={"textPrimary"} as={"span"} fontWeight={600}>
+                    <Text as={"span"} fontWeight={600}>
                         JavasScript, ReactJs, NodeJS and NextJS
                     </Text>
                 </Text>
@@ -97,9 +97,6 @@ const AboutSection = () => {
                     <Image src={"/image-assets/02-Baraka-Mulumia.png"} alt={""} />
                 </Box>
             </Flex>
-            <Box position={"absolute"} right={"0"} bottom={0}>
-                <Ornament />
-            </Box>
             <Box position={"absolute"} right={"0"} bottom={0}>
                 <Ornament />
             </Box>
