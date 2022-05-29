@@ -16,11 +16,12 @@ import {
     useDisclosure,
 } from "@chakra-ui/react";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
-import { useEffect, useRef, useState } from "react";
 
-import Link from "next/link";
 import NavContainer from "./subcomponents/NavContainer";
+import NextLink from "next/link";
+import { Link as SpyLink } from "react-scroll";
 import ThemeToggleIcon from "./subcomponents/ThemeToggleIcon";
+import { useRef } from "react";
 
 const navItems = ["Home", "About Me", "Projects", "Lets Connect"];
 
@@ -65,16 +66,21 @@ function SideBar() {
                     <DrawerBody p={0}>
                         <VStack w={"full"} align={"stretch"} p={3} spacing={3}>
                             {navItems.map((label, index) => (
-                                <MobileNavItem label={label} key={label} index={index} />
+                                <MobileNavItem
+                                    label={label}
+                                    key={label}
+                                    index={index}
+                                    onClose={onClose}
+                                />
                             ))}
                         </VStack>
                         <Divider />
                         <Flex pt={8} justify={"center"} align={"center"}>
-                            <Link href={"/blog"}>
+                            <NextLink href={"/blog"}>
                                 <a>
                                     <Button variant={"primary"}>My Blog</Button>
                                 </a>
-                            </Link>
+                            </NextLink>
                         </Flex>
                     </DrawerBody>
                 </DrawerContent>
@@ -83,43 +89,56 @@ function SideBar() {
     );
 }
 
-const MobileNavItem = ({ label, index }) => (
-    <Box
-        cursor={"pointer"}
-        borderBottomWidth={index !== navItems.length - 1 ? "1px" : 0}
-        py={2}
-        borderBottomColor={"gray.300"}
-    >
-        <Text variant={"navLink"} fontWeight={500}>
-            {label}
-        </Text>
-    </Box>
+const MobileNavItem = ({ label, index, onClose }) => (
+    <SpyLink to={label} spy={true} smooth={true} offset={-100} duration={1000} delay={100}>
+        <Box
+            cursor={"pointer"}
+            onClick={onClose}
+            borderBottomWidth={index !== navItems.length - 1 ? "1px" : 0}
+            py={2}
+            borderBottomColor={"gray.300"}
+        >
+            <Text variant={"navLink"} fontWeight={500}>
+                {label}
+            </Text>
+        </Box>
+    </SpyLink>
 );
 
 const DesktopNavItem = ({ label, index }) => {
     const primaryColor = useColorModeValue("primary.dark.100", "primary.light.100");
     return (
-        <Box
-            cursor={"pointer"}
-            _hover={{
-                _after: {
-                    width: "100%",
-                },
-            }}
-            _after={{
-                content: "''",
-                display: "block",
-                width: 0,
-                height: "2px",
-                background: primaryColor,
-                transition: "width .3s",
-            }}
-            py={1}
+        <SpyLink
+            activeClass="active"
+            to={label}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={1000}
+            delay={100}
         >
-            <Text variant={"navLink"} size={"lg"} fontWeight={400}>
-                {label}
-            </Text>
-        </Box>
+            <Box
+                cursor={"pointer"}
+                _hover={{
+                    _after: {
+                        width: "100%",
+                    },
+                }}
+                _after={{
+                    content: "''",
+                    display: "block",
+                    width: 0,
+                    height: "2px",
+                    background: primaryColor,
+                    transition: "width .3s",
+                }}
+                py={1}
+            >
+                <Text variant={"navLink"} size={"lg"} fontWeight={400}>
+                    {label}
+                </Text>
+            </Box>
+        </SpyLink>
     );
 };
 
@@ -141,16 +160,25 @@ const NavBar = () => {
                 <Box display={{ base: "block", md: "none" }} zIndex={1001}>
                     <SideBar />
                 </Box>
-                <Flex align={"center"}>
-                    <Avatar
-                        src={"/image-assets/03-Baraka-Mulumia.png"}
-                        title={"Baraka Mulumia"}
-                        size={"sm"}
-                    />
-                    <Box display={{ base: "none", md: "block" }}>
-                        <Text variant={"heading3"}>Baraka</Text>
-                    </Box>
-                </Flex>
+                <SpyLink
+                    to={"Home"}
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={1000}
+                    delay={100}
+                >
+                    <Flex align={"center"} cursor={"pointer"}>
+                        <Avatar
+                            src={"/image-assets/03-Baraka-Mulumia.png"}
+                            title={"Baraka Mulumia"}
+                            size={"sm"}
+                        />
+                        <Box display={{ base: "none", md: "block" }}>
+                            <Text variant={"heading3"}>Baraka</Text>
+                        </Box>
+                    </Flex>
+                </SpyLink>
                 <Flex justify={"center"} gap={2} display={{ base: "none", md: "flex" }}>
                     {navItems.slice(1).map((label, index) => (
                         <DesktopNavItem label={label} index={index} key={label + "desktop"} />
@@ -164,13 +192,13 @@ const NavBar = () => {
                         align={"center"}
                         display={{ base: "none", md: "flex" }}
                     >
-                        <Link href={"/blog"}>
+                        <NextLink href={"/blog"}>
                             <a>
                                 <Button variant={"primary"}>
                                     <Text variant={"cWhite"}>My Blog</Text>
                                 </Button>
                             </a>
-                        </Link>
+                        </NextLink>
                     </Flex>
                 </Flex>
             </Flex>

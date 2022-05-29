@@ -1,7 +1,8 @@
 import { AboutSection, ContactSection, HeroSection, ProjectsSection } from "../components/sections";
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, VStack } from "@chakra-ui/react";
 
 import CustomHead from "../components/subcomponents/CustomHead";
+import { Element } from "react-scroll";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
@@ -12,19 +13,28 @@ export default function Home() {
             <Box w={"full"} py={3} position={"relative"}>
                 <NavBar />
                 <VStack justify={"center"} align={"stretch"} h={"full"} w={"full"}>
-                    <SectionWrapper mt={"80px"}>
-                        <HeroSection />
-                    </SectionWrapper>
-                    <SectionWrapper align={"start"}>
-                        <AboutSection />
-                    </SectionWrapper>
-                    <SectionWrapper align={"start"}>
-                        <ProjectsSection />
-                    </SectionWrapper>
+                    <Element name={"Home"}>
+                        <SectionWrapper mt={"80px"}>
+                            <HeroSection />
+                        </SectionWrapper>
+                    </Element>
+                    <Element name={"About Me"}>
+                        <SectionWrapper align={"start"}>
+                            <AboutSection />
+                        </SectionWrapper>
+                    </Element>
 
-                    <SectionWrapper align={"start"} minHeight={"fit-content"}>
-                        <ContactSection />
-                    </SectionWrapper>
+                    <Element name={"Projects"}>
+                        <SectionWrapper align={"start"}>
+                            <ProjectsSection />
+                        </SectionWrapper>
+                    </Element>
+
+                    <Element name={"Lets Connect"}>
+                        <SectionWrapper align={"start"} minHeight={"fit-content"}>
+                            <ContactSection />
+                        </SectionWrapper>
+                    </Element>
                 </VStack>
                 <Footer />
             </Box>
