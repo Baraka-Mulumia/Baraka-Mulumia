@@ -1,6 +1,13 @@
-import { Avatar, Box, Center, Heading, Stack, Text, useColorModeValue } from "@chakra-ui/react";
-
-import Image from "next/image";
+import {
+    Avatar,
+    Box,
+    Center,
+    Heading,
+    Image,
+    Stack,
+    Text,
+    useColorModeValue,
+} from "@chakra-ui/react";
 
 const ProjectCard = ({ project }) => {
     const bg = useColorModeValue("backgrounds.light.200", "backgrounds.dark.200");
