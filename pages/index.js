@@ -1,12 +1,14 @@
 import { AboutSection, ContactSection, HeroSection, ProjectsSection } from "../components/sections";
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 
+import CustomHead from "../components/subcomponents/CustomHead";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 export default function Home() {
     return (
         <Box>
+            <CustomHead />
             <Box w={"full"} py={3} position={"relative"}>
                 <NavBar />
                 <VStack justify={"center"} align={"stretch"} h={"full"} w={"full"}>
@@ -16,10 +18,10 @@ export default function Home() {
                     <SectionWrapper align={"start"}>
                         <AboutSection />
                     </SectionWrapper>
-                    {/* <SectionWrapper align={"start"}>
+                    <SectionWrapper align={"start"}>
                         <ProjectsSection />
                     </SectionWrapper>
-                      */}
+
                     <SectionWrapper align={"start"} minHeight={"fit-content"}>
                         <ContactSection />
                     </SectionWrapper>
