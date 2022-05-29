@@ -82,7 +82,7 @@ const AboutSection = () => {
                 <Ornament />
             </Box>
             <Flex justify={"center"} direction={"column"} align={"center"} w={"full"}>
-                <Text fontSize={"6xl"} fontWeight={600}>
+                <Text fontSize={"5xl"} fontWeight={600}>
                     About Me
                 </Text>
                 <Text maxW={"600px"} size={"xl"} textAlign={"center"} variant={"textPrimary"}>
