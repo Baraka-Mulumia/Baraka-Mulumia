@@ -63,17 +63,19 @@ const HeroSection = () => {
                     A Front-End Architect, SaaS engineer and Creative-Coder specializing with
                     JAMstack technologies. Javascript is love
                 </Text>
-                <Link
-                    href="https://drive.google.com/file/d/1oc4NNLk-Ssa8JI48mzYzVYGhH7OtL02P/view?usp=sharing"
-                    target={"_blank"}
-                    _hover={{ textDecoration: "none" }}
-                >
-                    <Button colorScheme={"red"}>
-                        <Text variant={"cWhiteBlack"} px={6}>
-                            Check CV Here
-                        </Text>
-                    </Button>
-                </Link>
+                <Box w={"fit-content"}>
+                    <Link
+                        href="https://drive.google.com/file/d/1oc4NNLk-Ssa8JI48mzYzVYGhH7OtL02P/view?usp=sharing"
+                        target={"_blank"}
+                        _hover={{ textDecoration: "none" }}
+                    >
+                        <Button colorScheme={"red"}>
+                            <Text variant={"cWhiteBlack"} px={6}>
+                                Check CV Here
+                            </Text>
+                        </Button>
+                    </Link>
+                </Box>
             </Stack>
 
             <Flex

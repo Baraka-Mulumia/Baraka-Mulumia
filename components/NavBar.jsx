@@ -77,9 +77,9 @@ function SideBar() {
                         <Divider />
                         <Flex pt={8} justify={"center"} align={"center"}>
                             <NextLink href={"/blog"}>
-                                <a>
-                                    <Button variant={"primary"}>My Blog</Button>
-                                </a>
+                                <Button colorScheme={"red"}>
+                                    <Text variant={"cWhiteBlack"}>My Blog</Text>
+                                </Button>
                             </NextLink>
                         </Flex>
                     </DrawerBody>
@@ -194,8 +194,8 @@ const NavBar = () => {
                     >
                         <NextLink href={"/blog"}>
                             <a>
-                                <Button variant={"primary"}>
-                                    <Text variant={"cWhite"}>My Blog</Text>
+                                <Button colorScheme={"red"}>
+                                    <Text variant={"cWhiteBlack"}>My Blog</Text>
                                 </Button>
                             </a>
                         </NextLink>

@@ -24,14 +24,14 @@ const BlogPageHeader = () => {
                 <Flex px={12} py={4} maxW={"7xl"} m={"auto"} justify={"space-between"}>
                     <Link href={"/"}>
                         <a>
-                            <Button variant={"primary"} p={2}>
+                            <Button colorScheme={"red"} p={2}>
                                 <Flex align={"center"}>
                                     <Avatar
                                         src={"/image-assets/03-Baraka-Mulumia.png"}
                                         title={"Baraka Mulumia"}
                                         size={"sm"}
                                     />
-                                    <Text variant={"cWhite"}>Portfolio</Text>
+                                    <Text variant={"cWhiteBlack"}>Portfolio</Text>
                                 </Flex>
                             </Button>
                         </a>
