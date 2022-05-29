@@ -68,10 +68,10 @@ const ProjectsSection = () => {
                 gap={5}
                 py={4}
             >
-                <Text fontSize={"5xl"} fontWeight={600}>
+                <Text fontSize={"4xl"} fontWeight={600}>
                     Recent Works
                 </Text>
-                <Text maxW={"600px"} size={"xl"} textAlign={"center"} variant={"textPrimary"}>
+                <Text maxW={"600px"} size={"lg"} textAlign={"center"} variant={"textPrimary"}>
                     Learning to code has changed my life because I am now headed down a path to
                     potential economic stability and personal growth. I look forward to working on
                     complex projects and on things that improve people&apos;s lives.

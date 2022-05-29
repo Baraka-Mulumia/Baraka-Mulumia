@@ -18,6 +18,7 @@ export default function Home() {
                             <HeroSection />
                         </SectionWrapper>
                     </Element>
+
                     <Element name={"About Me"}>
                         <SectionWrapper align={"start"}>
                             <AboutSection />
@@ -29,7 +30,6 @@ export default function Home() {
                             <ProjectsSection />
                         </SectionWrapper>
                     </Element>
-
                     <Element name={"Lets Connect"}>
                         <SectionWrapper align={"start"} minHeight={"fit-content"}>
                             <ContactSection />

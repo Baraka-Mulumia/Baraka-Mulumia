@@ -82,14 +82,14 @@ const AboutSection = () => {
                 <Ornament />
             </Box>
             <Flex justify={"center"} direction={"column"} align={"center"} w={"full"}>
-                <Text fontSize={"5xl"} fontWeight={600}>
+                <Text fontSize={"4xl"} fontWeight={600}>
                     About Me
                 </Text>
-                <Text maxW={"600px"} size={"xl"} textAlign={"center"} variant={"textPrimary"}>
+                <Text maxW={"600px"} size={"lg"} textAlign={"center"} variant={"textPrimary"}>
                     An amazing problem solver who enjoys creating things that live on the internet
                     and is enthusiastic about building amazing software products. My Favorite
                     technologies are
-                    <Text as={"span"} fontWeight={600}>
+                    <Text as={"span"} size={"md"} fontWeight={600}>
                         JavaScript, ReactJs, NodeJS and NextJS
                     </Text>
                 </Text>

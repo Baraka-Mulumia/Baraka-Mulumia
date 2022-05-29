@@ -81,7 +81,6 @@ const HeroSection = () => {
             <Flex
                 position={"relative"}
                 w={{ base: "full", mxd: "50%" }}
-                minW={"400px"}
                 zIndex={0}
                 justify={"center"}
                 align={"center"}

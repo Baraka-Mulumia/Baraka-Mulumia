@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const CustomHead = ({
-    description = "Baraka Mulumia Mshindi Personal portfolio",
+    description = "A Front-End Architect, SaaS engineer and Creative-Coder",
     author = "baraka mulumia",
     title = "Baraka | Edge Software Solutions",
     iconUrl = "/baraka-favicon.ico",

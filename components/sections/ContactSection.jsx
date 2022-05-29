@@ -91,10 +91,10 @@ const ContactSection = () => {
             <Box>
                 <Ornament />
             </Box>
-            <Text fontSize={"6xl"} color={headingColor} fontWeight={600}>
-                Contact
+            <Text fontSize={"4xl"} color={headingColor} fontWeight={600}>
+                Get in Touch
             </Text>
-            <Text variant={"textPrimary"} maxW={"600px"} size={"xl"} textAlign={"center"}>
+            <Text variant={"textPrimary"} maxW={"600px"} size={"lg"} textAlign={"center"}>
                 Truth is a deep kindness that teaches us to be content in our everyday life and
                 share with the people the same happiness. the feeling of sunday is the same
                 everywhere: heavy, melancholy, standing still.

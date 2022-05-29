@@ -9,8 +9,12 @@ const ProjectCard = ({ project }) => {
         <Center py={6}>
             <Box
                 maxW={"445px"}
+                cursor={"pointer"}
                 w={"full"}
                 bg={bg}
+                _hover={{
+                    transform: "scale(1.025)",
+                }}
                 boxShadow={"2xl"}
                 rounded={"md"}
                 p={6}
@@ -27,7 +31,9 @@ const ProjectCard = ({ project }) => {
                     >
                         {project.name}
                     </Heading>
-                    <Text color={"gray.500"}>{project.desc}</Text>
+                    <Text color={"gray.500"} size={"lg"}>
+                        {project.desc}
+                    </Text>
                 </Stack>
                 <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
                     <Stack direction={"column"} spacing={0} fontSize={"sm"}>
