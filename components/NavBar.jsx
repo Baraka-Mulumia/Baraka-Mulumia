@@ -12,15 +12,15 @@ import {
     IconButton,
     Text,
     VStack,
-    useColorMode,
     useColorModeValue,
     useDisclosure,
 } from "@chakra-ui/react";
-import { MdMenu, MdOutlineClose, MdOutlineLightMode } from "react-icons/md";
+import { MdMenu, MdOutlineClose } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
 
-import { FaMoon } from "react-icons/fa";
 import Link from "next/link";
+import NavContainer from "./subcomponents/NavContainer";
+import ThemeToggleIcon from "./subcomponents/ThemeToggleIcon";
 
 const navItems = ["Home", "About Me", "Projects", "Lets Connect"];
 
@@ -124,37 +124,11 @@ const DesktopNavItem = ({ label, index }) => {
 };
 
 const NavBar = () => {
-    const { toggleColorMode, colorMode } = useColorMode();
-    const themeIconColor = useColorModeValue("primary.dark.200", "primary.light.200");
-    const [isScroll, setIsScroll] = useState(false);
-
-    const navBgOnScroll = useColorModeValue("backgrounds.light.200", "backgrounds.dark.200");
-    const navBg = useColorModeValue("backgrounds.light.100", "backgrounds.dark.100");
-    const changeBg = () => {
-        const windowPosition = window.scrollY;
-        if (windowPosition >= 100) {
-            setIsScroll(true);
-        } else {
-            setIsScroll(false);
-        }
-    };
-    useEffect(() => {
-        window.addEventListener("scroll", changeBg);
-
-        return function unMount() {
-            window.removeEventListener("scroll", changeBg);
-        };
-    }, []);
+    const secondaryNavBg = useColorModeValue("backgrounds.light.200", "backgrounds.dark.200");
+    const primaryNavBg = useColorModeValue("backgrounds.light.100", "backgrounds.dark.100");
 
     return (
-        <Box
-            position={"fixed"}
-            zIndex={1000}
-            top={0}
-            left={0}
-            w={"full"}
-            bg={isScroll ? navBgOnScroll : navBg}
-        >
+        <NavContainer primaryBgColor={primaryNavBg} secondaryBgColor={secondaryNavBg}>
             <Flex
                 align={"center"}
                 justify={"space-between"}
@@ -184,20 +158,7 @@ const NavBar = () => {
                 </Flex>
 
                 <Flex gap={4}>
-                    <IconButton
-                        color={themeIconColor}
-                        aria-label={"Change theme"}
-                        variant={"transparent"}
-                        icon={
-                            colorMode === "light" ? (
-                                <FaMoon size={24} />
-                            ) : (
-                                <MdOutlineLightMode size={24} />
-                            )
-                        }
-                        onClick={toggleColorMode}
-                    />
-
+                    <ThemeToggleIcon />
                     <Flex
                         justify={"center"}
                         align={"center"}
@@ -213,7 +174,7 @@ const NavBar = () => {
                     </Flex>
                 </Flex>
             </Flex>
-        </Box>
+        </NavContainer>
     );
 };
 
