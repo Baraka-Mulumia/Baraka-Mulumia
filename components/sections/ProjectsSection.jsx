@@ -83,7 +83,6 @@ const ProjectsSection = () => {
                     spaceBetween={10}
                     slidesPerView={2}
                     autoplay={{
-                        delay: 3000,
                         stopOnLastSlide: false,
                         pauseOnMouseEnter: true,
                     }}
