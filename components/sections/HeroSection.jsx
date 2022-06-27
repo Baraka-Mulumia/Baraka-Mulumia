@@ -61,11 +61,14 @@ const HeroSection = () => {
                 </Stack>
                 <Text maxW={96}>
                     A Front-End Architect, SaaS engineer and Creative-Coder specializing with
-                    JAMstack technologies. Javascript is love
+                    <Text as={"span"} color={nameColor} fontWeight={"bold"}>
+                        JAMstack
+                    </Text>{" "}
+                    technologies. Javascript is love
                 </Text>
                 <Box w={"fit-content"}>
                     <Link
-                        href="https://drive.google.com/file/d/1oc4NNLk-Ssa8JI48mzYzVYGhH7OtL02P/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1hUkwumoWV0eC8DaHnbyvvbxHSTkOIT__/view?usp=sharing"
                         target={"_blank"}
                         _hover={{ textDecoration: "none" }}
                     >
