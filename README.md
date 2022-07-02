@@ -1,6 +1,6 @@
-# Hi 👋 My name is Baraka Mulumia
+# Holla 👋 I'm Baraka Mulumia
 
-## Front End Architect | SaaS Engineer 
+## Front End Engineer 
 
 Me, Baraka Mulumia, Myself and I 💝💞❣️Coding, But Hey Here's to the crazy ones. The misfits. The
 rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently.
