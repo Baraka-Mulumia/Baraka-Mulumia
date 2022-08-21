@@ -11,7 +11,7 @@ see genius. Because the people who are crazy enough to think they can change the
 who do.
 
 -   🌍  I'm based in Nairobi Kenya
--   🖥️  See my portfolio at [https://barakamulumia.vercel.app/](http://barakamulumia.vercel.app/)
+-   🖥️  See my portfolio at [https://www.mshindi-creations.tech/](https://mshindi-creations.tech/)
 -   ✉️  You can contact me at [mulumia.baraka@gmail.com](mailto:mulumia.baraka@gmail.com)
 -   🤝  I'm open to collaborating on intresting SaaS projects to help solve real world problems
 -   ⚡  I'm secretly in love with JavaScript, But hey, don't tell anyone!!
