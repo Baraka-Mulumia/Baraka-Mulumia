@@ -1,6 +1,8 @@
 # Holla 👋 I'm Baraka Mulumia
 
-## Software Engineer 
+## Full Stack JavaScript Developer 
+
+### Passionate engineer building edge software solutions
 
 Me, Baraka Mulumia, Myself and I 💝💞❣️Coding, But Hey Here's to the crazy ones. The misfits. The
 rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently.
