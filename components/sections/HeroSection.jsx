@@ -65,7 +65,7 @@ const HeroSection = () => {
                 </Text>
                 <Box w={"fit-content"}>
                     <Link
-                        href="https://drive.google.com/file/d/1m4KrSivqp9o5e5Ppv5JClfWY-o0MeLKU/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1Dc0q85CJnuxGTXKBsmQpE7q2nRFB-FnN/view?usp=sharing"
                         target={"_blank"}
                         _hover={{ textDecoration: "none" }}
                         _focus={{ boxShadow: "none", textDecoration: "none" }}
