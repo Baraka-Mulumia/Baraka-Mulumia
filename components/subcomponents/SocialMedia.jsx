@@ -1,7 +1,7 @@
 import { IconButton, Stack, useColorModeValue } from "@chakra-ui/react";
 
 import ExternalLink from "./ExternalLink";
-import { SocialMediaLinks } from "../../lib/constants";
+import { SocialMediaLinks } from "../../constants/social-media-links";
 
 const SocialMediaIcon = ({ link, name, Icon }) => {
     const color = useColorModeValue("#330C2F", "#FBFBFF");
