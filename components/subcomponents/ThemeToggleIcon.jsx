@@ -10,9 +10,12 @@ const ThemeToggleIcon = () => {
     return (
         <IconButton
             color={themeIconColor}
+            size-={"sm"}
             aria-label={"Change theme"}
-            variant={"solid"}
-            icon={colorMode === "light" ? <FaMoon size={24} /> : <MdOutlineLightMode size={24} />}
+            bg={"transparent"}
+            border={"1px solid"}
+            borderColor={themeIconColor}
+            icon={colorMode === "light" ? <FaMoon size={20} /> : <MdOutlineLightMode size={20} />}
             onClick={toggleColorMode}
         />
     );
