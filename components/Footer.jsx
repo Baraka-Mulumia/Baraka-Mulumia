@@ -1,6 +1,7 @@
 import { Avatar, Box, Flex, Link, Text, useColorModeValue } from "@chakra-ui/react";
 
 import ExternalLink from "./subcomponents/ExternalLink";
+import React from "react";
 
 const Footer = () => {
     const borderColor = useColorModeValue("primary.dark.200", "primary.light.200");
@@ -24,18 +25,18 @@ const Footer = () => {
                     ml: 8,
                 }}
             >
-                <ExternalLink to={"https://mshindicreations.com"}>
+                <ExternalLink to={"https://iambaraka.dev"}>
                     <Avatar
-                        src={"/image-assets/mshindi-creations-logo.png"}
-                        title={"Mshindi Creations"}
-                        name={"Mshindi Creations"}
+                        src={"/image-assets/mshindi-creations-logo.jpg"}
+                        title={"Baraka Mulumia"}
+                        name={"Baraka Mulumia"}
                     />
                 </ExternalLink>
             </Flex>
             <Text pt={6} fontSize={"sm"} textAlign={"center"}>
                 &copy; {new Date().getFullYear()}{" "}
-                <ExternalLink to={"https://mshindicreations.com"}>Mshindi Creations</ExternalLink>{" "}
-                All rights reserved
+                <ExternalLink to={"https://iambaraka.dev"}>iambaraka.dev</ExternalLink> All rights
+                reserved
             </Text>
         </Box>
     );
