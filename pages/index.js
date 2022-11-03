@@ -1,28 +1,55 @@
-import { AboutSection, ContactSection, HeroSection, ProjectsSection } from "../components/sections";
-import { Box, Flex, VStack } from "@chakra-ui/react";
+import {
+    AboutSection,
+    ContactSection,
+    HeroSection,
+    ProjectsSection,
+    TimelineSection,
+} from "../components/sections";
+import { Box, Flex, VStack, useColorModeValue } from "@chakra-ui/react";
 
 import CustomHead from "../components/subcomponents/CustomHead";
 import { Element } from "react-scroll";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import React from "react";
+import SectionWrapper from "../components/subcomponents/SectionWrapper";
 
 export default function Home() {
+    const overlay = useColorModeValue(
+        "linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%)",
+        "linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%)"
+    );
+
     return (
         <Box>
             <CustomHead />
             <Box w={"full"} py={3} position={"relative"}>
                 <NavBar />
-                <VStack justify={"center"} align={"stretch"} h={"full"} w={"full"}>
+                <VStack justify={"center"} align={"stretch"} h={"full"} w={"full"} spacing={0}>
                     <Element name={"Home"}>
-                        <SectionWrapper mt={"80px"}>
-                            <HeroSection />
-                        </SectionWrapper>
+                        <Box
+                            backgroundImage={"url('/image-assets/bg-image.jpg')"}
+                            backgroundSize={"cover"}
+                        >
+                            <SectionWrapper mt={"80px"} bg={overlay}>
+                                <HeroSection />
+                            </SectionWrapper>
+                        </Box>
                     </Element>
 
                     <Element name={"About Me"}>
-                        <SectionWrapper align={"start"}>
-                            <AboutSection />
-                        </SectionWrapper>
+                        <Box
+                            backgroundImage={"url('/image-assets/bg-image-2.jpg')"}
+                            backgroundSize={"cover"}
+                        >
+                            <SectionWrapper align={"start"} bg={overlay}>
+                                <AboutSection />
+                            </SectionWrapper>
+                        </Box>
+                    </Element>
+
+                    <Element name={"Timeline"}>
+                        <TimelineSection />
                     </Element>
 
                     <Element name={"Projects"}>
@@ -41,13 +68,3 @@ export default function Home() {
         </Box>
     );
 }
-
-const SectionWrapper = ({ children, ...props }) => {
-    return (
-        <Flex justify={"center"} align={"center"} minHeight={"calc(100vh - 100px)"} {...props}>
-            <Box maxW={"1280px"} minW={"364px"} py={8} px={4} flexGrow={1}>
-                {children}
-            </Box>
-        </Flex>
-    );
-};
