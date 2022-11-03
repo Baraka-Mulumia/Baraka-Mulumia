@@ -60,19 +60,17 @@ const HeroSection = () => {
                     </Box>
                 </Stack>
                 <Text maxW={96}>
-                    A Front-End Architect, SaaS engineer and Creative-Coder specializing with
-                    <Text as={"span"} color={nameColor} fontWeight={"bold"}>
-                        JAMstack
-                    </Text>{" "}
-                    technologies. Javascript is love
+                    A Software Architect, SaaS engineer and Creative-Coder with a passion for
+                    building scalable, performant and maintainable software.
                 </Text>
                 <Box w={"fit-content"}>
                     <Link
-                        href="https://drive.google.com/file/d/1hUkwumoWV0eC8DaHnbyvvbxHSTkOIT__/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1m4KrSivqp9o5e5Ppv5JClfWY-o0MeLKU/view?usp=sharing"
                         target={"_blank"}
                         _hover={{ textDecoration: "none" }}
+                        _focus={{ boxShadow: "none", textDecoration: "none" }}
                     >
-                        <Button colorScheme={"red"}>
+                        <Button colorScheme={"blue"}>
                             <Text variant={"cWhiteBlack"} px={6}>
                                 Check CV Here
                             </Text>
@@ -91,7 +89,7 @@ const HeroSection = () => {
                 <Flex zIndex={3} position={"relative"}>
                     <AspectRatio ratio={5 / 4} w={{ base: "360px", md: "500px" }}>
                         <Image
-                            src={"/image-assets/01-Baraka-Mulumia.png"}
+                            src={"/image-assets/profile-image-baraka.png"}
                             alt={"Baraka Mulumia"}
                             objectFit="cover"
                             objectPosition={"top center"}
