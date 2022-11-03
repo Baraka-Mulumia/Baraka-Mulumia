@@ -23,7 +23,7 @@ import { Link as SpyLink } from "react-scroll";
 import ThemeToggleIcon from "./subcomponents/ThemeToggleIcon";
 import { useRef } from "react";
 
-const navItems = ["Home", "About Me", "Projects", "Lets Connect"];
+const navItems = ["Home", "About Me", "Timeline", "Projects", "Lets Connect"];
 
 function SideBar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -187,7 +187,7 @@ const NavBar = () => {
 
                 <Flex gap={4}>
                     <ThemeToggleIcon />
-                    <Flex
+                    {/* <Flex
                         justify={"center"}
                         align={"center"}
                         display={{ base: "none", md: "flex" }}
@@ -199,7 +199,7 @@ const NavBar = () => {
                                 </Button>
                             </a>
                         </NextLink>
-                    </Flex>
+                    </Flex> */}
                 </Flex>
             </Flex>
         </NavContainer>
