@@ -1,5 +1,7 @@
 import { AspectRatio, Box, Flex, Image, Text, useColorModeValue } from "@chakra-ui/react";
 
+import React from "react";
+
 const Ornament = () => {
     const color = useColorModeValue("#0D1321", "#FBFBFF");
     return (
@@ -94,7 +96,7 @@ const AboutSection = () => {
                     </Text>
                 </Text>
                 <Box>
-                    <Image src={"/image-assets/02-Baraka-Mulumia.png"} alt={""} />
+                    <Image src={"/image-assets/01-Baraka-Mulumia.png"} alt={""} />
                 </Box>
             </Flex>
             <Box position={"absolute"} right={"0"} bottom={0}>
