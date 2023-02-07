@@ -16,7 +16,7 @@ import SectionWrapper from "../components/subcomponents/SectionWrapper";
 
 export default function Home() {
     const overlay = useColorModeValue(
-        "linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%)",
+        "linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%)",
         "linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%)"
     );
 
@@ -24,20 +24,20 @@ export default function Home() {
         <Box>
             <CustomHead />
             <Box w={"full"} py={3} position={"relative"}>
-                {/* <NavBar /> */}
+                <NavBar />
                 <VStack justify={"center"} align={"stretch"} h={"full"} w={"full"} spacing={0}>
                     <Element name={"Home"}>
                         <Box
                             backgroundImage={"url('/image-assets/bg-image.jpg')"}
                             backgroundSize={"cover"}
                         >
-                            <SectionWrapper bg={overlay}>
+                            <SectionWrapper mt={"80px"} bg={overlay}>
                                 <HeroSection />
                             </SectionWrapper>
                         </Box>
                     </Element>
 
-                    {/* <Element name={"About Me"}>
+                    <Element name={"About Me"}>
                         <Box
                             backgroundImage={"url('/image-assets/bg-image-2.jpg')"}
                             backgroundSize={"cover"}
@@ -61,9 +61,9 @@ export default function Home() {
                         <SectionWrapper align={"start"} minHeight={"fit-content"}>
                             <ContactSection />
                         </SectionWrapper>
-                    </Element> */}
+                    </Element>
                 </VStack>
-                {/* <Footer /> */}
+                <Footer />
             </Box>
         </Box>
     );

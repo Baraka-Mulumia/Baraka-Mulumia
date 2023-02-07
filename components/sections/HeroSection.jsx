@@ -42,27 +42,28 @@ const HeroSection = () => {
             <Stack spacing={2}>
                 <Stack spacing={2} justify={"space-between"}>
                     <Text size={"sm"}>{"Holla I'm"}</Text>
-                    {/* <Text size={"2xl"} fontWeight={600} color={nameColor}>
+                    <Text size={"2xl"} fontWeight={600} color={nameColor}>
                         Baraka Mulumia
-                    </Text> */}
+                    </Text>
                 </Stack>
                 <Stack spacing={0}>
                     <Box>
                         <Text display={"inline"} fontSize={"6xl"} fontWeight={600} lineHeight={1}>
-                            Baraka
+                            Software
                         </Text>
                         <Box display={"flex"} fontWeight={600} pl={8}>
                             <Text fontSize={"6xl"} fontWeight={600} lineHeight={1}>
-                                Mulumia
+                                Developer
                             </Text>
                             <Box bg={"red.600"} h={4} w={4} rounded={"full"}></Box>
                         </Box>
                     </Box>
                 </Stack>
                 <Text maxW={96}>
-                    A Software Developer, building digital solutions one line of code at a time.
+                    A Software Architect, SaaS engineer and Creative-Coder with a passion for
+                    building scalable, performant and maintainable software.
                 </Text>
-                {/* <Box w={"fit-content"}>
+                <Box w={"fit-content"}>
                     <Link
                         href="https://drive.google.com/file/d/1VW5Lp4JkNTaHC9mGtTazkQomt1QZkXh8/view?usp=sharing"
                         target={"_blank"}
@@ -75,7 +76,7 @@ const HeroSection = () => {
                             </Text>
                         </Button>
                     </Link>
-                </Box> */}
+                </Box>
             </Stack>
 
             <Flex
