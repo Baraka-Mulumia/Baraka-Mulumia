@@ -13,6 +13,7 @@ import BannerImgLight from "@/assets/banner-image.png";
 import { BlockContainer } from "@/components/layout/BlockContainer";
 import { FunctionComponent } from "react";
 import Image from "next/image";
+import { SpyLink } from "@/components/SpyLink";
 
 const Banner: FunctionComponent = () => {
   const { colorMode } = useColorMode();
@@ -57,7 +58,7 @@ const Banner: FunctionComponent = () => {
                 fontWeight={700}
                 textTransform={"capitalize"}
               >
-                Your vision, My expertise, Powerful Results
+                Your vision. My expertise. Powerful Results.
               </Heading>
               <Box w={"80%"}>
                 <Text fontSize={"sm"} textAlign={"center"} mt={4}>
@@ -67,7 +68,9 @@ const Banner: FunctionComponent = () => {
                 </Text>
               </Box>
             </Stack>
-            <Button variant={"primary"}>Explore</Button>
+            <SpyLink path="about-section">
+              <Button variant={"primary"}>Explore</Button>
+            </SpyLink>
             <Box w={"75%"}>
               <Image
                 src={bannerImage}
