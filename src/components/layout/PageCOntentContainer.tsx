@@ -57,7 +57,7 @@ export const PageCOntentContainer: FunctionComponent<
           </Box>
         )}
       </Sticky>
-      {children}
+      <Box>{children}</Box>
     </StickyContainer>
   );
 };
