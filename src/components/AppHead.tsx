@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 type SeoProps = {
   title?: string;
@@ -16,7 +17,7 @@ type SeoProps = {
 export const AppHead: FunctionComponent<SeoProps> = ({
   description = "Baraka Mulumia | Building digital solutions, one line of code at a time.",
   author = "Baraka Mulumia",
-  title = "Baraka Mulumia | Building digital solutions, one line of code at a time.",
+  title = "Baraka M Mulumia",
   iconUrl = "/ic_launcher-web.png",
   meta = [
     {
@@ -25,6 +26,23 @@ export const AppHead: FunctionComponent<SeoProps> = ({
     },
   ],
 }) => {
+  const { asPath } = useRouter();
+  const currentUrl = asPath.split("/")[1];
+
+  const currentPath = currentUrl?.includes("?")
+    ? currentUrl?.slice(
+        0,
+        currentUrl.split("")?.findIndex((char) => char === "?") ??
+          currentUrl.length - 1
+      )
+    : currentUrl;
+
+  const pageTitle = `${title}  ${
+    currentPath
+      ? " | " + currentPath[0]?.toUpperCase() + currentPath.slice(1)
+      : ""
+  }`;
+
   const metaData = [
     {
       name: `description`,
@@ -32,7 +50,7 @@ export const AppHead: FunctionComponent<SeoProps> = ({
     },
     {
       property: `og:title`,
-      content: title,
+      content: pageTitle,
     },
     {
       property: `og:description`,
@@ -62,7 +80,7 @@ export const AppHead: FunctionComponent<SeoProps> = ({
 
   return (
     <Head>
-      <title>{title}</title>
+      <title>{pageTitle}</title>
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="language" content="en" />
