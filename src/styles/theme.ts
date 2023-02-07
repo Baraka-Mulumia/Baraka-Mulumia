@@ -1,4 +1,4 @@
-import { Inter, Nunito } from "@next/font/google";
+import { DM_Sans, Inter, Nunito } from "@next/font/google";
 
 import type { StyleFunctionProps } from "@chakra-ui/styled-system";
 import { extendTheme } from "@chakra-ui/react";
@@ -13,6 +13,12 @@ const inter = Inter({
 const nunito = Nunito({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+
+const dmSans = DM_Sans({
+  weight: ["400", "500", "700"],
+  style: ["normal"],
   subsets: ["latin"],
 });
 
@@ -37,34 +43,35 @@ export const theme = extendTheme({
   colors: {
     primary: {
       light: {
-        _000: "#FFFFFF",
+        "000": "#FFFFFF",
         100: "#FFFFEF",
         200: "#FBFBFF",
         300: "#733D47",
+        400: "",
+        red: " #EA3A60",
       },
       dark: {
-        _000: "#000000",
+        "000": "#000000",
         100: "#0D1321",
         200: "#330C2F",
         300: "#BF9B9B",
+        red: "#EA3A60",
       },
     },
 
     text: {
       light: {
         primary: "#733D47",
-        headings: "#2D3748",
-        body: "#000000eb",
-        captions: "#330C2F",
-        subtext: "#4A5568",
+        headings: "#0F2137",
+        subtext: "#02073E",
+        captions: "#4A5568",
         disabled: "#EAE0D5",
       },
       dark: {
         primary: "#F7FAFC",
         headings: "#FEF9EF",
-        body: "#EDF2F7",
-        captions: "#FBFBFF",
         subtext: "#A0AEC0",
+        captions: "#FBFBFF",
         disabled: "#565264",
       },
     },
@@ -77,23 +84,75 @@ export const theme = extendTheme({
       dark: {
         "000": "#000000",
         100: "#0d1117",
-        200: "#1A202C",
+        200: "#171923",
       },
     },
   },
   fonts: {
     body: inter.style.fontFamily,
-    heading: nunito.style.fontFamily,
+    heading: dmSans.style.fontFamily,
     subtext: nunito.style.fontFamily,
+  },
+
+  components: {
+    Button: {
+      baseStyle: {
+        fontWeight: "500",
+        borderRadius: "0.5rem",
+        _focus: {
+          boxShadow: "none",
+          outline: "none",
+        },
+      },
+      variants: {
+        primary: (props: StyleFunctionProps) => ({
+          bg: mode("primary.light.red", "primary.dark.red")(props),
+          color: mode("primary.light.000", "primary.light.200")(props),
+          fontWeight: "500",
+          letterSpacing: "-0.15px",
+          fontsize: "16px",
+          linHeight: "24px",
+          borderRadius: "48px",
+          padding: "0.75rem 1.5rem",
+          _active: {
+            transform: "scale(0.95)",
+          },
+        }),
+
+        primaryOutline: (props: StyleFunctionProps) => ({
+          bg: mode("primary.light.000", "primary.dark.100")(props),
+          color: mode("primary.light.red", "primary.dark.red")(props),
+          fontWeight: "500",
+          letterSpacing: "-0.15px",
+          fontsize: "16px",
+          linHeight: "24px",
+          borderRadius: "48px",
+          padding: "0.75rem 1.5rem",
+          border: "1px solid",
+          borderColor: mode("primary.light.red", "primary.dark.red")(props),
+
+          _hover: {
+            bg: mode("primary.light.red", "primary.dark.red")(props),
+            color: mode("primary.light.000", "primary.light.200")(props),
+          },
+
+          _active: {
+            transform: "scale(0.95)",
+          },
+        }),
+      },
+    },
   },
 
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
         color: (props: StyleFunctionProps) =>
-          mode("text.light.primary", "text.dark.primary")(props),
-        bg: (props: StyleFunctionProps) =>
-          mode("backgrounds.dark.200", "backgrounds.light.200")(props),
+          mode("primary.light.300", "text.dark.primary")(props),
+        bg:
+          props.colorMode === "dark"
+            ? "backgrounds.dark.100"
+            : "backgrounds.light.100",
       },
     }),
   },

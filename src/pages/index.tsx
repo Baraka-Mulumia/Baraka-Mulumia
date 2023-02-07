@@ -1,10 +1,14 @@
+import Banner from "@/sections/Banner";
 import { Box } from "@chakra-ui/react";
-import Header from "@/components/Header/Header";
+import { Header } from "@/components/Header/Header";
+import { PageCOntentContainer } from "@/components/layout/PageCOntentContainer";
 
 export default function Home() {
   return (
     <Box>
-      <Header />
+      <PageCOntentContainer Nav={Header}>
+        <Banner />
+      </PageCOntentContainer>
     </Box>
   );
 }
