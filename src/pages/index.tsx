@@ -1,11 +1,10 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import Header from "@/components/Header/Header";
 
 export default function Home() {
   return (
     <Box>
-      <Text fontSize="2xl" fontWeight="bold" fontFamily={"heading"}>
-        Building digital solutions, one line of code at a time.
-      </Text>
+      <Header />
     </Box>
   );
 }
