@@ -1,17 +1,37 @@
-import { Box, Container, HStack, Hide } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  HStack,
+  Hide,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { DesktopNav, DesktopNavItem } from "./DesktopNav";
+import React, { FunctionComponent } from "react";
 
 import { Branding } from "./Branding";
 import { HiddenOnBreakPoint } from "../layout/HiddenOnBreakPoint";
 import { NavigationDrawer } from "./NavigationDrawer";
-import React from "react";
 import { ReadBlogButton } from "./ReadBlogButton";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import { VisibleOnBreakPoint } from "../layout/VisibleOnBreakPoint";
 
-const Header = () => {
+export const Header: FunctionComponent<{
+  isSticky?: boolean;
+}> = ({ isSticky = false }) => {
+  const navBgOnSticky = useColorModeValue(
+    "backgrounds.light.100",
+    "backgrounds.dark.100"
+  );
+
+  const navBg = isSticky ? navBgOnSticky : "transparent";
+
   return (
-    <Box>
+    <Box
+      as={"header"}
+      w={"full"}
+      bg={navBg}
+      boxShadow={isSticky ? "md" : "none"}
+    >
       <Container maxW={"container.xl"}>
         <HStack py={4} justifyContent={"space-between"} alignItems={"center"}>
           <Branding />
@@ -32,5 +52,3 @@ const Header = () => {
     </Box>
   );
 };
-
-export default Header;
