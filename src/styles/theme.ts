@@ -120,7 +120,7 @@ export const theme = extendTheme({
         }),
 
         primaryOutline: (props: StyleFunctionProps) => ({
-          bg: mode("primary.light.000", "primary.dark.100")(props),
+          bg: mode("primary.light.000", "backgrounds.dark.100")(props),
           color: mode("primary.light.red", "primary.dark.red")(props),
           fontWeight: "500",
           letterSpacing: "-0.15px",
