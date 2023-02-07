@@ -22,7 +22,34 @@ export const theme = extendTheme({
     useSystemColorMode: true,
   },
 
+  breakpoints: {
+    sm: "360px",
+    sxm: "480px",
+    md: "640px",
+    mxd: "768px",
+    xxmd: "840px",
+    lg: "992px",
+    xl: "1024px",
+    xxl: "1280px",
+    xxxl: "1440px",
+  },
+
   colors: {
+    primary: {
+      light: {
+        _000: "#FFFFFF",
+        100: "#FFFFEF",
+        200: "#FBFBFF",
+        300: "#733D47",
+      },
+      dark: {
+        _000: "#000000",
+        100: "#0D1321",
+        200: "#330C2F",
+        300: "#BF9B9B",
+      },
+    },
+
     text: {
       light: {
         primary: "#733D47",

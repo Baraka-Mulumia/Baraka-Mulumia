@@ -12,7 +12,7 @@ export const navLinkList = [
     href: "/portfolio",
   },
   {
-    name: "Contact",
-    href: "/contact-me",
+    name: "Get in Touch",
+    href: "/get-in-touch",
   },
 ];

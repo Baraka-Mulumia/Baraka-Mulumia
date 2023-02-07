@@ -1,16 +1,21 @@
-import { Box, IconButton, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  IconButton,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 import { FunctionComponent } from "react";
 
 export const ThemeSwitcher: FunctionComponent = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const iconColor = colorMode === "dark" ? "white" : "black";
-
+  const iconColor = useColorModeValue("primary.light.300", "primary.light.200");
   return (
     <Box>
       <IconButton
-        border={"1px solid red"}
+        border={"1px solid"}
+        borderColor={iconColor}
         aria-label="toggle theme"
         rounded="full"
         size="xs"

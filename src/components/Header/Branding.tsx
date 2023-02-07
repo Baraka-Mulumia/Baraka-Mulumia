@@ -12,7 +12,10 @@ export const Branding: FunctionComponent = () => {
           as={"h1"}
           fontFamily={"heading"}
           fontWeight={"bold"}
-          fontSize={"2xl"}
+          fontSize={{
+            base: "xl",
+            md: "2xl",
+          }}
         >
           Baraka M. Mulumia
         </Text>
