@@ -1,3 +1,4 @@
+import AboutSection from "@/sections/About";
 import Banner from "@/sections/Banner";
 import { Box } from "@chakra-ui/react";
 import { Header } from "@/components/Header/Header";
@@ -8,6 +9,7 @@ export default function Home() {
     <Box>
       <PageCOntentContainer Nav={Header}>
         <Banner />
+        <AboutSection />
       </PageCOntentContainer>
     </Box>
   );
