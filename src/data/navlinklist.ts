@@ -4,8 +4,8 @@ export const navLinkList = [
     href: "/",
   },
   {
-    name: "About",
-    href: "/about-me",
+    name: "My Story",
+    href: "/blog/my-story",
   },
   {
     name: "Portfolio",
