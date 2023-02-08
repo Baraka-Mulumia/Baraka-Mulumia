@@ -142,6 +142,20 @@ export const theme = extendTheme({
         }),
       },
     },
+    Text: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        color: mode("text.light.primary", "text.dark.primary")(props),
+      }),
+
+      variants: {
+        headings: (props: StyleFunctionProps) => ({
+          color: mode("text.light.headings", "text.dark.headings")(props),
+          fontWeight: "700",
+          fontSize: "32px",
+          lineHeight: "48px",
+        }),
+      },
+    },
   },
 
   styles: {
