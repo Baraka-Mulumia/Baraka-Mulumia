@@ -4,10 +4,14 @@ import { BlockContainer } from "@/components/layout/BlockContainer";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { FunctionComponent } from "react";
 import Link from "next/link";
+import { ProjectContent } from "@/lib/types";
 import { ProjectPreviewCard } from "@/components/ProjectPreviewCard";
 import { SectionHeader } from "@/components/SectionHeader";
+import { map } from "lodash";
 
-export const Projects: FunctionComponent = () => {
+export const Projects: FunctionComponent<{
+  data: ProjectContent[];
+}> = ({ data: projects }) => {
   return (
     <Box as="section" id="services" py="20" w={"full"}>
       <BlockContainer w={"full"} minH={"auto"}>
@@ -20,8 +24,8 @@ export const Projects: FunctionComponent = () => {
           justifyContent={"center"}
           flexWrap={"wrap"}
         >
-          {Array.from({ length: 3 }).map((_, index) => (
-            <ProjectPreviewCard key={index} />
+          {map(projects, (project) => (
+            <ProjectPreviewCard key={project.slug.current} project={project} />
           ))}
         </HStack>
 

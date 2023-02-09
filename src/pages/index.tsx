@@ -1,3 +1,10 @@
+import { ProjectContent, ServiceContent } from "@/lib/types";
+import {
+  SanityClient,
+  projectsPreviewQuery,
+  servicesQuery,
+} from "@/lib/sanityClient";
+
 import AboutSection from "@/features/landing/About";
 import Banner from "@/features/landing/Banner";
 import { Blog } from "@/features/landing/blog";
@@ -8,44 +15,48 @@ import { Header } from "@/components/Header/Header";
 import { NextPage } from "next";
 import { PageCOntentContainer } from "@/components/layout/PageCOntentContainer";
 import { Projects } from "@/features/landing/Projects";
-import { SanityClient } from "@/lib/sanityClient";
-import { ServiceContent } from "@/lib/types";
 import { Services } from "@/features/landing/Services";
-import { sortBy } from "lodash";
-const servicesQuery = `*[_type == "service"]{
-  title,
-  description,
-  image {
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
-  slug,
-  _createdAt
+
+const queries = `{
+  "services": ${servicesQuery},
+  "projects": ${projectsPreviewQuery}
 }`;
 
 export async function getStaticProps() {
-  const data = await SanityClient.fetch(servicesQuery);
+  try {
+    const data = await SanityClient.fetch(queries);
 
-  return {
-    props: {
-      services: sortBy(data, "_createdAt"),
-    },
-  };
+    const { services, projects } = data;
+
+    return {
+      props: {
+        services,
+        projects,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        services: [],
+        projects: [],
+      },
+    };
+  }
 }
 
-const Home: NextPage<{
+type HomePageProps = {
   services: ServiceContent[];
-}> = ({ services }) => {
+  projects: ProjectContent[];
+};
+
+const Home: NextPage<HomePageProps> = ({ services, projects }) => {
   return (
     <Box>
       <PageCOntentContainer Nav={Header}>
         <Banner />
         <AboutSection />
         <Services data={services} />
-        <Projects />
+        <Projects data={projects} />
         <Contact />
         <Blog />
         <Footer />
