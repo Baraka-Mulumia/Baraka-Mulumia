@@ -21,7 +21,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import { ReadBlogButton } from "./ReadBlogButton";
 import { map } from "lodash";
-import { navLinkList } from "@/data/navlinklist";
+import { navigationLinks } from "@/data/navigation-links";
 
 type MobileNavItemProps = {
   label: string;
@@ -51,7 +51,7 @@ export const NavigationDrawer: FunctionComponent = () => {
     "primary.dark.300"
   );
 
-  const draweBg = useColorModeValue("primary.light.100", "primary.dark.100");
+  const drawerBg = useColorModeValue("primary.light.100", "primary.dark.100");
 
   return (
     <>
@@ -73,7 +73,7 @@ export const NavigationDrawer: FunctionComponent = () => {
         isFullHeight={true}
       >
         <DrawerOverlay />
-        <DrawerContent bg={draweBg}>
+        <DrawerContent bg={drawerBg}>
           <DrawerHeader borderBottomWidth="1px">
             <Branding />
             <DrawerCloseButton />
@@ -84,7 +84,7 @@ export const NavigationDrawer: FunctionComponent = () => {
               spacing={4}
               align="stretch"
             >
-              {map(navLinkList, (navLink) => (
+              {map(navigationLinks, (navLink) => (
                 <MobileNavItem
                   key={navLink.name}
                   label={navLink.name}

@@ -4,7 +4,9 @@ import { AnimatedBottomBorder } from "../AnimatedBottomBorder";
 import { FunctionComponent } from "react";
 import Link from "next/link";
 
-export const Branding: FunctionComponent = () => {
+export const Branding: FunctionComponent<{
+  isWhite?: boolean;
+}> = ({ isWhite = false }) => {
   const headingColor = useColorModeValue(
     "text.light.headings",
     "text.dark.headings"
@@ -21,7 +23,7 @@ export const Branding: FunctionComponent = () => {
             base: "xl",
             md: "2xl",
           }}
-          color={headingColor}
+          color={isWhite ? "white" : headingColor}
         >
           Baraka M. Mulumia
         </Text>

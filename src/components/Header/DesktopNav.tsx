@@ -4,16 +4,18 @@ import { AnimatedBottomBorder } from "../AnimatedBottomBorder";
 import { FunctionComponent } from "react";
 import Link from "next/link";
 import { map } from "lodash";
-import { navLinkList } from "@/data/navlinklist";
+import { navigationLinks } from "@/data/navigation-links";
 
 type DesktopNavItemProps = {
   label: string;
   path: string;
+  isWhite?: boolean;
 };
 
 export const DesktopNavItem: FunctionComponent<DesktopNavItemProps> = ({
   label,
   path,
+  isWhite = false,
 }) => (
   <Link href={path}>
     <AnimatedBottomBorder
@@ -22,7 +24,7 @@ export const DesktopNavItem: FunctionComponent<DesktopNavItemProps> = ({
       placeContent={"center"}
       cursor={"pointer"}
     >
-      <Text>{label}</Text>
+      <Text variant={isWhite ? "text_white" : "primary"}>{label}</Text>
     </AnimatedBottomBorder>
   </Link>
 );
@@ -30,7 +32,7 @@ export const DesktopNavItem: FunctionComponent<DesktopNavItemProps> = ({
 export const DesktopNav = () => {
   return (
     <HStack alignItems={"center"}>
-      {map(navLinkList, (item) => (
+      {map(navigationLinks, (item) => (
         <DesktopNavItem label={item.name} key={item.href} path={item.href} />
       ))}
     </HStack>

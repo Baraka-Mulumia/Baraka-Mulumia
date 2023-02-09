@@ -1,14 +1,8 @@
-import {
-  Box,
-  Container,
-  HStack,
-  Hide,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { DesktopNav, DesktopNavItem } from "./DesktopNav";
+import { Box, Container, HStack, useColorModeValue } from "@chakra-ui/react";
 import React, { FunctionComponent } from "react";
 
 import { Branding } from "./Branding";
+import { DesktopNav } from "./DesktopNav";
 import { HiddenOnBreakPoint } from "../layout/HiddenOnBreakPoint";
 import { NavigationDrawer } from "./NavigationDrawer";
 import { ReadBlogButton } from "./ReadBlogButton";

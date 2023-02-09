@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from "@chakra-ui/react";
+import { Heading, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 
 import { FunctionComponent } from "react";
 
@@ -13,6 +13,11 @@ export const SectionHeader: FunctionComponent<SectionHeaderProps> = ({
   slogan,
   isWhite = false,
 }) => {
+  const headingColor = useColorModeValue(
+    "text.light.headings",
+    "text.dark.headings"
+  );
+
   return (
     <Stack as="header" spacing={2} align="center">
       <Text
@@ -22,8 +27,13 @@ export const SectionHeader: FunctionComponent<SectionHeaderProps> = ({
       >
         {slogan}
       </Text>
-      <Heading as="h2" size="xl">
-        {title}
+      <Heading
+        as="h2"
+        size="xl"
+        color={isWhite ? "white" : headingColor}
+        textTransform={"capitalize"}
+      >
+        {title}.
       </Heading>
     </Stack>
   );
