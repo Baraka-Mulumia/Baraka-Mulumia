@@ -21,10 +21,17 @@ const AboutSection: FunctionComponent = () => {
     "radial(orange.300 1px, transparent 1px)"
   );
 
+  const headingColor = useColorModeValue(
+    "text.light.headings",
+    "text.dark.headings"
+  );
+
   return (
     <Element name="about-section">
       <Container maxW={"7xl"} p="12">
-        <Heading as="h2">Learn more about Baraka</Heading>
+        <Heading as="h2" color={headingColor}>
+          Learn more about Baraka
+        </Heading>
         <Stack
           marginTop={{ base: "1", sm: "5" }}
           display="flex"

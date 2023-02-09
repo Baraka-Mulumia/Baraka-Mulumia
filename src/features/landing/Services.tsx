@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Stack } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 
 import { BlockContainer } from "@/components/layout/BlockContainer";
 import { FunctionComponent } from "react";
