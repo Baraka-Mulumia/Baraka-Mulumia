@@ -6,7 +6,7 @@ import Link from "next/link";
 export const ReadBlogButton: FunctionComponent = () => {
   return (
     <Link href="/blog">
-      <Button variant={"primaryOutline"}>My Blog</Button>
+      <Button variant={"primaryOutline"}>Blog</Button>
     </Link>
   );
 };
