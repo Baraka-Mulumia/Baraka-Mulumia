@@ -87,20 +87,26 @@ const AboutSection: FunctionComponent = () => {
                 ready to work with you to bring your vision to life.
               </Text>
             </Stack>
-            <HStack>
-              <Button variant="primary" rounded={"10px"}>
-                <Link href="/blog/my-story">My Story</Link>
-              </Button>
+            <HStack
+              spacing={{
+                base: "2",
+                sm: "4",
+                md: "6",
+              }}
+            >
               <ChakraLink
                 href="https://drive.google.com/file/d/1VW5Lp4JkNTaHC9mGtTazkQomt1QZkXh8/view?usp=sharing"
                 target={"_blank"}
                 _hover={{ textDecoration: "none" }}
                 _focus={{ boxShadow: "none", textDecoration: "none" }}
               >
-                <Button variant="primaryOutline" rounded={"10px"}>
+                <Button variant="primary" rounded={"10px"} px={8}>
                   Resume
                 </Button>
               </ChakraLink>
+              <Button variant="primaryOutline" rounded={"10px"} px={8}>
+                <Link href="/blog/my-story">My Story</Link>
+              </Button>
             </HStack>
           </Stack>
         </Stack>
