@@ -154,6 +154,12 @@ export const theme = extendTheme({
           fontSize: "32px",
           lineHeight: "48px",
         }),
+        text_white: (props: StyleFunctionProps) => ({
+          color: mode("primary.light.000", "primary.light.000")(props),
+          fontWeight: "400",
+          fontSize: "16px",
+          lineHeight: "24px",
+        }),
       },
     },
   },
