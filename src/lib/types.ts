@@ -16,3 +16,16 @@ export type ServiceContent = {
   image: SanityImage;
   slug: SanitySlug;
 };
+
+export type ProjectContent = {
+  title: string;
+  description: string;
+  mainImage: SanityImage;
+  slug: SanitySlug;
+  technologies: string[];
+  images?: SanityImage[];
+  status: string;
+  url: string;
+  sourceCodeUrl: string;
+  isHosted: boolean;
+};
