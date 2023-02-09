@@ -26,7 +26,7 @@ export const Projects: FunctionComponent = () => {
         </HStack>
 
         <HStack spacing={4} mt={8} justifyContent={"flex-end"}>
-          <Link href="/portgolio">
+          <Link href="/portfolio">
             <Button variant={"primary"} rightIcon={<ChevronRightIcon />}>
               View All Projects{" "}
             </Button>
