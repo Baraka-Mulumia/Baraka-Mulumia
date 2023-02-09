@@ -1,4 +1,4 @@
-import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 
 import { FunctionComponent } from "react";
 import Image from "next/image";
@@ -14,25 +14,43 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
   description,
   image,
 }) => {
+  const headingColor = useColorModeValue(
+    "text.light.headings",
+    "text.dark.headings"
+  );
+
   return (
-    <Stack maxW={"sm"}>
+    <Stack
+      maxW={"sm"}
+      h={{
+        base: "auto",
+        md: 72,
+      }}
+    >
       <Box
         h={{
           base: "50px",
-          md: "100px",
+          md: "80px",
         }}
         w={{
           base: "50px",
-          md: "100px",
+          md: "80px",
         }}
         position={"relative"}
       >
         <Image src={image} alt={"Baraka Mulumia - " + title} fill />
       </Box>
       <Stack>
-        <Heading as="h3" size="md">
-          {title}
-        </Heading>
+        <Box
+          h={{
+            base: "auto",
+            md: 12,
+          }}
+        >
+          <Heading as="h3" size="md" color={headingColor}>
+            {title}
+          </Heading>
+        </Box>
         <Text>{description}</Text>
       </Stack>
     </Stack>

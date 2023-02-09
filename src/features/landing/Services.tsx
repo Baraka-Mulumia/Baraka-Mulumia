@@ -4,17 +4,12 @@ import { BlockContainer } from "@/components/layout/BlockContainer";
 import { FunctionComponent } from "react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ServiceCard } from "@/components/ServiceCard";
+import { ServiceContent } from "@/lib/types";
+import { map } from "lodash";
 
-export const Services: FunctionComponent = () => {
-  const services = [
-    {
-      title: "Web application development",
-      description:
-        "Development of complex and scalable web applications using the popular JavaScript libraries, Next.Js, React, Vue.js, Redux and server-side technology Node.js.",
-      image: "/images/service-1.png",
-    },
-  ];
-
+export const Services: FunctionComponent<{
+  data: ServiceContent[];
+}> = ({ data: services }) => {
   return (
     <Box as="section" id="services" py="20">
       <BlockContainer>
@@ -29,11 +24,16 @@ export const Services: FunctionComponent = () => {
             md: "repeat(2, 1fr)",
             lg: "repeat(3, 1fr)",
           }}
+          px={2}
           gap={3}
         >
-          {Array.from({ length: 8 }).map((_, index) => (
-            <GridItem key={index}>
-              <ServiceCard {...services[0]} />
+          {map(services, (service) => (
+            <GridItem key={service.slug.current}>
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                image={service.image.asset.url}
+              />
             </GridItem>
           ))}
         </Grid>
