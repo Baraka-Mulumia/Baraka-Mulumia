@@ -1,10 +1,13 @@
 import { Box, BoxProps, Container, Stack } from "@chakra-ui/react";
 import { FunctionComponent, PropsWithChildren } from "react";
 
-export const BlockContainer: FunctionComponent<PropsWithChildren<BoxProps>> = ({
-  children,
-  ...props
-}) => {
+type BlockContainerProps = BoxProps & {
+  innerSpacingY?: number;
+};
+
+export const BlockContainer: FunctionComponent<
+  PropsWithChildren<BlockContainerProps>
+> = ({ children, innerSpacingY = 8, ...props }) => {
   return (
     <Box
       as={"section"}
@@ -16,7 +19,7 @@ export const BlockContainer: FunctionComponent<PropsWithChildren<BoxProps>> = ({
       {...props}
     >
       <Container maxW={"container.xl"} h={"full"}>
-        <Stack spacing={8} py={8} h={"full"}>
+        <Stack spacing={8} py={innerSpacingY} h={"full"}>
           {children}
         </Stack>
       </Container>
