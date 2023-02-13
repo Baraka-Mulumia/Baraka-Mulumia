@@ -71,13 +71,13 @@ const AboutSection: FunctionComponent = () => {
           <Stack flex="1" spacing={8}>
             <Stack flex="1" spacing={2}>
               <Text as="p" marginTop="2" fontSize={{ base: "sm", md: "lg" }}>
-                As a software developer, I am passionate about using technology
-                to solve complex problems and create meaningful solutions. With
-                a strong understanding of the latest programming languages,
-                frameworks and tools, I am always seeking new and creative ways
-                to bring ideas to life. My goal is to deliver high-quality,
-                user-friendly software that not only meets the needs of clients
-                but exceeds their expectations.
+                Baraka Mulumia is a skilled software developer with over 5 years
+                of experience in the industry. Having a strong background in
+                both front-end and back-end development and worked on a variety
+                of projects, ranging from small websites to large-scale
+                enterprise applications. I have a passion for using technology
+                to solve complex problems and enjoy staying up-to-date with the
+                latest developments in my field.
               </Text>
               <Text as="p" marginTop="2" fontSize={{ base: "sm", md: "lg" }}>
                 I believe in collaboration, continuous learning and staying up
