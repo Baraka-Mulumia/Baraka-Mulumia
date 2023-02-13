@@ -37,3 +37,32 @@ export const projectsPreviewQuery = `*[_type == "project"] | order(_createdAt as
   sourceCodeUrl,
   isHosted,
 }`;
+
+export const blogPostsQuery = `*[_type == "post"] | order(_updatedAt desc) {
+  title,
+  excerpt,
+  mainImage {
+    asset->{
+      _id,
+      url
+    },
+    alt
+  },
+  slug,
+  author->{
+    name,
+    image {
+      asset->{
+        _id,
+        url
+      },
+      alt
+    }
+  },
+  _createdAt,
+  publishedAt,
+  categories[]->{
+    title,
+    slug
+  },
+}`;

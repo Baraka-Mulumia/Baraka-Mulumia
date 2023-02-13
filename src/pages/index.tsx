@@ -7,7 +7,6 @@ import {
 
 import AboutSection from "@/features/landing/About";
 import Banner from "@/features/landing/Banner";
-import { Blog } from "@/features/landing/blog";
 import { Box } from "@chakra-ui/react";
 import { Contact } from "@/features/landing/Contact";
 import { Footer } from "@/components/Footer";
@@ -58,7 +57,6 @@ const Home: NextPage<HomePageProps> = ({ services, projects }) => {
         <Services data={services} />
         <Projects data={projects} />
         <Contact />
-        <Blog />
         <Footer />
       </PageCOntentContainer>
     </Box>
