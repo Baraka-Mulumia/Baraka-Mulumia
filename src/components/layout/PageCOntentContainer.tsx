@@ -30,7 +30,7 @@ export const PageCOntentContainer: FunctionComponent<
   useEffect(() => {
     // if user scrolls down, then the header will be sticky and vice versa
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         handleStickyStateChange(true);
       } else {
         handleStickyStateChange(false);
@@ -39,7 +39,7 @@ export const PageCOntentContainer: FunctionComponent<
 
     return () => {
       window.removeEventListener("scroll", () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 10) {
           handleStickyStateChange(true);
         } else {
           handleStickyStateChange(false);
