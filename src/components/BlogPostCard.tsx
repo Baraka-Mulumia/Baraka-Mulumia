@@ -12,7 +12,6 @@ import {
 
 import { AnimatedBottomBorder } from "./AnimatedBottomBorder";
 import { FunctionComponent } from "react";
-// import Image from "next/image";
 import Link from "next/link";
 import { PostContent } from "@/lib/types";
 import { format } from "date-fns";
@@ -52,6 +51,7 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
   publishedAt,
   slug,
   author,
+  _createdAt,
   categories,
   size = "large",
   isReverse = false,
@@ -77,7 +77,11 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
       >
         <Box maxH={80} overflow={"hidden"} borderRadius={"lg"}>
           {mainImage && (
-            <Image src={mainImage.asset.url} alt={""} objectFit={"cover"} />
+            <Image
+              src={mainImage.asset.url}
+              alt={"Baraka Mulumia - Blog Post: " + title}
+              objectFit={"cover"}
+            />
           )}
         </Box>
 
@@ -88,7 +92,6 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
               as="h3"
               p={1}
               fontSize={"2xl"}
-              noOfLines={1}
               color={headingColor}
               textTransform={"capitalize"}
             >
@@ -110,7 +113,7 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
             <Stack direction={"column"} spacing={0}>
               <Text fontSize={"sm"}>{author.name} </Text>
               <Text fontSize={"xs"}>
-                {format(new Date(publishedAt), "MMMM dd, yyyy")}
+                {format(new Date(publishedAt || _createdAt), "MMMM dd, yyyy")}
               </Text>
             </Stack>
           </HStack>

@@ -15,6 +15,7 @@ import { Element } from "react-scroll";
 import { FunctionComponent } from "react";
 import Link from "next/link";
 import React from "react";
+import { navigationLinks } from "@/data/navigation-links";
 
 const AboutSection: FunctionComponent = () => {
   const bgGradient = useColorModeValue(
@@ -55,7 +56,7 @@ const AboutSection: FunctionComponent = () => {
               <Image
                 borderRadius="lg"
                 src={"/images/showcase-img.png"}
-                alt="some good alt text"
+                alt="Baraka Mulumia | Software Developer | Full Stack Developer"
                 objectFit="contain"
               />
             </Box>
@@ -105,7 +106,14 @@ const AboutSection: FunctionComponent = () => {
                 </Button>
               </ChakraLink>
               <Button variant="primaryOutline" rounded={"10px"} px={8}>
-                <Link href="/blog/my-story">My Story</Link>
+                <Link
+                  href={
+                    navigationLinks.find((link) => link.name === "My Story")
+                      ?.href || "/"
+                  }
+                >
+                  My Story
+                </Link>
               </Button>
             </HStack>
           </Stack>

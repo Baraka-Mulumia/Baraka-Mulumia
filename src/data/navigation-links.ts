@@ -9,7 +9,7 @@ export const navigationLinks = [
   },
   {
     name: "My Story",
-    href: "/blog/my-story",
+    href: "/blog/the-road-less-traveled-my-uncommon-path-to-becoming-a-developer",
   },
   {
     name: "Get in Touch",

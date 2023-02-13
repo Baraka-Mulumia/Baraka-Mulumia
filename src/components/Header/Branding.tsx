@@ -1,4 +1,4 @@
-import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { Text, useColorModeValue } from "@chakra-ui/react";
 
 import { AnimatedBottomBorder } from "../AnimatedBottomBorder";
 import { FunctionComponent } from "react";

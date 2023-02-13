@@ -1,4 +1,12 @@
-import { Box, HStack, Heading, Link, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Heading,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { FunctionComponent, PropsWithChildren } from "react";
 
 import { AnimatedBottomBorder } from "./AnimatedBottomBorder";
@@ -26,6 +34,11 @@ const ProjectPreviewLink: FunctionComponent<
 export const ProjectPreviewCard: FunctionComponent<{
   project: ProjectContent;
 }> = ({ project }) => {
+  const bgColor = useColorModeValue(
+    "backgrounds.light.100",
+    "backgrounds.dark.200"
+  );
+
   return (
     <Stack
       maxW={"sm"}
@@ -37,10 +50,13 @@ export const ProjectPreviewCard: FunctionComponent<{
         md: 96,
       }}
       boxShadow={"xl"}
+      borderRadius={"10px"}
+      bg={bgColor}
       _hover={{
         boxShadow: "2xl",
+        transform: "translateY(-5px)",
       }}
-      borderRadius={"10px"}
+      transition={"all 0.2s ease-in-out"}
     >
       <ProjectPreviewLink href={project.url}>
         <Box
@@ -54,7 +70,7 @@ export const ProjectPreviewCard: FunctionComponent<{
         >
           <Image
             src={project.mainImage.asset.url}
-            alt={"Baraka Mulumia - Web application development"}
+            alt={"Baraka Mulumia - Project: " + project.title}
             fill
           />
         </Box>

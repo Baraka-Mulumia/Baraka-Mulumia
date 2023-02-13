@@ -37,7 +37,7 @@ export const SimpleBanner: FunctionComponent<SimpleBannerProps> = ({
         textAlign={"center"}
         gap={4}
       >
-        <Heading as="h1" size="2xl">
+        <Heading as="h1" size="2xl" textTransform={"capitalize"}>
           {title}
         </Heading>
 

@@ -45,4 +45,5 @@ export type PostContent = {
     slug: SanitySlug;
   }[];
   body: string;
+  _createdAt: string;
 };

@@ -28,7 +28,6 @@ const projectsQuery = `*[_type == "project"] | order(_createdAt desc) {
 export async function getStaticProps() {
   try {
     const data = await SanityClient.fetch(projectsQuery);
-    console.log(data);
     return {
       props: {
         projects: data,
@@ -49,9 +48,9 @@ const Portfolio: NextPage<{
   return (
     <PageCOntentContainer Nav={Header}>
       <SimpleBanner
-        title="Art of Code"
+        title="Some of my projects"
         description={
-          "As a software developer, I understand the importance of bridging the gap between a client's vision and my expertise to achieve powerful results. This is why I am proud to present my personal portfolio, where I can showcase the projects I've worked on and the impact I've made"
+          "As a software developer, I am Building digital solutions, one line of code at a time, and I understand the importance of bridging the gap between a client's vision and my expertise to achieve powerful results. This is why I am proud to present my personal portfolio, where I can showcase the projects I've worked on and the impact I've made"
         }
       />
       <ProjectList data={projects} spacing={8} />
