@@ -145,6 +145,7 @@ export const theme = extendTheme({
     Text: {
       baseStyle: (props: StyleFunctionProps) => ({
         color: mode("text.light.primary", "text.dark.primary")(props),
+        fontFamily: inter.style.fontFamily,
       }),
 
       variants: {
@@ -167,6 +168,7 @@ export const theme = extendTheme({
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
+        fontFamily: inter.style.fontFamily,
         color: (props: StyleFunctionProps) =>
           mode("primary.light.300", "text.dark.primary")(props),
         bg:
