@@ -19,6 +19,15 @@ export default defineType({
         maxLength: 96,
       },
     }),
+
+    defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      description:
+        'This ends up on summary pages, on Google, when people share your post in social media.',
+    }),
+
     defineField({
       name: 'author',
       title: 'Author',

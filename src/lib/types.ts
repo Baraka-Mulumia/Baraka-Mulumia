@@ -29,3 +29,20 @@ export type ProjectContent = {
   sourceCodeUrl: string;
   isHosted: boolean;
 };
+
+export type PostContent = {
+  title: string;
+  slug: SanitySlug;
+  excerpt: string;
+  mainImage: SanityImage;
+  author: {
+    name: string;
+    image: SanityImage;
+  };
+  publishedAt: string;
+  categories: {
+    title: string;
+    slug: SanitySlug;
+  }[];
+  body: string;
+};
