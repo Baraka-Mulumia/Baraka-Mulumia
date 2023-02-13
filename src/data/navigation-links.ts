@@ -4,12 +4,12 @@ export const navigationLinks = [
     href: "/",
   },
   {
-    name: "My Story",
-    href: "/blog/my-story",
-  },
-  {
     name: "Portfolio",
     href: "/portfolio",
+  },
+  {
+    name: "My Story",
+    href: "/blog/my-story",
   },
   {
     name: "Get in Touch",
