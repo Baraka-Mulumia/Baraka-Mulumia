@@ -44,10 +44,10 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
         <Box
           h={{
             base: "auto",
-            md: 12,
+            md: 16,
           }}
         >
-          <Heading as="h3" size="md" color={headingColor}>
+          <Heading as="h3" size="md" color={headingColor} noOfLines={2}>
             {title}
           </Heading>
         </Box>
