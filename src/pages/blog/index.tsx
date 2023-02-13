@@ -1,6 +1,8 @@
 import { SanityClient, blogPostsQuery } from "@/lib/sanityClient";
 
 import { BlogPosts } from "@/features/blog";
+import { Contact } from "@/features/landing/Contact";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
 import { NextPage } from "next";
 import { PageCOntentContainer } from "@/components/layout/PageCOntentContainer";
