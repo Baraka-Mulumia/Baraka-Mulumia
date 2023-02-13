@@ -17,7 +17,7 @@ export const BlogPosts: FunctionComponent<{
 
   return (
     <Box as="section" id="blog" py="20" w={"full"}>
-      <BlockContainer w={"full"}>
+      <BlockContainer w={"full"} justifyContent={"start"} alignItems={"start"}>
         <Stack spacing={4}>
           <BlogPostCard size={"large"} {...firstBlogPost} />
 

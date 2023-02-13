@@ -79,7 +79,7 @@ export const theme = extendTheme({
       light: {
         "000": "#FFFFFF",
         100: "#F7FAFC",
-        200: "#FAF5E4",
+        200: "#EAE0D5",
       },
       dark: {
         "000": "#000000",
