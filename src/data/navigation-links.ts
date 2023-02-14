@@ -8,11 +8,11 @@ export const navigationLinks = [
     href: "/portfolio",
   },
   {
-    name: "My Story",
-    href: "/blog/the-road-less-traveled-my-uncommon-path-to-becoming-a-developer",
-  },
-  {
     name: "Get in Touch",
     href: "/get-in-touch",
+  },
+  {
+    name: "My Story",
+    href: "/blog/the-road-less-traveled-my-uncommon-path-to-becoming-a-developer",
   },
 ];
