@@ -67,8 +67,8 @@ export const ContactForm: FunctionComponent<{
             </FormControl>
           </Stack>
 
-          <Stack placeItems={"center"} mt={5}>
-            <Button variant={"primary"}>Send</Button>
+          <Stack placeItems={"center"} py={5}>
+            <Button variant={"primary"}>Send Message</Button>
           </Stack>
         </Stack>
       </form>
