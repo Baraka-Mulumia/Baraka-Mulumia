@@ -8,7 +8,7 @@ import {
   useState,
 } from 'react';
 
-import { NotificationType } from '@/types';
+import { NotificationType } from '@/lib/types';
 import { useToast } from '@chakra-ui/react';
 
 type NotificationContextType = {
