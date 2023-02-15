@@ -6,8 +6,8 @@ import { Contact } from '@/features/landing/Contact';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/header';
 import { NextPage } from 'next';
+import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
-import { SimpleBanner } from '@/components/SimpleBanner';
 
 export async function getStaticProps() {
   try {
@@ -34,9 +34,9 @@ type BlogPageProps = {
 const Blog: NextPage<BlogPageProps> = ({ posts }) => {
   return (
     <PageWrapper Nav={Header}>
-      <SimpleBanner
-        title="Baraka's Thoughts and Musings"
-        description='Welcome to my blog page! This page is a collection of my thoughts and musings on various tech topics. From My Journey to coding, which explores my tech story, to the future of technology, in which  i delve into what lies ahead, each post offers a unique perspective and insight into the world around us. I hope my writing will inspire you, challenge your thinking, and spark meaningful conversations. Thank you for taking the time to read my blog.'
+      <PageHeroSection
+        heading='Insights and Stories from the World of Software Development'
+        leadText='Welcome to TechTalk, your go-to source for the latest news, trends, and stories from the world of technology and software development. Join me on a journey through the exciting and constantly evolving world of software development, as we explore the latest innovations, share inspiring developer stories, and offer practical tips and insights to help you succeed in your tech career'
       />
       <BlogPosts posts={posts} />
       <Contact />
