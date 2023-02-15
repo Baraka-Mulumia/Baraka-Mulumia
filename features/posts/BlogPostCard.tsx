@@ -61,8 +61,6 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
     'text.dark.headings',
   );
 
-  console.log(categories);
-
   return (
     <Link href={`/tech-stories/${slug.current}`}>
       <Stack

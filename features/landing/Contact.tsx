@@ -16,8 +16,8 @@ export const Contact: FunctionComponent = () => {
           md: 20,
         }}>
         <BlockHeader
-          title='Lets talk about your next project'
-          slogan='Expertly designed, Expertly created'
+          slogan='Together We Can Build Your Dream'
+          title="Let's Connect and Bring Your Vision to Life"
         />
         <Flex
           w={'full'}

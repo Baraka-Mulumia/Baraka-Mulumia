@@ -5,10 +5,10 @@ import { Contact } from '@/features/landing/Contact';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/header';
 import { NextPage } from 'next';
+import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
 import { Project } from '@/lib/types';
 import { ProjectList } from '@/features/portfolio/ProjectList';
-import { SimpleBanner } from '@/components/SimpleBanner';
 
 export async function getStaticProps() {
   try {
@@ -32,12 +32,11 @@ const Portfolio: NextPage<{
 }> = ({ projects }) => {
   return (
     <PageWrapper Nav={Header}>
-      <SimpleBanner
-        title='Some of my projects'
-        description={
-          "As a software developer, I am Building digital solutions, one line of code at a time, and I understand the importance of bridging the gap between a client's vision and my expertise to achieve powerful results. This is why I am proud to present my personal portfolio, where I can showcase the projects I've worked on and the impact I've made"
-        }
+      <PageHeroSection
+        heading='From Vision to Reality: Innovative Projects'
+        leadText='Explore some of the innovative projects I have worked on and discover how I can help bring your vision to life. I am passionate about using technology to create exceptional results that make a difference'
       />
+
       <BlockContainer>
         <ProjectList data={projects} />
       </BlockContainer>

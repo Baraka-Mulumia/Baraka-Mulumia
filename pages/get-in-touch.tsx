@@ -20,6 +20,7 @@ import { GetInTouchForm } from '@/features/contact/GetInTouchForm';
 import { Header } from '@/components/header';
 import { IconType } from 'react-icons';
 import { NextPage } from 'next';
+import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
 import { SocialMediaIcons } from '@/components/SocialMediaIcons';
 import { map } from 'lodash';
@@ -83,6 +84,13 @@ const Contact: NextPage = () => {
 
   return (
     <PageWrapper Nav={Header}>
+      <PageHeroSection
+        heading={"Let's Connect and Bring Your Vision to Life"}
+        leadText={
+          "I'm excited to hear from you and discuss your technology needs. Let's work together to create innovative solutions that will exceed your expectations."
+        }
+      />
+
       <BlockContainer alignItems={'start'}>
         <Flex justifyContent={'center'} alignItems={'center'}>
           <Box
