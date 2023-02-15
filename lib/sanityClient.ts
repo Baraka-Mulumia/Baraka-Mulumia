@@ -1,4 +1,5 @@
 import { createClient } from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
 
 export const SanityClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -6,6 +7,10 @@ export const SanityClient = createClient({
   //   useCdn: true,
   apiVersion: '2021-03-25',
 });
+
+export function urlFor(source: any) {
+  return imageUrlBuilder(SanityClient).image(source);
+}
 
 // Queries
 export const SERVICES_QUERY = `*[_type == "service"] | order(_createdAt asc) {
