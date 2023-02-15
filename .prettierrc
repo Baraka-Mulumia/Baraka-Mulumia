@@ -1,1 +1,10 @@
-{}
+{
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "semi": true,
+  "singleQuote": true,
+  "useTabs": false,
+  "trailingComma": "all",
+  "jsxSingleQuote": true
+}

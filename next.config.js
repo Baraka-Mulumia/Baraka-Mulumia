@@ -4,7 +4,7 @@ const nextConfig = {
 
   // allow image domains
   images: {
-    domains: ["cdn.sanity.io"],
+    domains: ['cdn.sanity.io'],
   },
 };
 
