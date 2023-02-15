@@ -24,7 +24,7 @@ export const ProjectPreview: FunctionComponent<{
 
         <HStack spacing={4} mt={8} justifyContent={'flex-end'}>
           <Link href='/portfolio'>
-            <Button variant={'primary'} rightIcon={<ChevronRightIcon />}>
+            <Button variant={'primaryOutline'} rightIcon={<ChevronRightIcon />}>
               View All Projects{' '}
             </Button>
           </Link>

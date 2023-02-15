@@ -52,3 +52,17 @@ export type HomePageProps = {
   services: Service[];
   projects: Project[];
 };
+
+export type NotificationType = {
+  id: string;
+  title: string;
+  message?: string;
+  type: 'success' | 'error' | 'info' | 'warning';
+};
+
+export type InquiryInput = {
+  fullName: string;
+  email: string;
+  service?: string;
+  message?: string;
+};

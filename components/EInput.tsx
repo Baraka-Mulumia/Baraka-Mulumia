@@ -16,6 +16,11 @@ type EInputProps = {
   isRequired?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   colorVariant?: 'primary' | 'secondary';
+  register?: any;
+  formFieldName: string;
+  registerProps?: any;
+  isError?: boolean;
+  errorMessage?: string;
 };
 
 export const EInput: FunctionComponent<EInputProps> = ({
@@ -26,6 +31,11 @@ export const EInput: FunctionComponent<EInputProps> = ({
   isRequired = false,
   onChange,
   colorVariant = 'primary',
+  register,
+  formFieldName,
+  registerProps,
+  isError = false,
+  errorMessage,
 }) => {
   return (
     <FormControl>
@@ -43,9 +53,15 @@ export const EInput: FunctionComponent<EInputProps> = ({
           fontSize: 'sm',
           fontStyle: 'italic',
         }}
+        {...register(formFieldName, { ...registerProps })}
       />
-      {helperText && (
+      {helperText && !isError && (
         <FormHelperText fontSize={'xs'}>{helperText}</FormHelperText>
+      )}
+      {isError && (
+        <FormHelperText fontSize={'xs'} color={'red.500'}>
+          {errorMessage}
+        </FormHelperText>
       )}
     </FormControl>
   );
