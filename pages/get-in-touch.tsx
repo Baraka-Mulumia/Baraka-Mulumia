@@ -24,6 +24,7 @@ import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
 import { SocialMediaIcons } from '@/components/SocialMediaIcons';
 import { map } from 'lodash';
+import { uuid } from '@/lib/functions';
 
 const ContactItem: FunctionComponent<
   {
@@ -112,7 +113,7 @@ const Contact: NextPage = () => {
                           <ContactItem
                             text={item.text}
                             Icon={item.Icon}
-                            key={item.text}
+                            key={uuid()}
                             linkType={item.type}
                           />
                         ))}

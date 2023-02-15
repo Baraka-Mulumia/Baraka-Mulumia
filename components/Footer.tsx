@@ -6,6 +6,7 @@ import { FunctionComponent } from 'react';
 import { NAVIGATION_LINKS_LIST } from '@/constants';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { map } from 'lodash';
+import { uuid } from '@/lib/functions';
 
 DesktopNav;
 
@@ -38,7 +39,7 @@ export const Footer: FunctionComponent = () => {
         {map(NAVIGATION_LINKS_LIST, item => (
           <DesktopNavItem
             label={item.name}
-            key={item.href}
+            key={uuid()}
             path={item.href}
             isWhite={true}
           />

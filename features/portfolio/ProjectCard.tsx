@@ -16,6 +16,7 @@ import { ExternalLink } from '@/components/ExternalLink';
 import Image from 'next/image';
 import { Project } from '@/lib/types';
 import { map } from 'lodash';
+import { uuid } from '@/lib/functions';
 
 type ProjectDetailCardProps = {
   project: Project;
@@ -105,7 +106,7 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
             {technologies &&
               technologies.length > 0 &&
               map(technologies, tech => (
-                <TechnologyBadge name={tech} key={tech} />
+                <TechnologyBadge name={tech} key={uuid()} />
               ))}
           </HStack>
 

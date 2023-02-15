@@ -16,6 +16,7 @@ import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { map } from 'lodash';
+import { uuid } from '@/lib/functions';
 
 type BlogCardProps = BlogPost & {
   size?: 'large' | 'small';
@@ -35,7 +36,7 @@ const BlogTags: FunctionComponent<IBlogTags> = ({
     <HStack spacing={2} marginTop={marginTop}>
       {map(tags, (tag: string) => {
         return (
-          <Tag size={'md'} variant='solid' colorScheme='orange' key={tag}>
+          <Tag size={'md'} variant='solid' colorScheme='orange' key={uuid()}>
             {tag}
           </Tag>
         );

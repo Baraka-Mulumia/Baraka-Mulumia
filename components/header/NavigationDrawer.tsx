@@ -22,6 +22,7 @@ import Link from 'next/link';
 import { NAVIGATION_LINKS_LIST } from '@/constants';
 import { ReadBlogButton } from './ReadBlogButton';
 import { map } from 'lodash';
+import { uuid } from '@/lib/functions';
 
 type MobileNavItemProps = {
   label: string;
@@ -84,7 +85,7 @@ export const NavigationDrawer: FunctionComponent = () => {
               align='stretch'>
               {map(NAVIGATION_LINKS_LIST, navLink => (
                 <MobileNavItem
-                  key={navLink.name}
+                  key={uuid()}
                   label={navLink.name}
                   href={navLink.href}
                   onClick={onClose}

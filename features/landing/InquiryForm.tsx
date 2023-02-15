@@ -2,12 +2,13 @@ import { Flex, Stack } from '@chakra-ui/react';
 
 import { BlockContainer } from '@/containers/BlockContainer';
 import { BlockHeader } from '@/components/BlockHeader';
-import { ContactForm } from '../contact/ContactForm';
 import { FunctionComponent } from 'react';
+import { ProjectInquiryForm } from '../contact/ProjectInquiryForm';
+import { Service } from '@/lib/types';
 
-// ! TODO:  HANDLE SUBMIT
-
-export const Contact: FunctionComponent = () => {
+export const InquiryForm: FunctionComponent<{
+  services: Service[];
+}> = ({ services }) => {
   return (
     <BlockContainer w={'full'} minH={'auto'}>
       <Stack
@@ -29,7 +30,7 @@ export const Contact: FunctionComponent = () => {
             base: 5,
             md: 10,
           }}>
-          <ContactForm colorVariant={'secondary'} />
+          <ProjectInquiryForm colorVariant={'secondary'} services={services} />
         </Flex>
       </Stack>
     </BlockContainer>

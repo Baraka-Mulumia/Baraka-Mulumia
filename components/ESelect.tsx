@@ -8,6 +8,7 @@ import {
 
 import { FunctionComponent } from 'react';
 import { map } from 'lodash';
+import { uuid } from '@/lib/functions';
 
 type ESelectProps = {
   label: string;
@@ -55,7 +56,7 @@ export const ESelect: FunctionComponent<ESelectProps> = ({
 
         {map(options, (option, index) => (
           <option
-            key={index}
+            key={uuid()}
             value={option}
             style={{
               color: '#733D47',

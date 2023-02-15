@@ -1,35 +1,44 @@
-import { ALL_PROJECTS_QUERY, SanityClient } from '@/lib/sanityClient';
+import {
+  ALL_PROJECTS_QUERY,
+  SERVICES_TITLES_QUERY,
+  SanityClient,
+} from '@/lib/sanityClient';
+import { HomePageProps, Project } from '@/lib/types';
 
 import { BlockContainer } from '@/containers/BlockContainer';
-import { Contact } from '@/features/landing/Contact';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/header';
+import { InquiryForm } from '@/features/landing/InquiryForm';
 import { NextPage } from 'next';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
-import { Project } from '@/lib/types';
 import { ProjectList } from '@/features/portfolio/ProjectList';
+
+const queries = `{
+  "services": ${SERVICES_TITLES_QUERY},
+  "projects": ${ALL_PROJECTS_QUERY}
+}`;
 
 export async function getStaticProps() {
   try {
-    const data = await SanityClient.fetch(ALL_PROJECTS_QUERY);
+    const data = await SanityClient.fetch(queries);
     return {
       props: {
-        projects: data,
+        projects: data.projects,
+        services: data.services,
       },
     };
   } catch (error) {
     return {
       props: {
         projects: [],
+        services: [],
       },
     };
   }
 }
 
-const Portfolio: NextPage<{
-  projects: Project[];
-}> = ({ projects }) => {
+const Portfolio: NextPage<HomePageProps> = ({ projects, services }) => {
   return (
     <PageWrapper Nav={Header}>
       <PageHeroSection
@@ -40,7 +49,7 @@ const Portfolio: NextPage<{
       <BlockContainer>
         <ProjectList data={projects} />
       </BlockContainer>
-      <Contact />
+      <InquiryForm services={services} />
       <Footer />
     </PageWrapper>
   );

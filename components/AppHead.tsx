@@ -1,6 +1,6 @@
-import { FunctionComponent } from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
+import { FunctionComponent } from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 type SeoProps = {
   title?: string;
@@ -15,32 +15,32 @@ type SeoProps = {
 };
 
 export const AppHead: FunctionComponent<SeoProps> = ({
-  description = "Baraka Mulumia | Building digital solutions, one line of code at a time.",
-  author = "Baraka Mulumia",
-  title = "Baraka M Mulumia",
-  iconUrl = "/ic_launcher-web.png",
+  description = 'Baraka Mulumia | Building digital solutions, one line of code at a time.',
+  author = 'Baraka Mulumia',
+  title = 'Baraka M Mulumia',
+  iconUrl = '/ic_launcher-web.png',
   meta = [
     {
-      name: "viewport",
-      content: "width=device-width, initial-scale=1.0",
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1.0',
     },
   ],
 }) => {
   const { asPath } = useRouter();
-  const currentUrl = asPath.split("/")[1];
+  const currentUrl = asPath.split('/')[1];
 
-  const currentPath = currentUrl?.includes("?")
+  const currentPath = currentUrl?.includes('?')
     ? currentUrl?.slice(
         0,
-        currentUrl.split("")?.findIndex((char) => char === "?") ??
-          currentUrl.length - 1
+        currentUrl.split('')?.findIndex(char => char === '?') ??
+          currentUrl.length - 1,
       )
     : currentUrl;
 
   const pageTitle = `${title}  ${
     currentPath
-      ? " | " + currentPath[0]?.toUpperCase() + currentPath.slice(1)
-      : ""
+      ? ' | ' + currentPath[0]?.toUpperCase() + currentPath.slice(1)
+      : ''
   }`;
 
   const metaData = [
@@ -81,28 +81,28 @@ export const AppHead: FunctionComponent<SeoProps> = ({
   return (
     <Head>
       <title>{pageTitle}</title>
-      <meta charSet="UTF-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="language" content="en" />
+      <meta charSet='UTF-8' />
+      <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+      <meta name='language' content='en' />
       {metaData.map(({ name, content }, i) => (
         <meta key={i} name={name} content={content} />
       ))}
-      <link rel="apple-touch-icon" href={iconUrl} key="apple" />
+      <link rel='apple-touch-icon' href={iconUrl} key='apple' />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
         href={iconUrl}
-        key="icon32"
+        key='icon32'
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
         href={iconUrl}
-        key="icon16"
+        key='icon16'
       />
-      <link rel="icon" href={iconUrl} key="favicon" />
+      <link rel='icon' href={iconUrl} key='favicon' />
     </Head>
   );
 };

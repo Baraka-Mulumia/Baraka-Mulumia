@@ -5,6 +5,7 @@ import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { NAVIGATION_LINKS_LIST } from '@/constants';
 import { map } from 'lodash';
+import { uuid } from '@/lib/functions';
 
 type DesktopNavItemProps = {
   label: string;
@@ -32,7 +33,7 @@ export const DesktopNav = () => {
   return (
     <HStack alignItems={'center'}>
       {map(NAVIGATION_LINKS_LIST, item => (
-        <DesktopNavItem label={item.name} key={item.href} path={item.href} />
+        <DesktopNavItem label={item.name} key={uuid()} path={item.href} />
       ))}
     </HStack>
   );

@@ -4,7 +4,7 @@ import imageUrlBuilder from '@sanity/image-url';
 export const SanityClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: 'production',
-  //   useCdn: true,
+  useCdn: true,
   apiVersion: '2021-03-25',
 });
 
@@ -25,6 +25,11 @@ export const SERVICES_QUERY = `*[_type == "service"] | order(_createdAt asc) {
   },
   slug,
   _createdAt
+}`;
+
+export const SERVICES_TITLES_QUERY = `*[_type == "service"] | order(_createdAt asc) {
+  title,
+  slug,
 }`;
 
 export const BLOG_POSTS_QUERY = `*[_type == "post"] | order(_updatedAt desc) {
