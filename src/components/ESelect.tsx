@@ -26,11 +26,10 @@ export const ESelect: FunctionComponent<ESelectProps> = ({
           {isRequired ? "*" : ""}
         </Text>
       </FormLabel>
-      <Select onChange={onChange} color={"primary.light.100"}>
+      <Select onChange={onChange} color={"primary.light.100"} defaultValue={""}>
         <option
           value=""
           disabled
-          selected
           style={{
             color: "#733D47",
           }}
