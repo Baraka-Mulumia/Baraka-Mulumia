@@ -1,6 +1,5 @@
 import {
   Box,
-  HStack,
   Heading,
   Link,
   Stack,
