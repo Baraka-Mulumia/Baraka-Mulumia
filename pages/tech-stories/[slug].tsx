@@ -1,5 +1,9 @@
-import { Flex, Heading, Stack, Text } from '@chakra-ui/react';
-import { SINGLE_BLOG_POST_QUERY, SanityClient } from '@/lib/sanityClient';
+import { Box, Container, Flex, Heading, Stack } from '@chakra-ui/react';
+import {
+  SINGLE_BLOG_POST_QUERY,
+  SanityClient,
+  urlFor,
+} from '@/lib/sanityClient';
 
 import { BlockContainer } from '@/containers/BlockContainer';
 import { Footer } from '@/components/Footer';
@@ -7,6 +11,8 @@ import { Header } from '@/components/header';
 import Image from 'next/image';
 import { NextPage } from 'next';
 import { PageWrapper } from '@/containers/PageWrapper';
+import { PortableText } from '@portabletext/react';
+import { SanityAsset } from '@sanity/image-url/lib/types/types';
 import { map } from 'lodash';
 
 const postSlugsQuery = `*[_type == "post"]{
@@ -37,6 +43,37 @@ export async function getStaticProps({ params: { slug } }: any) {
 
 type ReadBlogPostPageProps = {
   post: any;
+};
+
+const ptComponents = {
+  types: {
+    image: ({ value }: { value: SanityAsset }) => {
+      console.log(value);
+
+      if (!value?.asset?._ref) {
+        return null;
+      }
+
+      return (
+        <Box
+          position={'relative'}
+          w={'80%'}
+          h={'400px'}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          alignSelf={'center'}>
+          <Image
+            alt={value.alt || ' '}
+            loading='lazy'
+            className='rounded-lg'
+            src={urlFor(value.asset).url()}
+            fill
+          />
+        </Box>
+      );
+    },
+  },
 };
 
 const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
@@ -79,7 +116,12 @@ const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
               }}
             />
           </Flex>
-          <Text>{post.excerpt}</Text>
+
+          <Container maxW={'container.md'}>
+            <Stack>
+              <PortableText value={post.body} components={ptComponents} />
+            </Stack>
+          </Container>
         </Stack>
       </BlockContainer>
 
