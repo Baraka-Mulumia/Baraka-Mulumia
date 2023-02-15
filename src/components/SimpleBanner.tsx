@@ -23,7 +23,7 @@ export const SimpleBanner: FunctionComponent<SimpleBannerProps> = ({
 
   return (
     <Stack
-      minH={96}
+      minH={56}
       w={"full"}
       placeContent={"center"}
       placeItems={"center"}

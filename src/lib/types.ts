@@ -18,18 +18,17 @@ export type ServiceContent = {
 };
 
 export type ProjectContent = {
+  _id: string;
   title: string;
   description: string;
   mainImage: SanityImage;
   slug: SanitySlug;
   technologies: string[];
-  images?: SanityImage[];
   status: string;
   url: string;
   sourceCodeUrl: string;
   isHosted: boolean;
 };
-
 export type PostContent = {
   title: string;
   slug: SanitySlug;

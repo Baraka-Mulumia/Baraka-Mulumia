@@ -36,3 +36,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+John Doe is a skilled software developer with over 5 years of experience in the industry. He has a strong background in both front-end and back-end development and has worked on a variety of projects, ranging from small websites to large-scale enterprise applications. John has a passion for using technology to solve complex problems and enjoys staying up-to-date with the latest developments in his field.
+
+John holds a Bachelor's degree in Computer Science from XYZ University and has a solid understanding of programming languages such as JavaScript, Python, and Java. He has a knack for writing clean, maintainable code and has a strong attention to detail.
+
+In his current role at ABC Company, John works on the development team and is responsible for creating and maintaining high-quality software solutions. He is an effective communicator and works well in a team environment, always striving to share knowledge and help his colleagues.
+
+In his free time, John enjoys tinkering with new technologies and expanding his skillset. He is also an avid gamer and enjoys spending time with his family and friends.
