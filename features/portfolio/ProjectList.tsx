@@ -3,6 +3,7 @@ import React, { FunctionComponent } from 'react';
 
 import { Project } from '@/lib/types';
 import { ProjectCard } from './ProjectCard';
+import { TransitionMotion } from '@/components/motion/Transition.motion';
 import { map } from 'lodash';
 
 type ProjectListProps = {
@@ -28,9 +29,18 @@ export const ProjectList: FunctionComponent<ProjectListProps> = ({
           colSpan={{
             lg: index == 0 ? 2 : 1,
           }}>
-          <Flex direction='column' justifyContent='center' alignItems='center'>
-            <ProjectCard project={project} />
-          </Flex>
+          <TransitionMotion
+            key={'project-card'}
+            animate={{
+              scale: [0.9, 1],
+            }}>
+            <Flex
+              direction='column'
+              justifyContent='center'
+              alignItems='center'>
+              <ProjectCard project={project} />
+            </Flex>
+          </TransitionMotion>
         </GridItem>
       ))}
     </Grid>

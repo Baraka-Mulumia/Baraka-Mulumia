@@ -16,6 +16,7 @@ import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { NAVIGATION_LINKS_LIST } from '@/constants';
 import React from 'react';
+import { TransitionMotion } from '@/components/motion/Transition.motion';
 
 const AboutSection: FunctionComponent = () => {
   const bgGradient = useColorModeValue(
@@ -50,12 +51,16 @@ const AboutSection: FunctionComponent = () => {
               zIndex='2'
               marginLeft={{ base: '0', sm: '5%' }}
               marginTop='5%'>
-              <Image
-                borderRadius='lg'
-                src={'/images/showcase-img.png'}
-                alt='Baraka Mulumia | Software Developer | Full Stack Developer'
-                objectFit='contain'
-              />
+              <TransitionMotion
+                key={'showcase-img'}
+                transition={{ duration: 2 }}>
+                <Image
+                  borderRadius='lg'
+                  src={'/images/showcase-img.png'}
+                  alt='Baraka Mulumia | Software Developer | Full Stack Developer'
+                  objectFit='contain'
+                />
+              </TransitionMotion>
             </Box>
             <Box zIndex='1' width='100%' position='absolute' height='100%'>
               <Box

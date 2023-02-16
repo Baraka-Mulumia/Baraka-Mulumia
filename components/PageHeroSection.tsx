@@ -9,6 +9,7 @@ import {
 import { FunctionComponent, PropsWithChildren } from 'react';
 
 import { SpyLink } from './SpyLink';
+import { TransitionMotion } from './motion/Transition.motion';
 
 type HeroProps = PropsWithChildren<{
   heading: string;
@@ -40,23 +41,25 @@ export const PageHeroSection: FunctionComponent<HeroProps> = ({
         pt={isHomePage ? 0 : { base: 20, md: 32 }}
         pb={isHomePage ? 0 : { base: 4, md: 8 }}
         maxW={isHomePage ? '600px' : 'container.md'}>
-        <Heading
-          as='h2'
-          fontSize={{
-            base: '3xl',
-            sm: '4xl',
-            md: '5xl',
-          }}
-          color={headingColor}
-          lineHeight={'100%'}
-          textAlign={'center'}
-          fontFamily={'heading'}
-          fontWeight={700}
-          textTransform={'capitalize'}>
-          {heading}
-        </Heading>
-        <Box w={'90%'}>
-          <Text fontSize={isHomePage ? 'sm' : 'md'} textAlign={'center'} mt={4}>
+        <TransitionMotion key={heading}>
+          <Heading
+            as='h2'
+            fontSize={{
+              base: '3xl',
+              sm: '4xl',
+              md: '5xl',
+            }}
+            color={headingColor}
+            lineHeight={'100%'}
+            textAlign={'center'}
+            fontFamily={'heading'}
+            fontWeight={700}
+            textTransform={'capitalize'}>
+            {heading}
+          </Heading>
+        </TransitionMotion>
+        <Box w={'90%'} pt={4}>
+          <Text fontSize={'md'} textAlign={'center'}>
             {leadText}
           </Text>
         </Box>

@@ -89,7 +89,7 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
           w={{
             base: '90%',
           }}
-          h={{ base: '200px', sxm: '400px' }}
+          h={{ base: '200px', sxm: '300px' }}
           boxShadow={'lg'}
           position={'relative'}>
           <Image
@@ -133,5 +133,6 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
         </Stack>
       </Stack>
     </Stack>
+    // </TransitionMotion>
   );
 };

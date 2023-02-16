@@ -6,6 +6,7 @@ import { BlockContainer } from '@/containers/BlockContainer';
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
 import { PageHeroSection } from '@/components/PageHeroSection';
+import { TransitionMotion } from '@/components/motion/Transition.motion';
 
 const Banner: FunctionComponent = () => {
   const { colorMode } = useColorMode();
@@ -27,14 +28,20 @@ const Banner: FunctionComponent = () => {
               'With a passion for technology and a drive to create innovative  solutions, I am dedicated to delivering exceptional results that meet and exceed expectations.'
             }>
             <Box w={'75%'}>
-              <Image
-                src={bannerImage}
-                alt='banner'
-                priority={true}
-                style={{
-                  borderRadius: '1rem',
+              <TransitionMotion
+                animate={{
+                  scale: [0.75, 1],
                 }}
-              />
+                key={'bannerImage'}>
+                <Image
+                  src={bannerImage}
+                  alt='banner'
+                  priority={true}
+                  style={{
+                    borderRadius: '1rem',
+                  }}
+                />
+              </TransitionMotion>
             </Box>
           </PageHeroSection>
         </Box>

@@ -14,6 +14,7 @@ import { AnimatedBottomBorder } from '@/components/AnimatedBottomBorder';
 import { BlogPost } from '@/lib/types';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
+import { TransitionMotion } from '@/components/motion/Transition.motion';
 import { format } from 'date-fns';
 import { map } from 'lodash';
 import { uuid } from '@/lib/functions';
@@ -61,61 +62,72 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
     'text.light.headings',
     'text.dark.headings',
   );
+  const bgColor = useColorModeValue('primary.light.000', 'primary.dark.000');
 
   return (
     <Link href={`/tech-stories/${slug.current}`}>
-      <Stack
-        w={'full'}
-        p={4}
-        direction={{
-          base: 'column',
-          md: size === 'large' ? (isReverse ? 'row-reverse' : 'row') : 'column',
-        }}
-        justifyContent={'center'}
-        spacing={4}>
-        <Box maxH={80} overflow={'hidden'} borderRadius={'lg'}>
-          {mainImage && (
-            <Image
-              src={mainImage.asset.url}
-              alt={'Baraka Mulumia - Blog Post: ' + title}
-              objectFit={'cover'}
-            />
-          )}
-        </Box>
+      <TransitionMotion
+        key={'blog-post-card'}
+        animate={{
+          scale: [0.9, 1],
+        }}>
+        <Stack
+          w={'full'}
+          p={4}
+          direction={{
+            base: 'column',
+            md:
+              size === 'large' ? (isReverse ? 'row-reverse' : 'row') : 'column',
+          }}
+          shadow={'md'}
+          bg={bgColor}
+          borderRadius={'lg'}
+          justifyContent={'center'}
+          spacing={4}>
+          <Box maxH={80} overflow={'hidden'} borderRadius={'lg'}>
+            {mainImage && (
+              <Image
+                src={mainImage.asset.url}
+                alt={'Baraka Mulumia - Blog Post: ' + title}
+                objectFit={'cover'}
+              />
+            )}
+          </Box>
 
-        <Stack maxW={'sm'} spacing={4}>
-          <BlogTags tags={map(categories, category => category.title)} />
-          <AnimatedBottomBorder>
-            <Heading
-              as='h3'
-              p={1}
-              fontSize={'2xl'}
-              color={headingColor}
-              textTransform={'capitalize'}>
-              {title}
-            </Heading>
-          </AnimatedBottomBorder>
-          <Text lineHeight={1.2} noOfLines={5}>
-            {excerpt}
-          </Text>
+          <Stack maxW={'sm'} spacing={4}>
+            <BlogTags tags={map(categories, category => category.title)} />
+            <AnimatedBottomBorder>
+              <Heading
+                as='h3'
+                p={1}
+                fontSize={'2xl'}
+                color={headingColor}
+                textTransform={'capitalize'}>
+                {title}
+              </Heading>
+            </AnimatedBottomBorder>
+            <Text lineHeight={1.2} noOfLines={5}>
+              {excerpt}
+            </Text>
 
-          <HStack spacing={1}>
-            <Image
-              src={author.image.asset.url}
-              alt=''
-              w={8}
-              h={8}
-              rounded={'full'}
-            />
-            <Stack direction={'column'} spacing={0}>
-              <Text fontSize={'sm'}>{author.name} </Text>
-              <Text fontSize={'xs'}>
-                {format(new Date(publishedAt || _createdAt), 'MMMM dd, yyyy')}
-              </Text>
-            </Stack>
-          </HStack>
+            <HStack spacing={1}>
+              <Image
+                src={author.image.asset.url}
+                alt=''
+                w={8}
+                h={8}
+                rounded={'full'}
+              />
+              <Stack direction={'column'} spacing={0}>
+                <Text fontSize={'sm'}>{author.name} </Text>
+                <Text fontSize={'xs'}>
+                  {format(new Date(publishedAt || _createdAt), 'MMMM dd, yyyy')}
+                </Text>
+              </Stack>
+            </HStack>
+          </Stack>
         </Stack>
-      </Stack>
+      </TransitionMotion>
     </Link>
   );
 };
