@@ -4,6 +4,7 @@ import {
   FormLabel,
   Select,
   Text,
+  useColorMode,
 } from '@chakra-ui/react';
 
 import { FunctionComponent } from 'react';
@@ -32,6 +33,10 @@ export const ESelect: FunctionComponent<ESelectProps> = ({
   isError = false,
   errorMessage,
 }) => {
+  const { colorMode } = useColorMode();
+
+  const optionCOlor = colorMode == 'light' ? '#733D47' : '#FBFBFF';
+
   return (
     <FormControl>
       <FormLabel color={'primary.light.000'}>
@@ -49,7 +54,7 @@ export const ESelect: FunctionComponent<ESelectProps> = ({
           value=''
           disabled
           style={{
-            color: '#733D47',
+            color: optionCOlor,
           }}>
           Select a service
         </option>
@@ -59,7 +64,7 @@ export const ESelect: FunctionComponent<ESelectProps> = ({
             key={uuid()}
             value={option}
             style={{
-              color: '#733D47',
+              color: optionCOlor,
             }}>
             {option}
           </option>
