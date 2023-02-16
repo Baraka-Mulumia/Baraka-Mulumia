@@ -47,8 +47,8 @@ const Blog: NextPage<BlogPageProps> = ({ posts, services }) => {
   return (
     <PageWrapper Nav={Header}>
       <PageHeroSection
-        heading='Insights and Stories from the World of Software Development'
-        leadText='Welcome to TechTalk, your go-to source for the latest news, trends, and stories from the world of technology and software development. Join me on a journey through the exciting and constantly evolving world of software development, as we explore the latest innovations, share inspiring developer stories, and offer practical tips and insights to help you succeed in your tech career'
+        heading='Insights and Stories from the World of Tech'
+        leadText='Join me on a journey through the exciting and constantly evolving world of software development, as we explore the latest innovations, share inspiring developer stories, and offer practical tips and insights to help you succeed in your tech career'
       />
       <BlogPosts posts={posts} />
       <InquiryForm services={services} />

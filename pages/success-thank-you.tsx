@@ -10,8 +10,8 @@ const FormSubmitSuccess: NextPage = () => {
     <PageWrapper Nav={Header}>
       <BlockContainer>
         <PageHeroSection
-          heading="Thank You for Your Inquiry - Let's Bring Your Vision to Life"
-          leadText="Congratulations, your inquiry has been received! I am thrilled to have the opportunity to collaborate with you and bring your technology vision to life. With my expertise and your vision, we can create powerful and innovative solutions that exceed your expectations. I'll be in touch with you soon to discuss your inquiry in more detail. Thank you for choosing me as your technology partner."
+          heading='Thank You for Reaching Out!'
+          leadText="Congratulations, your inquiry has been received! I am thrilled to have the opportunity to collaborate with you and bring your technology vision to life.  I'll be in touch with you soon. Thank you for choosing me as your technology partner."
         />
       </BlockContainer>
       <Footer />
