@@ -21,6 +21,13 @@ export default defineType({
     }),
 
     defineField({
+      name: 'oder',
+      title: 'Order',
+      type: 'number',
+      validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
@@ -31,7 +38,7 @@ export default defineType({
       name: 'sourceCodeUrl',
       title: 'Source code URL',
       type: 'url',
-      validation: (Rule) => Rule.required(),
+      // validation: (Rule) => Rule.required(),
     }),
 
     defineField({
