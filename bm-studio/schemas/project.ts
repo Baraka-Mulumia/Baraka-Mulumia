@@ -21,7 +21,7 @@ export default defineType({
     }),
 
     defineField({
-      name: 'oder',
+      name: 'order',
       title: 'Order',
       type: 'number',
       validation: (Rule) => Rule.required(),

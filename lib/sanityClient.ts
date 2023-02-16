@@ -32,7 +32,7 @@ export const SERVICES_TITLES_QUERY = `*[_type == "service"] | order(_createdAt a
   slug,
 }`;
 
-export const BLOG_POSTS_QUERY = `*[_type == "post"] | order(_updatedAt desc) {
+export const BLOG_POSTS_QUERY = `*[_type == "post"] | order(_createdAt desc) {
   title,
   excerpt,
   mainImage {
@@ -92,7 +92,7 @@ export const SINGLE_BLOG_POST_QUERY = `*[_type == "post" && slug.current == $slu
     body
 }`;
 
-export const ALL_PROJECTS_QUERY = `*[_type == "project"] | order(_createdAt desc) { 
+export const ALL_PROJECTS_QUERY = `*[_type == "project"] | order(order asc) { 
 _createdAt,
   _id,
   title,
@@ -112,7 +112,7 @@ _createdAt,
   url,
 }`;
 
-export const FIRST_3_PROJECTS_QUERY = `*[_type == "project"] | order(_createdAt desc) [0..2] { 
+export const FIRST_3_PROJECTS_QUERY = `*[_type == "project"] | order(order asc) [0..2] { 
     _createdAt,
   _id,
   title,
