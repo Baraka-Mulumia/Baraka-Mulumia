@@ -59,7 +59,7 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
       bg={bgCOlor}
       shadow={'md'}
       w={'full'}
-      rounded={'28px'}
+      rounded={'10px'}
       maxW={'container.md'}
       minW={{
         base: '100%',
