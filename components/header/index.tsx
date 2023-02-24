@@ -38,12 +38,19 @@ export const Header: FunctionComponent<{
           </Show>
           <HStack alignItems={'center'} spacing={6}>
             <ThemeSwitcher />
-            <Show above={'md'}>
+            <Box
+              display={{
+                base: 'none',
+                md: 'block',
+              }}>
               <ReadBlogButton />
-            </Show>
-            <Hide above={'xxmd'}>
+            </Box>
+            <Box
+              display={{
+                xxmd: 'none',
+              }}>
               <NavigationDrawer />
-            </Hide>
+            </Box>
           </HStack>
         </HStack>
       </Container>
