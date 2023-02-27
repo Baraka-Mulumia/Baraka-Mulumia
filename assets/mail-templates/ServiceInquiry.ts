@@ -1,6 +1,6 @@
-import { InquiryInput } from '@/lib/types';
+import { InquiryFormInput } from '@/types';
 
-export const ServiceInquiry = (input: InquiryInput) => {
+export const ServiceInquiry = (input: InquiryFormInput) => {
   const { fullName, service, email, message } = input;
 
   return `

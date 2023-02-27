@@ -5,9 +5,9 @@ import {
 } from '@/lib/sanityClient';
 
 import { Header } from '@/components/header';
-import { HomePageProps } from '@/lib/types';
 import { LandingPageContent } from '@/features/landing';
 import { NextPage } from 'next';
+import { PageContentDataRequired } from '@/types';
 import { PageWrapper } from '@/containers/PageWrapper';
 
 const queries = `{
@@ -37,7 +37,10 @@ export async function getStaticProps() {
   }
 }
 
-const HomePage: NextPage<HomePageProps> = ({ services, projects }) => {
+const HomePage: NextPage<PageContentDataRequired> = ({
+  services,
+  projects,
+}) => {
   return (
     <PageWrapper Nav={Header}>
       <LandingPageContent services={services} projects={projects} />

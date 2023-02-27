@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 
 import { AnimatedBottomBorder } from '@/components/AnimatedBottomBorder';
-import { BlogPost } from '@/lib/types';
+import { BlogPost } from '@/types';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { TransitionMotion } from '@/components/motion/Transition.motion';

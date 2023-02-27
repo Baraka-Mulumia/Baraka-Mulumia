@@ -3,7 +3,7 @@ import { Box, Grid, GridItem } from '@chakra-ui/react';
 import { BlockContainer } from '@/containers/BlockContainer';
 import { BlockHeader } from '@/components/BlockHeader';
 import { FunctionComponent } from 'react';
-import { Service } from '@/lib/types';
+import { Service } from '@/types';
 import { ServiceCard } from '@/components/ServiceCard';
 import { map } from 'lodash';
 

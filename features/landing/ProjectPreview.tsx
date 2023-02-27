@@ -5,7 +5,7 @@ import { BlockHeader } from '@/components/BlockHeader';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
-import { Project } from '@/lib/types';
+import { Project } from '@/types';
 import { ProjectList } from '../portfolio/ProjectList';
 
 type ProjectListProps = {

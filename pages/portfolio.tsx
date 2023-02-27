@@ -3,13 +3,13 @@ import {
   SERVICES_TITLES_QUERY,
   SanityClient,
 } from '@/lib/sanityClient';
-import { HomePageProps, Project } from '@/lib/types';
 
 import { BlockContainer } from '@/containers/BlockContainer';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/header';
 import { InquiryForm } from '@/features/landing/InquiryForm';
 import { NextPage } from 'next';
+import { PageContentDataRequired } from '@/types';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
 import { ProjectList } from '@/features/portfolio/ProjectList';
@@ -38,7 +38,10 @@ export async function getStaticProps() {
   }
 }
 
-const Portfolio: NextPage<HomePageProps> = ({ projects, services }) => {
+const Portfolio: NextPage<PageContentDataRequired> = ({
+  projects,
+  services,
+}) => {
   return (
     <PageWrapper Nav={Header}>
       <PageHeroSection

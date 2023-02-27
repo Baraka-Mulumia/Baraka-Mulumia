@@ -131,3 +131,5 @@ export const FIRST_3_PROJECTS_QUERY = `*[_type == "project"] | order(order asc) 
   technologies,
   url,
 }`;
+
+// TODO:  Break this up into  a sanity service class

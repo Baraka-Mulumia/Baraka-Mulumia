@@ -14,7 +14,7 @@ import React, { FunctionComponent } from 'react';
 import { AnimatedBottomBorder } from '@/components/AnimatedBottomBorder';
 import { ExternalLink } from '@/components/ExternalLink';
 import Image from 'next/image';
-import { Project } from '@/lib/types';
+import { Project } from '@/types';
 import { map } from 'lodash';
 import { uuid } from '@/lib/functions';
 

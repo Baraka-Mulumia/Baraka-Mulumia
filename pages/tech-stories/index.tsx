@@ -3,7 +3,7 @@ import {
   SERVICES_TITLES_QUERY,
   SanityClient,
 } from '@/lib/sanityClient';
-import { BlogPost, Service } from '@/lib/types';
+import { BlogPost, Service } from '@/types';
 
 import { BlogPosts } from '@/features/posts';
 import { Footer } from '@/components/Footer';

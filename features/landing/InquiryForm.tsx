@@ -4,7 +4,7 @@ import { BlockContainer } from '@/containers/BlockContainer';
 import { BlockHeader } from '@/components/BlockHeader';
 import { FunctionComponent } from 'react';
 import { ProjectInquiryForm } from '../contact/ProjectInquiryForm';
-import { Service } from '@/lib/types';
+import { Service } from '@/types';
 
 export const InquiryForm: FunctionComponent<{
   services: Service[];

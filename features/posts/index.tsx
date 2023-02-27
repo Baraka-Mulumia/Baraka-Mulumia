@@ -2,7 +2,7 @@ import { Box, Grid, GridItem, Stack } from '@chakra-ui/react';
 import { chunk, map } from 'lodash';
 
 import { BlockContainer } from '@/containers/BlockContainer';
-import { BlogPost } from '@/lib/types';
+import { BlogPost } from '@/types';
 import { BlogPostCard } from './BlogPostCard';
 import { FunctionComponent } from 'react';
 import { uuid } from '@/lib/functions';

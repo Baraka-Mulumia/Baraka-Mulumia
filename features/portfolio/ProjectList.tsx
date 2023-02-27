@@ -1,7 +1,7 @@
 import { Flex, Grid, GridItem } from '@chakra-ui/react';
 import React, { FunctionComponent } from 'react';
 
-import { Project } from '@/lib/types';
+import { Project } from '@/types';
 import { ProjectCard } from './ProjectCard';
 import { TransitionMotion } from '@/components/motion/Transition.motion';
 import { map } from 'lodash';

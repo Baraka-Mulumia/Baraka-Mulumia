@@ -10,7 +10,7 @@ import { FunctionComponent, useState } from 'react';
 import { EInput } from '@/components/EInput';
 import { ESelect } from '@/components/ESelect';
 import { PageLoadingModal } from '@/modals/PageLoadingModal';
-import { Service } from '@/lib/types';
+import { Service } from '@/types';
 import axios from 'axios';
 import { map } from 'lodash';
 import { useForm } from 'react-hook-form';

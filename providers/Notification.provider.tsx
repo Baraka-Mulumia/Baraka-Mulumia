@@ -8,13 +8,13 @@ import {
   useState,
 } from 'react';
 
-import { NotificationType } from '@/lib/types';
+import { ToastNotification } from '@/types';
 import { useToast } from '@chakra-ui/react';
 
 type NotificationContextType = {
-  addNotification: (notification: NotificationType) => void;
+  addNotification: (notification: ToastNotification) => void;
   removeNotification: () => void;
-  notification: NotificationType | null;
+  notification: ToastNotification | null;
 };
 
 const NotificationContext = createContext<NotificationContextType>({
@@ -26,13 +26,13 @@ const NotificationContext = createContext<NotificationContextType>({
 export const NotificationProvider: FunctionComponent<PropsWithChildren<{}>> = ({
   children,
 }) => {
-  const [notification, setNotification] = useState<NotificationType | null>(
+  const [notification, setNotification] = useState<ToastNotification | null>(
     null,
   );
 
   const toast = useToast();
 
-  const addNotification = useCallback((notification: NotificationType) => {
+  const addNotification = useCallback((notification: ToastNotification) => {
     setNotification(notification);
   }, []);
 
