@@ -8,7 +8,8 @@ export default defineType({
     defineField({
       name: 'quote',
       title: 'Quote',
-      type: 'string',
+      type: 'text',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'author',
