@@ -1,37 +1,28 @@
-import {
-  FIRST_3_PROJECTS_QUERY,
-  SERVICES_QUERY,
-  SanityClient,
-} from '@/lib/sanityClient';
-
 import { Header } from '@/components/header';
 import { LandingPageContent } from '@/features/landing';
 import { NextPage } from 'next';
 import { PageContentDataRequired } from '@/types';
 import { PageWrapper } from '@/containers/PageWrapper';
-
-const queries = `{
-  "services": ${SERVICES_QUERY},
-  "projects": ${FIRST_3_PROJECTS_QUERY}
-}`;
+import sanityAPI from '@/sanityAPI';
 
 export async function getStaticProps() {
-  try {
-    const data = await SanityClient.fetch(queries);
+  const { data } = await sanityAPI.getMultipleDocuments<{
+    services: PageContentDataRequired['services'];
+    first3Projects: PageContentDataRequired['projects'];
+  }>(['services', 'first3Projects']);
 
-    const { services, projects } = data;
+  if (!data) {
+    return {
+      services: [],
+      projects: [],
+    };
+  } else {
+    const { services, first3Projects: projects } = data;
 
     return {
       props: {
         services,
         projects,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        services: [],
-        projects: [],
       },
     };
   }

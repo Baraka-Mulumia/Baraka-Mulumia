@@ -13,6 +13,6 @@ export const NAVIGATION_LINKS_LIST = [
   },
   {
     name: 'My Story',
-    href: '/tech-stories/the-road-less-traveled-my-uncommon-path-to-becoming-a-developer',
+    href: '/insights/the-road-less-traveled-my-uncommon-path-to-becoming-a-developer',
   },
 ];

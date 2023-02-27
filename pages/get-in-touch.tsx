@@ -32,7 +32,7 @@ const ContactItem: FunctionComponent<
     Icon: IconType;
     linkType: string;
   } & ButtonProps
-> = ({ text, Icon, linkType, ...props }) => {
+> = ({ text, Icon, linkType }) => {
   const RenderButton = () => (
     <Button
       size='md'

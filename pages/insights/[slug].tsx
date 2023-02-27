@@ -1,9 +1,4 @@
 import { Box, Container, Flex, Heading, Stack } from '@chakra-ui/react';
-import {
-  SINGLE_BLOG_POST_QUERY,
-  SanityClient,
-  urlFor,
-} from '@/lib/sanityClient';
 
 import { BlockContainer } from '@/containers/BlockContainer';
 import { Footer } from '@/components/Footer';
@@ -14,25 +9,38 @@ import { PageWrapper } from '@/containers/PageWrapper';
 import { PortableText } from '@portabletext/react';
 import { SanityAsset } from '@sanity/image-url/lib/types/types';
 import { map } from 'lodash';
-
-const postSlugsQuery = `*[_type == "post"]{
-  _id,
-  slug,
-}`;
+import sanityAPI from '@/sanityAPI';
 
 export async function getStaticPaths() {
-  const paths = await SanityClient.fetch(postSlugsQuery);
+  const { data: paths, error } = await sanityAPI.getSlugs('post');
 
+  if (error) {
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
   return {
-    paths: map(paths, ({ slug }) => ({
-      params: { slug: slug.current },
-    })),
+    paths:
+      paths &&
+      map(paths, ({ slug }) => ({
+        params: { slug: slug?.current },
+      })),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params: { slug } }: any) {
-  const post = await SanityClient.fetch(SINGLE_BLOG_POST_QUERY, { slug });
+  const { data: post } = await sanityAPI.getBlogPostBySlug(slug);
+
+  if (!post) {
+    return {
+      redirect: {
+        destination: '/404',
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: {
@@ -48,8 +56,6 @@ type ReadBlogPostPageProps = {
 const ptComponents = {
   types: {
     image: ({ value }: { value: SanityAsset }) => {
-      console.log(value);
-
       if (!value?.asset?._ref) {
         return null;
       }
@@ -67,7 +73,7 @@ const ptComponents = {
             alt={value.alt || ' '}
             loading='lazy'
             className='rounded-lg'
-            src={urlFor(value.asset).url()}
+            src={sanityAPI.urlFor(value.asset).url()}
             fill
           />
         </Box>

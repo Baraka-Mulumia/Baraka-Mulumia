@@ -1,8 +1,3 @@
-import {
-  BLOG_POSTS_QUERY,
-  SERVICES_TITLES_QUERY,
-  SanityClient,
-} from '@/lib/sanityClient';
 import { BlogPost, Service } from '@/types';
 
 import { BlogPosts } from '@/features/posts';
@@ -12,36 +7,35 @@ import { InquiryForm } from '@/features/landing/InquiryForm';
 import { NextPage } from 'next';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
-
-const queries = `{
-  "services": ${SERVICES_TITLES_QUERY},
-  "posts": ${BLOG_POSTS_QUERY}
-}`;
-
-export async function getStaticProps() {
-  try {
-    const data = await SanityClient.fetch(queries);
-
-    return {
-      props: {
-        posts: data.posts,
-        services: data.services,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        posts: [],
-        services: [],
-      },
-    };
-  }
-}
+import sanityAPI from '@/sanityAPI';
 
 type BlogPageProps = {
   posts: BlogPost[];
   services: Service[];
 };
+
+export async function getStaticProps() {
+  const { data } = await sanityAPI.getMultipleDocuments<BlogPageProps>([
+    'services',
+    'posts',
+  ]);
+
+  if (!data) {
+    return {
+      services: [],
+      projects: [],
+    };
+  }
+
+  const { services, posts } = data;
+
+  return {
+    props: {
+      services,
+      posts,
+    },
+  };
+}
 
 const Blog: NextPage<BlogPageProps> = ({ posts, services }) => {
   return (
