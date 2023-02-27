@@ -65,7 +65,7 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
   const bgColor = useColorModeValue('primary.light.000', 'primary.dark.000');
 
   return (
-    <Link href={`/tech-stories/${slug.current}`}>
+    <Link href={`/insights/${slug.current}`}>
       <TransitionMotion
         key={'blog-post-card'}
         animate={{

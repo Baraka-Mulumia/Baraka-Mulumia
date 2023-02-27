@@ -1,21 +1,14 @@
+import { FunctionComponent, useEffect } from 'react';
 import {
-  Box,
-  Button,
-  Center,
   Modal,
   ModalBody,
-  ModalCloseButton,
   ModalContent,
-  ModalFooter,
-  ModalHeader,
   ModalOverlay,
   Spinner,
   Text,
   VStack,
-  useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
-import { FunctionComponent, useEffect, useRef } from 'react';
 
 type PageLOadingModalProps = {
   visible: boolean;

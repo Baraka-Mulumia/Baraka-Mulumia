@@ -1,4 +1,4 @@
-import { Box, Button, HStack, StackProps } from '@chakra-ui/react';
+import { Box, Button, HStack } from '@chakra-ui/react';
 
 import { BlockContainer } from '@/containers/BlockContainer';
 import { BlockHeader } from '@/components/BlockHeader';
@@ -7,10 +7,6 @@ import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { Project } from '@/types';
 import { ProjectList } from '../portfolio/ProjectList';
-
-type ProjectListProps = {
-  data: Project[];
-} & StackProps;
 
 export const ProjectPreview: FunctionComponent<{
   data: Project[];

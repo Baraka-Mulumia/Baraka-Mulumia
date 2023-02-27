@@ -2,7 +2,6 @@ import {
   Box,
   Container,
   HStack,
-  Hide,
   Show,
   useColorModeValue,
 } from '@chakra-ui/react';

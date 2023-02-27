@@ -59,7 +59,7 @@ export const ESelect: FunctionComponent<ESelectProps> = ({
           Select a service
         </option>
 
-        {map(options, (option, index) => (
+        {map(options, option => (
           <option
             key={uuid()}
             value={option}

@@ -1,4 +1,3 @@
-import { BlogPost } from './BlogPost';
 import { Project } from './Project';
 import { Service } from './Service';
 

@@ -36,7 +36,7 @@ export const ProjectInquiryForm: FunctionComponent<{
     setLoading(true);
     axios
       .post('/api/contact', data)
-      .then(response => {
+      .then(_response => {
         router.push('/success-thank-you');
         addNotification({
           title: 'Message sent - Thank you!',
@@ -45,7 +45,7 @@ export const ProjectInquiryForm: FunctionComponent<{
           id: 'contact-form',
         });
       })
-      .catch(error => {
+      .catch(_error => {
         addNotification({
           title: 'Oops! Something went wrong',
           message: 'Your message has not been sent',

@@ -29,7 +29,6 @@ export const EInput: FunctionComponent<EInputProps> = ({
   helperText,
   placeHolder,
   isRequired = false,
-  onChange,
   colorVariant = 'primary',
   register,
   formFieldName,
