@@ -53,7 +53,8 @@ export const BLOG_POSTS_QUERY = `*[_type == "post"] | order(_createdAt desc) {
 }`;
 
 export const SINGLE_BLOG_POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
-    ${BlOG_POST}
+    ${BlOG_POST},
+    body  
 }`;
 
 export const BLOG_POST_SLUGS_QUERY = `*[_type == "post"] | order(_createdAt desc) {
