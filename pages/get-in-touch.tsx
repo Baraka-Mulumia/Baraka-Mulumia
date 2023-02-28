@@ -3,9 +3,7 @@ import {
   Button,
   ButtonProps,
   Flex,
-  Heading,
   Link,
-  Text,
   VStack,
   Wrap,
   WrapItem,
@@ -13,6 +11,8 @@ import {
 } from '@chakra-ui/react';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 
+import AppHeading from '@/components/AppHeading';
+import AppText from '@/components/AppText';
 import { BlockContainer } from '@/containers/BlockContainer';
 import { Footer } from '@/components/Footer';
 import { FunctionComponent } from 'react';
@@ -103,10 +103,12 @@ const Contact: NextPage = () => {
               <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }} w={'full'}>
                 <WrapItem>
                   <Box>
-                    <Heading color={'white'}>Get in Touch</Heading>
-                    <Text mt={{ sm: 3, md: 3, lg: 5 }} variant={'text_white'}>
+                    <AppHeading color={'white'}>Get in Touch</AppHeading>
+                    <AppText
+                      mt={{ sm: 3, md: 3, lg: 5 }}
+                      variant={'text_white'}>
                       Lets grab coffee sometime!
-                    </Text>
+                    </AppText>
                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                       <VStack pl={0} spacing={3} alignItems='flex-start'>
                         {map(contactItems, item => (

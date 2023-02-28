@@ -3,9 +3,9 @@ import {
   FormHelperText,
   FormLabel,
   Input,
-  Text,
 } from '@chakra-ui/react';
 
+import AppText from './AppText';
 import { FunctionComponent } from 'react';
 
 type EInputProps = {
@@ -40,9 +40,9 @@ export const EInput: FunctionComponent<EInputProps> = ({
     <FormControl>
       <FormLabel color={'primary.light.100'}>
         {label}
-        <Text as={'span'} color={'red.500'}>
+        <AppText as={'span'} color={'red.500'}>
           {isRequired ? '*' : ''}
-        </Text>
+        </AppText>
       </FormLabel>
       <Input
         type={type}

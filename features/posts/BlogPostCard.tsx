@@ -1,16 +1,16 @@
 import {
   Box,
   HStack,
-  Heading,
   Image,
   SpaceProps,
   Stack,
   Tag,
-  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 
 import { AnimatedBottomBorder } from '@/components/AnimatedBottomBorder';
+import AppHeading from '@/components/AppHeading';
+import AppText from '@/components/AppText';
 import { BlogPost } from '@/types';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
@@ -97,18 +97,18 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
           <Stack maxW={'sm'} spacing={4}>
             <BlogTags tags={map(categories, category => category.title)} />
             <AnimatedBottomBorder>
-              <Heading
+              <AppHeading
                 as='h3'
                 p={1}
                 fontSize={'2xl'}
                 color={headingColor}
                 textTransform={'capitalize'}>
                 {title}
-              </Heading>
+              </AppHeading>
             </AnimatedBottomBorder>
-            <Text lineHeight={1.2} noOfLines={5} textAlign={'justify'}>
+            <AppText lineHeight={1.2} noOfLines={5} textAlign={'justify'}>
               {excerpt}
-            </Text>
+            </AppText>
 
             <HStack spacing={1}>
               <Image
@@ -119,10 +119,10 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
                 rounded={'full'}
               />
               <Stack direction={'column'} spacing={0}>
-                <Text fontSize={'sm'}>{author.name} </Text>
-                <Text fontSize={'xs'}>
+                <AppText fontSize={'sm'}>{author.name} </AppText>
+                <AppText fontSize={'xs'}>
                   {format(new Date(publishedAt || _createdAt), 'MMMM dd, yyyy')}
-                </Text>
+                </AppText>
               </Stack>
             </HStack>
           </Stack>

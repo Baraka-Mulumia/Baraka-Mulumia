@@ -3,15 +3,15 @@ import {
   Button,
   Center,
   HStack,
-  Heading,
   Stack,
   Tag,
-  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 import React, { FunctionComponent } from 'react';
 
 import { AnimatedBottomBorder } from '@/components/AnimatedBottomBorder';
+import AppHeading from '@/components/AppHeading';
+import AppText from '@/components/AppText';
 import { ExternalLink } from '@/components/ExternalLink';
 import Image from 'next/image';
 import { Project } from '@/types';
@@ -68,9 +68,9 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
       <ExternalLink href={href}>
         <Center>
           <AnimatedBottomBorder>
-            <Heading textAlign={'center'} color={headingColor} as={'h3'}>
+            <AppHeading textAlign={'center'} color={headingColor} as={'h3'}>
               {title}
-            </Heading>
+            </AppHeading>
           </AnimatedBottomBorder>
         </Center>
       </ExternalLink>
@@ -100,7 +100,7 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
           />
         </Box>
         <Stack alignSelf={'flex-start'} px={4} w={'full'}>
-          <Text>{description}</Text>
+          <AppText>{description}</AppText>
 
           <HStack spacing={1} wrap={'wrap'}>
             {technologies &&

@@ -1,5 +1,7 @@
-import { Box, Heading, Stack, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Stack, useColorModeValue } from '@chakra-ui/react';
 
+import AppHeading from './AppHeading';
+import AppText from './AppText';
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
 
@@ -48,11 +50,11 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
             base: 'auto',
             md: 16,
           }}>
-          <Heading as='h3' size='md' color={headingColor} noOfLines={2}>
+          <AppHeading as='h3' size='md' color={headingColor} noOfLines={2}>
             {title}
-          </Heading>
+          </AppHeading>
         </Box>
-        <Text>{description}</Text>
+        <AppText>{description}</AppText>
       </Stack>
     </Stack>
   );

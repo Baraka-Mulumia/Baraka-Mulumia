@@ -1,5 +1,5 @@
-import { DM_Sans } from '@next/font/google';
-import { Inter } from '@next/font/google';
+import { DM_Sans, Inter } from '@next/font/google';
+
 import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';

@@ -31,7 +31,7 @@ export const TransitionMotion: FunctionComponent<TransitionProps> = ({
 
   const [ref, inView] = useInView({
     threshold: 0.5,
-    // triggerOnce: true,
+    triggerOnce: true,
   });
 
   useEffect(() => {

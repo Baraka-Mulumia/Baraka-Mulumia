@@ -1,7 +1,7 @@
-import { HStack, Text } from '@chakra-ui/react';
-
 import { AnimatedBottomBorder } from '../AnimatedBottomBorder';
+import AppText from '../AppText';
 import { FunctionComponent } from 'react';
+import { HStack } from '@chakra-ui/react';
 import Link from 'next/link';
 import { NAVIGATION_LINKS_LIST } from '@/constants';
 import { map } from 'lodash';
@@ -24,7 +24,7 @@ export const DesktopNavItem: FunctionComponent<DesktopNavItemProps> = ({
       placeItems={'center'}
       placeContent={'center'}
       cursor={'pointer'}>
-      <Text variant={isWhite ? 'text_white' : 'primary'}>{label}</Text>
+      <AppText variant={isWhite ? 'text_white' : 'primary'}>{label}</AppText>
     </AnimatedBottomBorder>
   </Link>
 );
