@@ -37,11 +37,13 @@ export const AppHead: FunctionComponent<SeoProps> = ({
       )
     : currentUrl;
 
-  const pageTitle = `${title}  ${
-    currentPath
-      ? ' | ' + currentPath[0]?.toUpperCase() + currentPath.slice(1)
-      : ''
-  }`;
+  const pageName = currentPath
+    ? currentPath[0]?.toUpperCase() + currentPath.slice(1)
+    : '';
+
+  const pageTitle =
+    pageName.replace(/-/g, ' ') +
+    `${pageName?.length > 0 ? ' - ' : ''}   ${title}`;
 
   const metaData = [
     {
