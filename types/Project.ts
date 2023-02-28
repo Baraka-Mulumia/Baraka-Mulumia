@@ -13,5 +13,3 @@ export type Project = {
   sourceCodeUrl: string;
   isHosted: boolean;
 };
-
-//TODO:  Create type for project preview

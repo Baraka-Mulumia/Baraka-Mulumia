@@ -18,5 +18,3 @@ export type BlogPost = {
   body: string;
   _createdAt: string;
 };
-
-//TODO:  Create blog post preview type
