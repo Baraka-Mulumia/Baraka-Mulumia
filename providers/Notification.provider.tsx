@@ -40,8 +40,6 @@ export const NotificationProvider: FunctionComponent<PropsWithChildren<{}>> = ({
     setNotification(null);
   }, []);
 
-  //TODO! Create custom render for toast
-
   useEffect(() => {
     if (notification) {
       toast({
@@ -50,7 +48,7 @@ export const NotificationProvider: FunctionComponent<PropsWithChildren<{}>> = ({
         status: notification.type,
         duration: 5000,
         isClosable: true,
-        position: 'top',
+        position: 'top-right',
       });
 
       setNotification(null);
