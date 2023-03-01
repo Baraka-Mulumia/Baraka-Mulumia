@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Center,
   HStack,
   Stack,
   Tag,
@@ -24,7 +23,12 @@ type ProjectDetailCardProps = {
 
 const TechnologyBadge = ({ name }: { name: string }) => {
   return (
-    <Tag size={'md'} variant='solid' colorScheme='orange'>
+    <Tag
+      size={'md'}
+      marginTop={1}
+      marginBottom={1}
+      variant='solid'
+      colorScheme='orange'>
       {name}
     </Tag>
   );
@@ -53,28 +57,16 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
 
   return (
     <Stack
-      px={1}
-      py={4}
       spacing={3}
       bg={bgCOlor}
       shadow={'md'}
       w={'full'}
       rounded={'10px'}
-      maxW={'container.md'}
+      maxW={'container.sm'}
       minW={{
         base: '100%',
         md: 'md',
       }}>
-      <ExternalLink href={href}>
-        <Center>
-          <AnimatedBottomBorder>
-            <AppHeading textAlign={'center'} color={headingColor} as={'h3'}>
-              {title}
-            </AppHeading>
-          </AnimatedBottomBorder>
-        </Center>
-      </ExternalLink>
-
       <Stack
         spacing={{
           base: 1,
@@ -86,23 +78,26 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
         <Box
           as={ExternalLink}
           href={href}
-          w={{
-            base: '90%',
-          }}
-          h={{ base: '200px', sxm: '300px' }}
+          w={'100%'}
+          h={{ base: '200px', sxm: '300px', xl: '400px' }}
           boxShadow={'lg'}
+          borderTopRadius={'10px'}
+          overflow={'hidden'}
           position={'relative'}>
-          <Image
-            src={mainImage.asset.url}
-            alt={altText(mainImage.alt)}
-            className={'rounded-md'}
-            fill
-          />
+          <Image src={mainImage.asset.url} alt={altText(mainImage.alt)} fill />
         </Box>
         <Stack alignSelf={'flex-start'} px={4} w={'full'}>
+          <ExternalLink href={href}>
+            <AnimatedBottomBorder>
+              <AppHeading color={headingColor} as={'h3'}>
+                {title}
+              </AppHeading>
+            </AnimatedBottomBorder>
+          </ExternalLink>
+
           <AppText>{description}</AppText>
 
-          <HStack spacing={1} wrap={'wrap'}>
+          <HStack spacing={2} wrap={'wrap'}>
             {technologies &&
               technologies.length > 0 &&
               map(technologies, tech => (
@@ -113,7 +108,7 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
           <HStack spacing={4} pb={6}>
             {isHosted && (
               <ExternalLink href={url}>
-                <Button variant={'primary'} rounded={'2px'}>
+                <Button variant={'primary'} size={'sm'}>
                   Live Preview
                 </Button>
               </ExternalLink>
@@ -124,7 +119,7 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
                 isExternal
                 href={sourceCodeUrl}
                 className={'text-decoration-none'}>
-                <Button colorScheme={'blue'} rounded={'2px'}>
+                <Button colorScheme={'blue'} size={'sm'}>
                   Source Code
                 </Button>
               </ExternalLink>

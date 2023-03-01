@@ -1,11 +1,11 @@
-import { DM_Sans, Inter } from '@next/font/google';
+import { DM_Sans, Rubik } from '@next/font/google';
 
 import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
-const inter = Inter({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+const rubik = Rubik({
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   style: ['normal'],
   subsets: ['latin'],
 });
@@ -83,7 +83,7 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    body: inter.style.fontFamily,
+    body: rubik.style.fontFamily,
     heading: dmSans.style.fontFamily,
   },
 
@@ -138,7 +138,7 @@ export const theme = extendTheme({
     Text: {
       baseStyle: (props: StyleFunctionProps) => ({
         color: mode('text.light.primary', 'text.dark.primary')(props),
-        fontFamily: inter.style.fontFamily,
+        fontFamily: rubik.style.fontFamily,
       }),
 
       variants: {
@@ -161,7 +161,7 @@ export const theme = extendTheme({
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
-        fontFamily: inter.style.fontFamily,
+        fontFamily: rubik.style.fontFamily,
         color: (props: StyleFunctionProps) =>
           mode('primary.light.300', 'text.dark.primary')(props),
         bg:
