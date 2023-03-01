@@ -1,4 +1,10 @@
-import { Box, Flex, Stack, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Stack,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
 import AppHeading from './AppHeading';
 import AppText from './AppText';
@@ -23,6 +29,16 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
     'text.dark.headings',
   );
 
+  const { colorMode } = useColorMode();
+
+  const shadowColor = `0 0 20px ${
+    colorMode === 'light' ? 'rgba(0,0,0,0.1)' : 'rgba(200,200,200,0.2)'
+  }`;
+
+  const hoverShadowColor = `0 0 20px ${
+    colorMode === 'light' ? 'rgba(0,0,0,0.2)' : 'rgba(200,200,200,0.2)'
+  }`;
+
   return (
     <Stack
       borderRadius={'16px'}
@@ -31,9 +47,9 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
         md: '240px',
       }}
       overflow={'hidden'}
-      boxShadow={'0 0 10px rgba(0,0,0,0.1)'}
+      boxShadow={shadowColor}
       _hover={{
-        boxShadow: '0 0 20px rgba(0,0,0,0.2)',
+        boxShadow: hoverShadowColor,
         transform: 'scale(1.02) translateY(-2px)',
       }}
       direction={{
