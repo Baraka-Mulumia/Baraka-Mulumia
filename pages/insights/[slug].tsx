@@ -95,8 +95,8 @@ const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
             />
           </Flex>
 
-          <Container maxW={'container.md'}>
-            <Stack textAlign={'justify'}>
+          <Container maxW={'container.lg'}>
+            <Stack textAlign={'justify'} lineHeight={'2rem'}>
               <PortableText value={post.body} components={PTComponents} />
             </Stack>
           </Container>
