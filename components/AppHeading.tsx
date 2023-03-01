@@ -1,20 +1,14 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
 import { Heading, HeadingProps } from '@chakra-ui/react';
 
-import { DM_Sans } from '@next/font/google';
+import { FONT_DM_SANS } from '@/assets/fonts';
 import React from 'react';
-
-const dmSans = DM_Sans({
-  weight: ['400', '500', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-});
 
 type Props = PropsWithChildren<HeadingProps>;
 
 const AppHeading: FunctionComponent<Props> = ({ children, ...props }) => {
   return (
-    <Heading className={dmSans.className} {...props}>
+    <Heading className={FONT_DM_SANS.className} {...props}>
       {children}
     </Heading>
   );

@@ -12,6 +12,7 @@ import { AnimatedBottomBorder } from '@/components/AnimatedBottomBorder';
 import AppHeading from '@/components/AppHeading';
 import AppText from '@/components/AppText';
 import { ExternalLink } from '@/components/ExternalLink';
+import { FONT_DM_SANS } from '@/assets/fonts';
 import Image from 'next/image';
 import { Project } from '@/types';
 import { map } from 'lodash';
@@ -28,6 +29,7 @@ const TechnologyBadge = ({ name }: { name: string }) => {
       marginTop={1}
       marginBottom={1}
       variant='solid'
+      className={FONT_DM_SANS.className}
       colorScheme='orange'>
       {name}
     </Tag>

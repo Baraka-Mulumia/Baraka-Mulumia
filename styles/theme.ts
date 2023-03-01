@@ -1,20 +1,8 @@
-import { DM_Sans, Rubik } from '@next/font/google';
+import { FONT_DM_SANS, FONT_RUBIK } from '@/assets/fonts';
 
 import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
-
-const rubik = Rubik({
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal'],
-  subsets: ['latin'],
-});
-
-const dmSans = DM_Sans({
-  weight: ['400', '500', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-});
 
 export const theme = extendTheme({
   config: {
@@ -83,8 +71,8 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    body: rubik.style.fontFamily,
-    heading: dmSans.style.fontFamily,
+    body: FONT_RUBIK.style.fontFamily,
+    heading: FONT_DM_SANS.style.fontFamily,
   },
 
   components: {
@@ -92,6 +80,7 @@ export const theme = extendTheme({
       baseStyle: {
         fontWeight: '500',
         borderRadius: '0.5rem',
+        fontFamily: FONT_RUBIK.style.fontFamily,
         _focus: {
           boxShadow: 'none',
           outline: 'none',
@@ -138,7 +127,7 @@ export const theme = extendTheme({
     Text: {
       baseStyle: (props: StyleFunctionProps) => ({
         color: mode('text.light.primary', 'text.dark.primary')(props),
-        fontFamily: rubik.style.fontFamily,
+        fontFamily: FONT_RUBIK.style.fontFamily,
       }),
 
       variants: {
@@ -161,7 +150,7 @@ export const theme = extendTheme({
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
-        fontFamily: rubik.style.fontFamily,
+        fontFamily: FONT_RUBIK.style.fontFamily,
         color: (props: StyleFunctionProps) =>
           mode('primary.light.300', 'text.dark.primary')(props),
         bg:

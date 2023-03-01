@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Stack } from '@chakra-ui/react';
+import { Container, Flex, Stack } from '@chakra-ui/react';
 
 import AppHeading from '@/components/AppHeading';
 import { BlockContainer } from '@/containers/BlockContainer';
@@ -6,9 +6,9 @@ import { Footer } from '@/components/Footer';
 import { Header } from '@/components/header';
 import Image from 'next/image';
 import { NextPage } from 'next';
+import PTComponents from '@/sanityAPI/PTComponents';
 import { PageWrapper } from '@/containers/PageWrapper';
 import { PortableText } from '@portabletext/react';
-import { SanityAsset } from '@sanity/image-url/lib/types/types';
 import { map } from 'lodash';
 import sanityAPI from '@/sanityAPI';
 
@@ -54,35 +54,6 @@ type ReadBlogPostPageProps = {
   post: any;
 };
 
-const ptComponents = {
-  types: {
-    image: ({ value }: { value: SanityAsset }) => {
-      if (!value?.asset?._ref) {
-        return null;
-      }
-
-      return (
-        <Box
-          position={'relative'}
-          w={'80%'}
-          h={'400px'}
-          display={'flex'}
-          justifyContent={'center'}
-          alignItems={'center'}
-          alignSelf={'center'}>
-          <Image
-            alt={value.alt || ' '}
-            loading='lazy'
-            className='rounded-lg'
-            src={sanityAPI.urlFor(value.asset).url()}
-            fill
-          />
-        </Box>
-      );
-    },
-  },
-};
-
 const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
   return (
     <PageWrapper Nav={Header}>
@@ -126,7 +97,7 @@ const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
 
           <Container maxW={'container.md'}>
             <Stack textAlign={'justify'}>
-              <PortableText value={post.body} components={ptComponents} />
+              <PortableText value={post.body} components={PTComponents} />
             </Stack>
           </Container>
         </Stack>

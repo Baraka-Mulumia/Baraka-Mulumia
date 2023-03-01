@@ -1,19 +1,13 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
 import { Text, TextProps } from '@chakra-ui/react';
 
-import { Rubik } from '@next/font/google';
+import { FONT_RUBIK } from '@/assets/fonts';
 
 type Props = PropsWithChildren<TextProps>;
 
-const rubik = Rubik({
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal'],
-  subsets: ['latin'],
-});
-
 const AppText: FunctionComponent<Props> = ({ children, ...props }) => {
   return (
-    <Text className={rubik.className} {...props}>
+    <Text className={FONT_RUBIK.className} {...props}>
       {children}
     </Text>
   );
