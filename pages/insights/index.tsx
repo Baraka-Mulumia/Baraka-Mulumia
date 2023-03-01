@@ -7,6 +7,7 @@ import { InquiryForm } from '@/features/landing/InquiryForm';
 import { NextPage } from 'next';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
+import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
 import sanityAPI from '@/sanityAPI';
 
 type BlogPageProps = {
@@ -46,6 +47,7 @@ const Blog: NextPage<BlogPageProps> = ({ posts, services }) => {
       />
       <BlogPosts posts={posts} />
       <InquiryForm services={services} />
+      <QuoteOfTheDay />
       <Footer />
     </PageWrapper>
   );

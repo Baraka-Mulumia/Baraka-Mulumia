@@ -88,3 +88,19 @@ export const PROJECTS_QUERY = `*[_type == "project"] | order(order asc) {
 export const FIRST_3_PROJECTS_QUERY = `*[_type == "project"] | order(order asc) [0..2] { 
     ${PROJECT}
 }`;
+
+const QUOTE = `
+  _id,
+  quote,
+  author,
+  source,
+  _createdAt
+`;
+
+export const RANDOM_QUOTE_QUERY = `*[_type == "quote"] | order() [0] {
+    ${QUOTE}
+}`;
+
+export const QUOTES_QUERY = `*[_type == "quote"] | order(_createdAt desc) {
+    ${QUOTE}
+}`;

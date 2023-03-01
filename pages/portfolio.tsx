@@ -7,6 +7,7 @@ import { PageContentDataRequired } from '@/types';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
 import { ProjectList } from '@/features/portfolio/ProjectList';
+import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
 import sanityAPI from '@/sanityAPI';
 
 export async function getStaticProps() {
@@ -48,6 +49,7 @@ const Portfolio: NextPage<PageContentDataRequired> = ({
         <ProjectList data={projects} />
       </BlockContainer>
       <InquiryForm services={services} />
+      <QuoteOfTheDay />
       <Footer />
     </PageWrapper>
   );

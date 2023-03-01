@@ -5,6 +5,7 @@ import { FunctionComponent } from 'react';
 import { InquiryForm } from './InquiryForm';
 import { PageContentDataRequired } from '@/types';
 import { ProjectPreview } from './ProjectPreview';
+import QuoteOfTheDay from '../quotes/QuoteOfTheDay';
 import { Services } from './Services';
 
 export const LandingPageContent: FunctionComponent<PageContentDataRequired> = ({
@@ -18,6 +19,7 @@ export const LandingPageContent: FunctionComponent<PageContentDataRequired> = ({
       <Services data={services} />
       <ProjectPreview data={projects} />
       <InquiryForm services={services} />
+      <QuoteOfTheDay />
       <Footer />
     </>
   );

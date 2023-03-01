@@ -5,7 +5,7 @@ import { BlockHeader } from '@/components/BlockHeader';
 import { FunctionComponent } from 'react';
 import { Service } from '@/types';
 import { ServiceCard } from '@/components/ServiceCard';
-import { assignBgColorToServiceImage } from '@/lib/functions';
+import { assignColor } from '@/lib/functions';
 import { map } from 'lodash';
 
 const colors = [
@@ -17,7 +17,7 @@ const colors = [
 export const Services: FunctionComponent<{
   data: Service[];
 }> = ({ data: services }) => {
-  const assignedColors = assignBgColorToServiceImage(
+  const assignedColors = assignColor(
     services.map((_, index) => index),
     colors,
   );

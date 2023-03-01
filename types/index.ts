@@ -8,3 +8,4 @@ export type { SanitySlug } from './SanitySlug';
 export type { Service } from './Service';
 export type { PartialService } from './Service';
 export type { ToastNotification } from './ToastNotification';
+export type { Quote } from './Quote';

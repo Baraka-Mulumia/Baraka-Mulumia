@@ -9,6 +9,7 @@ import { NextPage } from 'next';
 import PTComponents from '@/sanityAPI/PTComponents';
 import { PageWrapper } from '@/containers/PageWrapper';
 import { PortableText } from '@portabletext/react';
+import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
 import { map } from 'lodash';
 import sanityAPI from '@/sanityAPI';
 
@@ -102,7 +103,7 @@ const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
           </Container>
         </Stack>
       </BlockContainer>
-
+      <QuoteOfTheDay />
       <Footer />
     </PageWrapper>
   );

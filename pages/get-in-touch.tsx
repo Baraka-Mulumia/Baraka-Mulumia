@@ -22,6 +22,7 @@ import { IconType } from 'react-icons';
 import { NextPage } from 'next';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
+import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
 import { SocialMediaIcons } from '@/components/SocialMediaIcons';
 import { map } from 'lodash';
 import { uuid } from '@/lib/functions';
@@ -130,6 +131,7 @@ const Contact: NextPage = () => {
           </Box>
         </Flex>
       </BlockContainer>
+      <QuoteOfTheDay />
       <Footer />
     </PageWrapper>
   );

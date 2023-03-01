@@ -9,7 +9,7 @@ export const uuid = () => {
   });
 };
 
-export const assignBgColorToServiceImage = (
+export const assignColor = (
   projectIndices: number[],
   colors: string[],
 ): { [key: number]: string } => {
@@ -25,4 +25,15 @@ export const assignBgColorToServiceImage = (
   });
 
   return Object.assign({}, ...flatten(assignedColors));
+};
+
+//get a random number between start and end
+export const getRandomNumber = (
+  start: number,
+  end: number,
+  isInclusive: boolean = true,
+): number => {
+  const min = isInclusive ? Math.ceil(start) : Math.floor(start);
+  const max = isInclusive ? Math.floor(end) : Math.ceil(end);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 };

@@ -4,6 +4,7 @@ import {
   FIRST_3_PROJECTS_QUERY,
   PARTIAL_SERVICES_QUERY,
   PROJECTS_QUERY,
+  QUOTES_QUERY,
   SERVICES_QUERY,
   SINGLE_BLOG_POST_QUERY,
 } from './queries';
@@ -11,12 +12,14 @@ import {
   BlogPost,
   PartialService,
   Project,
+  Quote,
   SanitySlug,
   Service,
 } from '@/types';
 import { SanityClient, createClient } from '@sanity/client';
 
 import { SanityAsset } from '@sanity/image-url/lib/types/types';
+import { getRandomNumber } from './../lib/functions';
 import imageUrlBuilder from '@sanity/image-url';
 
 const queryMap = {
@@ -48,7 +51,7 @@ class SanityAPI {
     this.client = createClient({
       projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
       dataset: 'production',
-      // useCdn: true,
+      useCdn: true,
       apiVersion: '2021-03-25',
     });
   }
@@ -142,6 +145,28 @@ class SanityAPI {
 
     try {
       const data = await this.client.fetch(query, { documentType });
+      return { data, error: null };
+    } catch (error) {
+      return { data: null, error };
+    }
+  };
+
+  //TODO : Fix this - find a way to fetch only one quote from Sanity
+  getRandomQuote = async (): Promise<SanityResponse<Quote>> => {
+    try {
+      const data = await this.client.fetch(QUOTES_QUERY);
+
+      const randomIndex = getRandomNumber(0, data.length - 1);
+
+      return { data: data[randomIndex], error: null };
+    } catch (error) {
+      return { data: null, error };
+    }
+  };
+
+  getQuotes = async (): Promise<SanityResponse<Quote[]>> => {
+    try {
+      const data = await this.client.fetch(QUOTES_QUERY);
       return { data, error: null };
     } catch (error) {
       return { data: null, error };

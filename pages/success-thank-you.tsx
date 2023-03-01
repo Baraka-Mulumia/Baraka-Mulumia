@@ -4,6 +4,7 @@ import { Header } from '@/components/header';
 import { NextPage } from 'next';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
+import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
 
 const FormSubmitSuccess: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const FormSubmitSuccess: NextPage = () => {
           leadText="Congratulations, your inquiry has been received! I am thrilled to have the opportunity to collaborate with you and bring your technology vision to life.  I'll be in touch with you soon. Thank you for choosing me as your technology partner."
         />
       </BlockContainer>
+      <QuoteOfTheDay />
       <Footer />
     </PageWrapper>
   );

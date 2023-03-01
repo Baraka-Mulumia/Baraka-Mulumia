@@ -4,6 +4,7 @@ import { Header } from '@/components/header';
 import { NextPage } from 'next';
 import PageNotFound from '@/components/PageNotFound';
 import { PageWrapper } from '@/containers/PageWrapper';
+import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
 
 const _404Page: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const _404Page: NextPage = () => {
       <Container maxW={'7xl'} p='12'>
         <PageNotFound />
       </Container>
+      <QuoteOfTheDay />
       <Footer />
     </PageWrapper>
   );

@@ -19,7 +19,7 @@ export default defineType({
     defineField({
       name: 'source',
       title: 'Source',
-      type: 'string',
+      type: 'url',
     }),
   ],
 
