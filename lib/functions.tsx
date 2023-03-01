@@ -1,3 +1,5 @@
+import { chunk, flatten, map } from 'lodash';
+
 // function to generate a random id
 export const uuid = () => {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -5,4 +7,22 @@ export const uuid = () => {
       v = c == 'x' ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
+};
+
+export const assignBgColorToServiceImage = (
+  projectIndices: number[],
+  colors: string[],
+): { [key: number]: string } => {
+  // chunk the project indices into groups of the length of the colors array
+  let groupsOf3 = chunk(projectIndices, colors.length);
+
+  const assignedColors = map(groupsOf3, chunk => {
+    return map(chunk, (item, index) => {
+      return {
+        [item]: colors[index],
+      };
+    });
+  });
+
+  return Object.assign({}, ...flatten(assignedColors));
 };
