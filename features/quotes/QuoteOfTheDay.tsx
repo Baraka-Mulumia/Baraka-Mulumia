@@ -31,7 +31,7 @@ const QuoteOfTheDay: FunctionComponent = () => {
       {isLoading ? (
         <QuoteLoadingSkeleton />
       ) : (
-        <QuoteCard quote={quote} isPreview={true} />
+        <>{quote && <QuoteCard quote={quote} isPreview={true} />}</>
       )}
     </Flex>
   );
