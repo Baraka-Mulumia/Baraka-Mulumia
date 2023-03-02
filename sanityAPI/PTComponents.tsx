@@ -113,6 +113,11 @@ const PTComponents: PortableTextComponents = {
         {children}
       </AppHeading>
     ),
+    normal: ({ children }) => (
+      <AppText fontSize={'xl'} lineHeight={'tall'}>
+        {children}
+      </AppText>
+    ),
   },
 };
 
