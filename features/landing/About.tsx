@@ -4,13 +4,13 @@ import {
   Link as ChakraLink,
   Container,
   HStack,
+  Heading,
   Image,
   Stack,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import AppHeading from '@/components/AppHeading';
-import AppText from '@/components/AppText';
 import { Element } from 'react-scroll';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
@@ -32,9 +32,9 @@ const AboutSection: FunctionComponent = () => {
   return (
     <Element name='about-section'>
       <Container maxW={'7xl'} p='12'>
-        <AppHeading as='h2' color={headingColor}>
+        <Heading as='h2' color={headingColor}>
           Learn more about Baraka
-        </AppHeading>
+        </Heading>
         <Stack
           marginTop={{ base: '1', sm: '5' }}
           display='flex'
@@ -73,7 +73,7 @@ const AboutSection: FunctionComponent = () => {
           </Box>
           <Stack flex='1' spacing={8}>
             <Stack flex='1' spacing={2}>
-              <AppText as='p' marginTop='2' fontSize={{ base: 'sm', md: 'lg' }}>
+              <Text as='p' marginTop='2' fontSize={{ base: 'sm', md: 'lg' }}>
                 Baraka Mulumia is a skilled software developer with over 5 years
                 of experience in the industry. Having a strong background in
                 both front-end and back-end development and worked on a variety
@@ -81,14 +81,14 @@ const AboutSection: FunctionComponent = () => {
                 enterprise applications. I have a passion for using technology
                 to solve complex problems and enjoy staying up-to-date with the
                 latest developments in my field.
-              </AppText>
-              <AppText as='p' marginTop='2' fontSize={{ base: 'sm', md: 'lg' }}>
+              </Text>
+              <Text as='p' marginTop='2' fontSize={{ base: 'sm', md: 'lg' }}>
                 I believe in collaboration, continuous learning and staying up
                 to date with industry advancements to ensure that my clients
                 receive the best possible results. Whether you have a small
                 project or a large-scale software development requirement, I am
                 ready to work with you to bring your vision to life.
-              </AppText>
+              </Text>
             </Stack>
             <HStack
               spacing={{

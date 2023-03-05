@@ -3,11 +3,11 @@ import {
   Button,
   Heading,
   Stack,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 import { FunctionComponent, PropsWithChildren } from 'react';
 
-import AppText from './AppText';
 import { SpyLink } from './SpyLink';
 import { TransitionMotion } from './motion/Transition.motion';
 
@@ -59,9 +59,9 @@ export const PageHeroSection: FunctionComponent<HeroProps> = ({
           </Heading>
         </TransitionMotion>
         <Box w={'90%'} pt={4}>
-          <AppText fontSize={'md'} textAlign={'center'}>
+          <Text fontSize={'md'} textAlign={'center'}>
             {leadText}
-          </AppText>
+          </Text>
         </Box>
       </Stack>
       {isHomePage && (

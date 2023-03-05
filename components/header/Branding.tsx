@@ -1,7 +1,7 @@
 import { AnimatedBottomBorder } from '../AnimatedBottomBorder';
-import AppText from '../AppText';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
+import { Text } from '@chakra-ui/react';
 import { useColorModeValue } from '@chakra-ui/react';
 
 export const Branding: FunctionComponent<{
@@ -15,7 +15,7 @@ export const Branding: FunctionComponent<{
   return (
     <Link href={'/'}>
       <AnimatedBottomBorder>
-        <AppText
+        <Text
           as={'h1'}
           fontFamily={'heading'}
           fontWeight={700}
@@ -25,7 +25,7 @@ export const Branding: FunctionComponent<{
           }}
           color={isWhite ? 'white' : headingColor}>
           Baraka M. Mulumia
-        </AppText>
+        </Text>
       </AnimatedBottomBorder>
     </Link>
   );

@@ -9,10 +9,12 @@ import Document, {
 import { ColorModeScript } from '@chakra-ui/react';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
-import { theme } from '@/styles/theme';
+import theme from '@/config/theme';
+
+const emotionKey = 'emotion-css';
 
 const emotionCache = createCache({
-  key: 'css',
+  key: emotionKey,
 });
 
 const APP_NAME = 'Baraka Mulumia';
@@ -28,7 +30,7 @@ class MyDocument extends Document {
       styles: [
         initialProps.styles,
         <style
-          key='emotion-css'
+          key={emotionKey}
           dangerouslySetInnerHTML={{ __html: styles.css }}
           data-emotion-css={styles.ids.join(' ')}
         />,

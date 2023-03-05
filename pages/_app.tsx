@@ -1,17 +1,18 @@
-import '@/styles/globals.css';
+import theme, { appFont } from '@/config/theme';
 
-import { AppHead } from '@/components/AppHead';
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import { NotificationProvider } from '@/providers/Notification.provider';
-import { theme } from '@/styles/theme';
+import SEO from '@/components/SEO';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <AppHead />
+      <SEO />
       <NotificationProvider>
-        <Component {...pageProps} />
+        <main className={appFont.className}>
+          <Component {...pageProps} />
+        </main>
       </NotificationProvider>
     </ChakraProvider>
   );

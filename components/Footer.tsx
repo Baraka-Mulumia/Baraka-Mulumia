@@ -1,7 +1,6 @@
-import { Box, Stack, useColorModeValue } from '@chakra-ui/react';
+import { Box, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import { DesktopNav, DesktopNavItem } from './header/DesktopNav';
 
-import AppText from './AppText';
 import { Branding } from './header/Branding';
 import { FunctionComponent } from 'react';
 import { NAVIGATION_LINKS_LIST } from '@/constants';
@@ -47,9 +46,9 @@ export const Footer: FunctionComponent = () => {
         ))}
       </Stack>
       <SocialMediaIcons />
-      <AppText fontSize={'sm'} fontWeight={'medium'} variant={'text_white'}>
+      <Text fontSize={'sm'} fontWeight={'medium'} variant={'text_white'}>
         © {new Date().getFullYear()} All rights reserved. Baraka Mulumia
-      </AppText>
+      </Text>
     </Stack>
   );
 };

@@ -5,11 +5,10 @@ import {
   ModalContent,
   ModalOverlay,
   Spinner,
+  Text,
   VStack,
   useDisclosure,
 } from '@chakra-ui/react';
-
-import AppText from '@/components/AppText';
 
 type PageLOadingModalProps = {
   visible: boolean;
@@ -53,9 +52,9 @@ export const PageLoadingModal: FunctionComponent<PageLOadingModalProps> = ({
               h={32}
               w={32}
             />
-            <AppText color={'white'} fontSize={'2xl'}>
+            <Text color={'white'} fontSize={'2xl'}>
               {loadingText}
-            </AppText>
+            </Text>
           </VStack>
         </ModalBody>
       </ModalContent>

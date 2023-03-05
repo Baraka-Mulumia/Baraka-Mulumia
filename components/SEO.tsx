@@ -14,7 +14,7 @@ type SeoProps = {
   lang?: string;
 };
 
-export const AppHead: FunctionComponent<SeoProps> = ({
+const SEO: FunctionComponent<SeoProps> = ({
   description = 'Baraka Mulumia | Building digital solutions, one line of code at a time.',
   author = 'Baraka Mulumia',
   title = 'Baraka M Mulumia',
@@ -108,3 +108,5 @@ export const AppHead: FunctionComponent<SeoProps> = ({
     </Head>
   );
 };
+
+export default SEO;

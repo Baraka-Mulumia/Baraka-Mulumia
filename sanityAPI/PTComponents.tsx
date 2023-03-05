@@ -1,7 +1,5 @@
-import { Box, useColorModeValue } from '@chakra-ui/react';
+import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 
-import AppHeading from '@/components/AppHeading';
-import AppText from '@/components/AppText';
 import { ExternalLink } from '@/components/ExternalLink';
 import Image from 'next/image';
 import { PortableTextComponents } from '@portabletext/react';
@@ -41,13 +39,13 @@ const PTComponents: PortableTextComponents = {
       const emphasisColor = useColorModeValue('gray.500', 'gray.300');
 
       return (
-        <AppText
+        <Text
           as={'em'}
           fontWeight='500'
           fontStyle='italic'
           color={emphasisColor}>
           {children}
-        </AppText>
+        </Text>
       );
     },
 
@@ -73,7 +71,7 @@ const PTComponents: PortableTextComponents = {
 
   block: {
     h1: ({ children }) => (
-      <AppHeading
+      <Heading
         as={'h1'}
         maxW={'container.lg'}
         fontSize={{
@@ -82,10 +80,10 @@ const PTComponents: PortableTextComponents = {
         }}
         textTransform={'capitalize'}>
         {children}
-      </AppHeading>
+      </Heading>
     ),
     h2: ({ children }) => (
-      <AppHeading
+      <Heading
         as={'h2'}
         maxW={'container.lg'}
         fontSize={{
@@ -94,10 +92,10 @@ const PTComponents: PortableTextComponents = {
         }}
         textTransform={'capitalize'}>
         {children}
-      </AppHeading>
+      </Heading>
     ),
     h3: ({ children }) => (
-      <AppHeading
+      <Heading
         as={'h3'}
         maxW={'container.lg'}
         fontSize={{
@@ -106,22 +104,22 @@ const PTComponents: PortableTextComponents = {
         }}
         textTransform={'capitalize'}>
         {children}
-      </AppHeading>
+      </Heading>
     ),
     h4: ({ children }) => (
-      <AppHeading as={'h4'} maxW={'container.lg'} textTransform={'capitalize'}>
+      <Heading as={'h4'} maxW={'container.lg'} textTransform={'capitalize'}>
         {children}
-      </AppHeading>
+      </Heading>
     ),
     normal: ({ children }) => (
-      <AppText
+      <Text
         fontSize={{
           base: 'lg',
           md: 'xl',
         }}
         lineHeight={'tall'}>
         {children}
-      </AppText>
+      </Text>
     ),
   },
 };

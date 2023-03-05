@@ -1,13 +1,13 @@
 import {
   Box,
   Flex,
+  Heading,
   Stack,
+  Text,
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import AppHeading from './AppHeading';
-import AppText from './AppText';
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
 
@@ -82,10 +82,10 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
         </Box>
       </Flex>
       <Stack p={6} flex={2}>
-        <AppHeading as={'h3'} size={'md'} color={headingColor} mt={4}>
+        <Heading as={'h3'} size={'md'} color={headingColor} mt={4}>
           {title}
-        </AppHeading>
-        <AppText>{description}</AppText>
+        </Heading>
+        <Text>{description}</Text>
       </Stack>
     </Stack>
   );

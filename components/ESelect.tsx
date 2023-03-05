@@ -3,10 +3,10 @@ import {
   FormHelperText,
   FormLabel,
   Select,
+  Text,
   useColorMode,
 } from '@chakra-ui/react';
 
-import AppText from './AppText';
 import { FunctionComponent } from 'react';
 import { map } from 'lodash';
 import { uuid } from '@/lib/functions';
@@ -41,9 +41,9 @@ export const ESelect: FunctionComponent<ESelectProps> = ({
     <FormControl>
       <FormLabel color={'primary.light.000'}>
         {label}
-        <AppText as={'span'} color={'red.500'}>
+        <Text as={'span'} color={'red.500'}>
           {isRequired ? '*' : ''}
-        </AppText>
+        </Text>
       </FormLabel>
       <Select
         color={'primary.light.100'}

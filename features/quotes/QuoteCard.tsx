@@ -1,7 +1,6 @@
-import { Box, Stack, useColorModeValue } from '@chakra-ui/react';
+import { Box, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import React, { FunctionComponent } from 'react';
 
-import AppText from '@/components/AppText';
 import { ExternalLink } from '@/components/ExternalLink';
 import { ImQuotesLeft } from 'react-icons/im';
 import Link from 'next/link';
@@ -20,7 +19,7 @@ const QuoteCard: FunctionComponent<{
   const cardBgColor = useColorModeValue('white', 'gray.800');
 
   const Author = (
-    <AppText
+    <Text
       fontSize={{
         base: 'sm',
         md: 'md',
@@ -28,7 +27,7 @@ const QuoteCard: FunctionComponent<{
       color={authorColor}
       textTransform='uppercase'>
       - {quote?.author}
-    </AppText>
+    </Text>
   );
 
   return (
@@ -52,22 +51,22 @@ const QuoteCard: FunctionComponent<{
       </Box>
       {isPreview ? (
         <Link href={`/favorite-quotes`}>
-          <AppText
+          <Text
             fontSize={{
               base: 'lg',
               md: 'xl',
             }}>
             {quote?.quote}
-          </AppText>
+          </Text>
         </Link>
       ) : (
-        <AppText
+        <Text
           fontSize={{
             base: 'lg',
             md: 'xl',
           }}>
           {quote?.quote}
-        </AppText>
+        </Text>
       )}
       {quote?.author && (
         <>

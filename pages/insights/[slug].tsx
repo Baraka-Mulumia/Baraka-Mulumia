@@ -1,6 +1,5 @@
-import { Container, Flex, Stack } from '@chakra-ui/react';
+import { Container, Flex, Heading, Stack } from '@chakra-ui/react';
 
-import AppHeading from '@/components/AppHeading';
 import { BlockContainer } from '@/containers/BlockContainer';
 import { BlogPost } from '@/types';
 import { Footer } from '@/components/Footer';
@@ -73,7 +72,7 @@ const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
               base: '1rem',
               md: '2rem',
             }}>
-            <AppHeading
+            <Heading
               as={'h1'}
               maxW={'container.lg'}
               fontSize={{
@@ -82,7 +81,7 @@ const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
               }}
               textTransform={'capitalize'}>
               {post.title}
-            </AppHeading>
+            </Heading>
             <Flex
               position={'relative'}
               h={{

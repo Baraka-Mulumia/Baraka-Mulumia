@@ -2,17 +2,16 @@ import {
   Box,
   Button,
   HStack,
+  Heading,
   Stack,
   Tag,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 import React, { FunctionComponent } from 'react';
 
 import { AnimatedBottomBorder } from '@/components/AnimatedBottomBorder';
-import AppHeading from '@/components/AppHeading';
-import AppText from '@/components/AppText';
 import { ExternalLink } from '@/components/ExternalLink';
-import { FONT_DM_SANS } from '@/assets/fonts';
 import Image from 'next/image';
 import { Project } from '@/types';
 import { map } from 'lodash';
@@ -29,7 +28,6 @@ const TechnologyBadge = ({ name }: { name: string }) => {
       marginTop={1}
       marginBottom={1}
       variant='solid'
-      className={FONT_DM_SANS.className}
       colorScheme='orange'>
       {name}
     </Tag>
@@ -91,13 +89,13 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
         <Stack alignSelf={'flex-start'} px={4} w={'full'}>
           <ExternalLink href={href}>
             <AnimatedBottomBorder>
-              <AppHeading color={headingColor} as={'h3'}>
+              <Heading color={headingColor} as={'h3'}>
                 {title}
-              </AppHeading>
+              </Heading>
             </AnimatedBottomBorder>
           </ExternalLink>
 
-          <AppText>{description}</AppText>
+          <Text>{description}</Text>
 
           <HStack spacing={2} wrap={'wrap'}>
             {technologies &&

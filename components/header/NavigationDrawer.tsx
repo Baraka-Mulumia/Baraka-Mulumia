@@ -9,12 +9,12 @@ import {
   DrawerOverlay,
   IconButton,
   Stack,
+  Text,
   VStack,
   useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
 
-import AppText from '../AppText';
 import { Branding } from './Branding';
 import { FunctionComponent } from 'react';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -38,7 +38,7 @@ const MobileNavItem: FunctionComponent<MobileNavItemProps> = ({
   return (
     <Link href={href}>
       <Stack placeContent={'center'} py={2} w={'100%'} onClick={onClick}>
-        <AppText>{label}</AppText>
+        <Text>{label}</Text>
       </Stack>
     </Link>
   );
@@ -102,9 +102,7 @@ export const NavigationDrawer: FunctionComponent = () => {
             </VStack>
           </DrawerBody>
           <DrawerFooter>
-            <AppText fontSize={'xs'}>
-              Expertly designed, expertly delivered
-            </AppText>
+            <Text fontSize={'xs'}>Expertly designed, expertly delivered</Text>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
