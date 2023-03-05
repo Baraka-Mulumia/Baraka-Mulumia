@@ -15,6 +15,8 @@ export type BlogPost = {
     title: string;
     slug: SanitySlug;
   }[];
-  body: string;
   _createdAt: string;
+
+  // the body is sanity block content
+  body: any;
 };

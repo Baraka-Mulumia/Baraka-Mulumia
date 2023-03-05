@@ -2,7 +2,9 @@ import { Container, Flex, Stack } from '@chakra-ui/react';
 
 import AppHeading from '@/components/AppHeading';
 import { BlockContainer } from '@/containers/BlockContainer';
+import { BlogPost } from '@/types';
 import { Footer } from '@/components/Footer';
+import Head from 'next/head';
 import { Header } from '@/components/header';
 import Image from 'next/image';
 import { NextPage } from 'next';
@@ -52,60 +54,66 @@ export async function getStaticProps({ params: { slug } }: any) {
 }
 
 type ReadBlogPostPageProps = {
-  post: any;
+  post: BlogPost;
 };
 
 const ReadBlogPostPage: NextPage<ReadBlogPostPageProps> = ({ post }) => {
   return (
-    <PageWrapper Nav={Header}>
-      <BlockContainer>
-        <Stack
-          justifyContent={'center'}
-          alignItems={'center'}
-          spacing={{
-            base: '1rem',
-            md: '2rem',
-          }}>
-          <AppHeading
-            as={'h1'}
-            maxW={'container.lg'}
-            fontSize={{
-              base: '2xl',
-              md: '4xl',
-            }}
-            textTransform={'capitalize'}>
-            {post.title}
-          </AppHeading>
-          <Flex
-            position={'relative'}
-            h={{
-              base: '300px',
-              md: '500px',
-            }}
-            w={'100%'}
-            maxW={'container.lg'}>
-            <Image
-              src={post.mainImage.asset.url}
-              alt={post.title}
-              fill
-              style={{
-                objectFit: 'cover',
-                objectPosition: 'top center',
-                borderRadius: '10px',
-              }}
-            />
-          </Flex>
+    <>
+      <Head>
+        <meta name={'description'} content={post.title} />
+      </Head>
 
-          <Container maxW={'container.lg'}>
-            <Stack textAlign={'justify'} spacing={4}>
-              <PortableText value={post.body} components={PTComponents} />
-            </Stack>
-          </Container>
-        </Stack>
-      </BlockContainer>
-      <QuoteOfTheDay />
-      <Footer />
-    </PageWrapper>
+      <PageWrapper Nav={Header}>
+        <BlockContainer>
+          <Stack
+            justifyContent={'center'}
+            alignItems={'center'}
+            spacing={{
+              base: '1rem',
+              md: '2rem',
+            }}>
+            <AppHeading
+              as={'h1'}
+              maxW={'container.lg'}
+              fontSize={{
+                base: '2xl',
+                md: '4xl',
+              }}
+              textTransform={'capitalize'}>
+              {post.title}
+            </AppHeading>
+            <Flex
+              position={'relative'}
+              h={{
+                base: '300px',
+                md: '500px',
+              }}
+              w={'100%'}
+              maxW={'container.lg'}>
+              <Image
+                src={post.mainImage.asset.url}
+                alt={post.title}
+                fill
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'top center',
+                  borderRadius: '10px',
+                }}
+              />
+            </Flex>
+
+            <Container maxW={'container.lg'}>
+              <Stack textAlign={'justify'} spacing={4}>
+                <PortableText value={post.body} components={PTComponents} />
+              </Stack>
+            </Container>
+          </Stack>
+        </BlockContainer>
+        <QuoteOfTheDay />
+        <Footer />
+      </PageWrapper>
+    </>
   );
 };
 
