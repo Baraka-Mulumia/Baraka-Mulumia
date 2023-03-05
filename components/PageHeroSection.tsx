@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react';
 import { FunctionComponent, PropsWithChildren } from 'react';
 
+import { ChevronDownIcon } from '@chakra-ui/icons';
 import { SpyLink } from './SpyLink';
 import { TransitionMotion } from './motion/Transition.motion';
 
@@ -65,8 +66,12 @@ export const PageHeroSection: FunctionComponent<HeroProps> = ({
         </Box>
       </Stack>
       {isHomePage && (
-        <SpyLink path='about-section'>
-          <Button variant={'primary'}>Explore</Button>
+        <SpyLink path='services-section'>
+          <Button
+            variant={'primary'}
+            rightIcon={<ChevronDownIcon fontSize={24} />}>
+            Explore Services
+          </Button>
         </SpyLink>
       )}
       {children}
