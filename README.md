@@ -19,7 +19,7 @@ who do.
 -   ⚡  I'm secretly in love with JavaScript, But hey, don't tell anyone!!
 
 <a href="https://www.twitter.com/barakamulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/twitter/follow/barakamulumia?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917"/>
-</a><a href="https://www.github.com/Baraka-Mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/followers/Baraka-Mulumia?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
+</a><a href="https://www.github.com/Baraka-Mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/followers/iambaraka?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
 
 ### Skills
 
