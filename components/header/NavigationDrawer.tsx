@@ -16,11 +16,11 @@ import {
 } from '@chakra-ui/react';
 
 import { Branding } from './Branding';
+import ContactPageLink from './ContactPageLink';
 import { FunctionComponent } from 'react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { NAVIGATION_LINKS_LIST } from '@/constants';
-import { ReadBlogButton } from './ReadBlogButton';
 import { map } from 'lodash';
 import { uuid } from '@/lib/functions';
 
@@ -97,7 +97,7 @@ export const NavigationDrawer: FunctionComponent = () => {
                 alignItems={'center'}
                 py={2}
                 mt={10}>
-                <ReadBlogButton />
+                <ContactPageLink />
               </Stack>
             </VStack>
           </DrawerBody>

@@ -8,9 +8,9 @@ import {
 import React, { FunctionComponent } from 'react';
 
 import { Branding } from './Branding';
+import ContactPageLink from './ContactPageLink';
 import { DesktopNav } from './DesktopNav';
 import { NavigationDrawer } from './NavigationDrawer';
-import { ReadBlogButton } from './ReadBlogButton';
 import { ThemeSwitcher } from '../ThemeSwitcher';
 
 export const Header: FunctionComponent<{
@@ -42,7 +42,7 @@ export const Header: FunctionComponent<{
                 base: 'none',
                 md: 'block',
               }}>
-              <ReadBlogButton />
+              <ContactPageLink />
             </Box>
             <Box
               display={{
