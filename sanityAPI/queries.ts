@@ -13,7 +13,7 @@ export const SERVICES_QUERY = `*[_type == "service"] | order(_createdAt asc) {
     _createdAt
 }`;
 
-export const PARTIAL_SERVICES_QUERY = `*[_type == "service"] | order(_createdAt desc) {
+export const PARTIAL_SERVICES_QUERY = `*[_type == "service"] | order(_createdAt asc) {
     _id,
     title,
     slug,

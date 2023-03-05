@@ -8,12 +8,12 @@ export const NAVIGATION_LINKS_LIST = [
     href: '/portfolio',
   },
   {
-    name: 'Get in Touch',
-    href: '/get-in-touch',
+    name: 'Timeline',
+    href: '/timeline',
   },
   {
-    name: 'My Story',
-    href: '/insights/my-path-to-becoming-a-developer',
+    name: 'Thoughts',
+    href: '/blog',
   },
 ];
 

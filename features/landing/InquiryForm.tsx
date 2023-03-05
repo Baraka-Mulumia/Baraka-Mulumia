@@ -8,7 +8,8 @@ import { Service } from '@/types';
 
 export const InquiryForm: FunctionComponent<{
   services: Service[];
-}> = ({ services }) => {
+  includeHeader?: boolean;
+}> = ({ services, includeHeader = true }) => {
   return (
     <BlockContainer w={'full'} minH={'auto'}>
       <Stack
@@ -16,10 +17,12 @@ export const InquiryForm: FunctionComponent<{
           base: 10,
           md: 20,
         }}>
-        <BlockHeader
-          slogan='Together We Can Build Your Dream'
-          title="Let's Connect and Bring Your Vision to Life"
-        />
+        {includeHeader && (
+          <BlockHeader
+            slogan='Together We Can Build Your Dream'
+            title="Let's Connect and Bring Your Vision to Life"
+          />
+        )}
         <Flex
           w={'full'}
           placeContent={'center'}

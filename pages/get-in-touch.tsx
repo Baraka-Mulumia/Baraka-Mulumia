@@ -1,30 +1,19 @@
-import {
-  Box,
-  Button,
-  ButtonProps,
-  Flex,
-  Heading,
-  Link,
-  Text,
-  VStack,
-  Wrap,
-  WrapItem,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Button, ButtonProps, Flex, Link, Stack } from '@chakra-ui/react';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 
 import { BlockContainer } from '@/containers/BlockContainer';
 import { Footer } from '@/components/Footer';
 import { FunctionComponent } from 'react';
-import { GetInTouchForm } from '@/features/contact/GetInTouchForm';
 import { Header } from '@/components/header';
 import { IconType } from 'react-icons';
+import { InquiryForm } from '@/features/landing/InquiryForm';
 import { NextPage } from 'next';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
 import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
-import { SocialMediaIcons } from '@/components/SocialMediaIcons';
+import { Service } from '@/types/Service';
 import { map } from 'lodash';
+import sanityAPI from '@/sanityAPI';
 import { uuid } from '@/lib/functions';
 
 const ContactItem: FunctionComponent<
@@ -40,9 +29,8 @@ const ContactItem: FunctionComponent<
       height='48px'
       width='200px'
       variant='ghost'
-      color='#DCE2FF'
-      _hover={{ border: '2px solid', borderColor: '#DCE2FF' }}
-      leftIcon={<Icon color='#DCE2FF' size='20px' />}>
+      _hover={{ border: '2px solid' }}
+      leftIcon={<Icon size='20px' />}>
       {linkType == 'email' ? text.split('@')[0] : text}
     </Button>
   );
@@ -63,9 +51,25 @@ const ContactItem: FunctionComponent<
   );
 };
 
-const Contact: NextPage = () => {
-  const bgCOlor = useColorModeValue('primary.dark.200', 'primary.dark.200');
+export async function getStaticProps() {
+  const { data } = await sanityAPI.getPartialService();
 
+  if (!data) {
+    return {
+      services: [],
+    };
+  }
+
+  return {
+    props: {
+      services: data,
+    },
+  };
+}
+
+const Contact: NextPage<{
+  services: Service[];
+}> = ({ services }) => {
   const contactItems = [
     {
       text: '+254 748 717 044',
@@ -94,38 +98,26 @@ const Contact: NextPage = () => {
       />
 
       <BlockContainer alignItems={'start'}>
+        <InquiryForm services={services} includeHeader={false} />
+
         <Flex justifyContent={'center'} alignItems={'center'}>
-          <Box
-            bg={bgCOlor}
-            borderRadius='lg'
-            m={{ sm: 4, md: 16, lg: 10 }}
-            p={{ sm: 5, md: 5, lg: 16 }}>
-            <Box p={4}>
-              <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }} w={'full'}>
-                <WrapItem>
-                  <Box>
-                    <Heading color={'white'}>Get in Touch</Heading>
-                    <Text mt={{ sm: 3, md: 3, lg: 5 }} variant={'text_white'}>
-                      Lets grab coffee sometime!
-                    </Text>
-                    <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <VStack pl={0} spacing={3} alignItems='flex-start'>
-                        {map(contactItems, item => (
-                          <ContactItem
-                            text={item.text}
-                            Icon={item.Icon}
-                            key={uuid()}
-                            linkType={item.type}
-                          />
-                        ))}
-                      </VStack>
-                    </Box>
-                    <SocialMediaIcons />
-                  </Box>
-                </WrapItem>
-                <GetInTouchForm />
-              </Wrap>
-            </Box>
+          <Box borderRadius='lg' p={{ sm: 4, lg: 8 }}>
+            <Stack
+              pl={0}
+              spacing={3}
+              direction={{
+                base: 'column',
+                md: 'row',
+              }}>
+              {map(contactItems, item => (
+                <ContactItem
+                  text={item.text}
+                  Icon={item.Icon}
+                  key={uuid()}
+                  linkType={item.type}
+                />
+              ))}
+            </Stack>
           </Box>
         </Flex>
       </BlockContainer>
