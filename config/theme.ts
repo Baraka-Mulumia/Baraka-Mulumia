@@ -1,10 +1,14 @@
-import { FONT_DM_SANS, FONT_RUBIK } from '@/assets/fonts';
-
+import { DM_Sans } from 'next/font/google';
 import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
-export const theme = extendTheme({
+export const appFont = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
+
+const theme = extendTheme({
   config: {
     initialColorMode: 'system',
     useSystemColorMode: true,
@@ -71,8 +75,8 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    body: FONT_RUBIK.style.fontFamily,
-    heading: FONT_DM_SANS.style.fontFamily,
+    body: appFont.style.fontFamily,
+    heading: appFont.style.fontFamily,
   },
 
   components: {
@@ -80,7 +84,6 @@ export const theme = extendTheme({
       baseStyle: {
         fontWeight: '500',
         borderRadius: '0.5rem',
-        fontFamily: FONT_RUBIK.style.fontFamily,
         _focus: {
           boxShadow: 'none',
           outline: 'none',
@@ -127,7 +130,6 @@ export const theme = extendTheme({
     Text: {
       baseStyle: (props: StyleFunctionProps) => ({
         color: mode('text.light.primary', 'text.dark.primary')(props),
-        fontFamily: FONT_RUBIK.style.fontFamily,
       }),
 
       variants: {
@@ -150,14 +152,13 @@ export const theme = extendTheme({
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
-        fontFamily: FONT_RUBIK.style.fontFamily,
+        ...appFont.style,
         color: (props: StyleFunctionProps) =>
           mode('primary.light.300', 'text.dark.primary')(props),
-        bg:
-          props.colorMode === 'dark'
-            ? 'backgrounds.dark.100'
-            : 'backgrounds.light.100',
+        bg: mode('backgrounds.light.100', 'backgrounds.dark.100')(props),
       },
     }),
   },
 });
+
+export default theme;
