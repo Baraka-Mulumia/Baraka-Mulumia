@@ -14,7 +14,6 @@ import {
 import { Element } from 'react-scroll';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
-import { NAVIGATION_LINKS_LIST } from '@/constants';
 import React from 'react';
 import { TransitionMotion } from '@/components/motion/Transition.motion';
 
@@ -106,11 +105,7 @@ const AboutSection: FunctionComponent = () => {
                 </Button>
               </ChakraLink>
               <Button variant='primaryOutline' rounded={'10px'} px={8}>
-                <Link
-                  href={
-                    NAVIGATION_LINKS_LIST.find(link => link.name === 'My Story')
-                      ?.href || '/'
-                  }>
+                <Link href={'/blog/my-path-to-becoming-a-developer'}>
                   My Story
                 </Link>
               </Button>
