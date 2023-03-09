@@ -10,7 +10,6 @@ import { InquiryForm } from '@/features/landing/InquiryForm';
 import { NextPage } from 'next';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
-import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
 import { Service } from '@/types/Service';
 import { map } from 'lodash';
 import sanityAPI from '@/sanityAPI';
@@ -121,7 +120,6 @@ const Contact: NextPage<{
           </Box>
         </Flex>
       </BlockContainer>
-      <QuoteOfTheDay />
       <Footer />
     </PageWrapper>
   );

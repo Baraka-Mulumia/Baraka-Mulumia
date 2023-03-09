@@ -106,11 +106,7 @@ const AboutSection: FunctionComponent = () => {
                 </Button>
               </ChakraLink>
               <Button variant='primaryOutline' rounded={'10px'} px={8}>
-                <Link
-                  href={
-                    NAVIGATION_LINKS_LIST.find(link => link.name === 'My Story')
-                      ?.href || '/'
-                  }>
+                <Link href={'/blog/my-path-to-becoming-a-developer'}>
                   My Story
                 </Link>
               </Button>
