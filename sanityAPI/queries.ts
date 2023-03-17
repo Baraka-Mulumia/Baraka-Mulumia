@@ -81,11 +81,11 @@ _createdAt,
   technologies,
   url`;
 
-export const PROJECTS_QUERY = `*[_type == "project"] | order(order asc) { 
+export const PROJECTS_QUERY = `*[_type == "project"] | order(order desc) { 
     ${PROJECT}
 }`;
 
-export const FIRST_3_PROJECTS_QUERY = `*[_type == "project"] | order(order asc) [0..2] { 
+export const FIRST_3_PROJECTS_QUERY = `*[_type == "project"] | order(order desc) [0..2] { 
     ${PROJECT}
 }`;
 

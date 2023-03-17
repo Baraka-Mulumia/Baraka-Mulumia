@@ -30,7 +30,7 @@ export default defineType({
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'text',
+      type: 'string',
       validation: (Rule) => Rule.required(),
     }),
 

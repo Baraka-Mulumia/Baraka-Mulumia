@@ -1,43 +1,33 @@
 import { BlockContainer } from '@/containers/BlockContainer';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/header';
-import { InquiryForm } from '@/features/landing/InquiryForm';
 import { NextPage } from 'next';
-import { PageContentDataRequired } from '@/types';
 import { PageHeroSection } from '@/components/PageHeroSection';
 import { PageWrapper } from '@/containers/PageWrapper';
+import { Project } from '@/types';
 import { ProjectList } from '@/features/portfolio/ProjectList';
 import QuoteOfTheDay from '@/features/quotes/QuoteOfTheDay';
 import sanityAPI from '@/sanityAPI';
 
 export async function getStaticProps() {
-  const { data } =
-    await sanityAPI.getMultipleDocuments<PageContentDataRequired>([
-      'services',
-      'projects',
-    ]);
+  const { data } = await sanityAPI.getProjects();
 
   if (!data) {
     return {
-      services: [],
       projects: [],
     };
   }
 
-  const { services, projects } = data;
-
   return {
     props: {
-      services,
-      projects,
+      projects: data,
     },
   };
 }
 
-const Portfolio: NextPage<PageContentDataRequired> = ({
-  projects,
-  services,
-}) => {
+const Portfolio: NextPage<{
+  projects: Project[];
+}> = ({ projects }) => {
   return (
     <PageWrapper Nav={Header}>
       <PageHeroSection
@@ -48,7 +38,6 @@ const Portfolio: NextPage<PageContentDataRequired> = ({
       <BlockContainer>
         <ProjectList data={projects} />
       </BlockContainer>
-      <InquiryForm services={services} />
       <QuoteOfTheDay />
       <Footer />
     </PageWrapper>
