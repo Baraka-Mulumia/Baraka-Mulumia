@@ -13,7 +13,7 @@ export const NAVIGATION_LINKS_LIST = [
   },
   {
     name: 'Thoughts',
-    href: '/blog',
+    href: '/thoughts',
   },
 ];
 
