@@ -27,6 +27,10 @@ const QuoteCard: FunctionComponent<{
   return (
     <Stack
       maxW={'lg'}
+      minW={{
+        base: '100%',
+        md: 'md',
+      }}
       p={{
         base: '6',
         md: '10',
