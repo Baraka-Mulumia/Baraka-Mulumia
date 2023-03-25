@@ -19,20 +19,14 @@ const QuoteCard: FunctionComponent<{
   const cardBgColor = useColorModeValue('white', 'gray.800');
 
   const Author = (
-    <Text
-      fontSize={{
-        base: 'sm',
-        md: 'md',
-      }}
-      color={authorColor}
-      textTransform='uppercase'>
+    <Text fontSize={'xs'} color={authorColor} textTransform='uppercase'>
       - {quote?.author}
     </Text>
   );
 
   return (
     <Stack
-      maxW={'xl'}
+      maxW={'lg'}
       p={{
         base: '6',
         md: '10',
@@ -50,11 +44,11 @@ const QuoteCard: FunctionComponent<{
         <ImQuotesLeft fontSize='80px' fontWeight='bold' color={iconCOlor} />
       </Box>
       {isPreview ? (
-        <Link href={`/favorite-quotes`}>
+        <Link href={`/inspiration`}>
           <Text
             fontSize={{
-              base: 'lg',
-              md: 'xl',
+              base: 'sm',
+              md: 'md',
             }}>
             {quote?.quote}
           </Text>
@@ -62,8 +56,8 @@ const QuoteCard: FunctionComponent<{
       ) : (
         <Text
           fontSize={{
-            base: 'lg',
-            md: 'xl',
+            base: 'sm',
+            md: 'md',
           }}>
           {quote?.quote}
         </Text>

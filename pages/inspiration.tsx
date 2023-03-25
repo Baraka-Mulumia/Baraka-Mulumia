@@ -21,12 +21,12 @@ export async function getStaticProps() {
   return {
     props: {
       quotes: data,
-      revalidate: 600,
     },
+    revalidate: 600,
   };
 }
 
-const FavoriteQuotesPage: NextPage<{
+const InspirationPage: NextPage<{
   quotes: Quote[];
 }> = ({ quotes }) => {
   return (
@@ -57,4 +57,4 @@ const FavoriteQuotesPage: NextPage<{
   );
 };
 
-export default FavoriteQuotesPage;
+export default InspirationPage;
