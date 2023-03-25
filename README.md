@@ -1,16 +1,15 @@
 # Holla 👋 I'm Baraka Mulumia
 
-## Software Engineer | Front-end Architect. 
+I'm a Software Engineer and Front-end Architect with a passion for building digital solutions. With every line of code, I strive to create elegant, efficient, and user-friendly software that makes a positive impact on people's lives.
 
-### Building digital solutions, one line of code at a time.
+> Building digital solutions, one line of code at a time.
 
-Me, Baraka Mulumia, Myself and I 💝💞❣️Coding, But Hey Here's to the crazy ones. The misfits. The
-rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently.
-They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree
-with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they
-change things. They push the human race forward. And while some may see them as the crazy ones, we
-see genius. Because the people who are crazy enough to think they can change the world, are the ones
-who do.
+
+## About Me
+
+I'm a coding enthusiast, and I'm always on the lookout for new and exciting programming challenges. I'm also a lifelong learner and believe that continuous education is the key to staying up-to-date with the latest developments in the tech industry.
+
+> Me, Baraka Mulumia, Myself and I 💝💞❣️Coding,
 
 -   🌍  I'm based in Nairobi Kenya
 -   🖥️  See my portfolio at [https://iambaraka.dev/](https://iambaraka.dev/)
@@ -19,7 +18,7 @@ who do.
 -   ⚡  I'm secretly in love with JavaScript, But hey, don't tell anyone!!
 
 <a href="https://www.twitter.com/baraka-mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/twitter/follow/barakamulumia?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917"/>
-</a><a href="https://www.github.com/baraka-mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/followers/iambaraka?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
+</a><a href="https://www.github.com/baraka-mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/followers/baraka-mulumia?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
 
 ### Skills
 
