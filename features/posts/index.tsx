@@ -26,7 +26,8 @@ const BlogPostBlock: FunctionComponent<{
           base: 'repeat(1, 1fr)',
           md: 'repeat(2, 1fr)',
           lg: 'repeat(3, 1fr)',
-        }}>
+        }}
+        gap={4}>
         {midPosts &&
           midPosts.length > 0 &&
           map(midPosts, post => (

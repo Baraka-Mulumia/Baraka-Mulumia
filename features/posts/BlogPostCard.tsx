@@ -84,7 +84,7 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
           borderRadius={'lg'}
           justifyContent={'center'}
           spacing={4}>
-          <Box maxH={80} overflow={'hidden'} borderRadius={'lg'}>
+          <Box maxH={80} minH={60} overflow={'hidden'} borderRadius={'lg'}>
             {mainImage && (
               <Image
                 src={mainImage.asset.url}
@@ -106,7 +106,7 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
                 {title}
               </Heading>
             </AnimatedBottomBorder>
-            <Text lineHeight={1.2} noOfLines={5} textAlign={'justify'}>
+            <Text lineHeight={1.2} noOfLines={5}>
               {excerpt}
             </Text>
 
