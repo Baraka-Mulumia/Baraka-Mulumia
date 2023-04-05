@@ -96,7 +96,7 @@ const AboutSection: FunctionComponent = () => {
                 md: '6',
               }}>
               <ChakraLink
-                href='https://drive.google.com/file/d/1VW5Lp4JkNTaHC9mGtTazkQomt1QZkXh8/view?usp=sharing'
+                href='https://drive.google.com/file/d/1l4ZwJNno2dgr3zjvADdZ2BYBaIC69pRY/view?usp=sharing'
                 target={'_blank'}
                 _hover={{ textDecoration: 'none' }}
                 _focus={{ boxShadow: 'none', textDecoration: 'none' }}>
