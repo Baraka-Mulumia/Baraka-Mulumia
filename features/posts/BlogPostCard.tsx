@@ -106,7 +106,7 @@ export const BlogPostCard: FunctionComponent<BlogCardProps> = ({
                 {title}
               </Heading>
             </AnimatedBottomBorder>
-            <Text lineHeight={1.2} noOfLines={5}>
+            <Text lineHeight={1.2} noOfLines={size === 'large' ? 4 : 2}>
               {excerpt}
             </Text>
 
