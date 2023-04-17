@@ -88,17 +88,18 @@ export const ProjectCard: FunctionComponent<ProjectDetailCardProps> = ({
               <Heading
                 textTransform={'capitalize'}
                 color={headingColor}
+                noOfLines={1}
                 as={'h3'}
                 fontSize={'2xl'}>
                 {title}
               </Heading>
             </AnimatedBottomBorder>
-            <Text>{description}</Text>
+            <Text noOfLines={1}>{description}</Text>
           </ExternalLink>
           <HStack gap={1} minH={16} wrap={'wrap'}>
             {technologies &&
               technologies.length > 0 &&
-              map(technologies, tech => (
+              map(technologies.slice(0, 4), tech => (
                 <TechnologyBadge name={tech} key={uuid()} />
               ))}
           </HStack>
