@@ -9,7 +9,7 @@ export const SocialMediaIcons = () => {
   const social_links = [
     {
       icon: BsGithub,
-      href: 'https://github.com/baraka-mulumia',
+      href: 'https://github.com/iambaraka',
       ariaLabel: 'github',
     },
     {
