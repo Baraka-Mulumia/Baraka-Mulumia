@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Link as ChakraLink,
   Container,
   HStack,
   Heading,
@@ -95,15 +94,6 @@ const AboutSection: FunctionComponent = () => {
                 sm: '4',
                 md: '6',
               }}>
-              <ChakraLink
-                href='https://drive.google.com/file/d/1l4ZwJNno2dgr3zjvADdZ2BYBaIC69pRY/view?usp=sharing'
-                target={'_blank'}
-                _hover={{ textDecoration: 'none' }}
-                _focus={{ boxShadow: 'none', textDecoration: 'none' }}>
-                <Button variant='primary' rounded={'10px'} px={8}>
-                  Resume
-                </Button>
-              </ChakraLink>
               <Button variant='primaryOutline' rounded={'10px'} px={8}>
                 <Link href={'/thoughts/my-path-to-becoming-a-developer'}>
                   My Story
