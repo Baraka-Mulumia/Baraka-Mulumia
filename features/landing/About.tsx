@@ -72,13 +72,13 @@ const AboutSection: FunctionComponent = () => {
           <Stack flex='1' spacing={8}>
             <Stack flex='1' spacing={2}>
               <Text as='p' marginTop='2' fontSize={{ base: 'sm', md: 'lg' }}>
-                Baraka Mulumia is a skilled software developer with over 5 years
-                of experience in the industry. Having a strong background in
-                both front-end and back-end development and worked on a variety
-                of projects, ranging from small websites to large-scale
-                enterprise applications. I have a passion for using technology
-                to solve complex problems and enjoy staying up-to-date with the
-                latest developments in my field.
+                Baraka Mulumia is a skilled software developer with much
+                experience in the industry. Have a strong background in both
+                front-end and back-end development and worked on a variety of
+                projects, ranging from small websites to large-scale enterprise
+                applications. I have a passion for using technology to solve
+                complex problems and enjoy staying up-to-date with the latest
+                developments in my field.
               </Text>
               <Text as='p' marginTop='2' fontSize={{ base: 'sm', md: 'lg' }}>
                 I believe in collaboration, continuous learning and staying up
@@ -86,6 +86,9 @@ const AboutSection: FunctionComponent = () => {
                 receive the best possible results. Whether you have a small
                 project or a large-scale software development requirement, I am
                 ready to work with you to bring your vision to life.
+              </Text>
+              <Text as='p' marginTop='2' fontSize={{ base: 'sm', md: 'lg' }}>
+                Lets make the world a better place one line of code at a time.
               </Text>
             </Stack>
             <HStack
