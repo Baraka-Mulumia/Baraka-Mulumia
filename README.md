@@ -11,9 +11,9 @@ I'm a coding enthusiast, and I'm always on the lookout for new and exciting prog
 > Me, Baraka Mulumia, Myself and I 💝💞❣️Coding,
 
 - 🌍  I'm based in Nairobi Kenya
-- 🖥️  See my portfolio at [https://iambaraka.dev/](https://iambaraka.dev/)
-- ✉️  You can contact me at [barakamulumia@gmail.com](mailto:barakamulumia@gmail.com)
-- 🤝  I'm open to collaborating on intresting SaaS projects to help solve real world problems
+- 🖥️  See my portfolio at [https://www.mulumia.com](https://www.mulumia.com)
+- ✉️  You can contact me at [barakamulumia@outlook.com](mailto:barakamulumia@outlook.com)
+- 🤝  I'm open to collaborating on interesting SaaS projects to help solve real-world problems
 - ⚡  I'm secretly in love with JavaScript, But hey, don't tell anyone!!
 
 <a href="https://www.twitter.com/baraka-mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/twitter/follow/barakamulumia?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917"/>
