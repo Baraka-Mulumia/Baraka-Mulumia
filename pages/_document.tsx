@@ -6,6 +6,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 
+import { Analytics } from '@vercel/analytics/react';
 import { ColorModeScript } from '@chakra-ui/react';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
@@ -57,6 +58,7 @@ class MyDocument extends Document {
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     );
