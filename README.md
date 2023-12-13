@@ -1,6 +1,6 @@
 # Holla 👋 I'm Baraka Mulumia
 
-I'm a Software Engineer and Front-end Architect with a passion for building digital solutions. With every line of code, I strive to create elegant, efficient, and user-friendly software that makes a positive impact on people's lives.
+Software Developer - A maestro of elegant, scalable solutions, I shape seamless web and mobile experiences. Thriving on innovation, I push the boundaries of development with a blend of creativity and precision.
 
 > Building digital solutions, one line of code at a time.
 
