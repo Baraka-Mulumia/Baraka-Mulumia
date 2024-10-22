@@ -12,7 +12,7 @@ I'm a coding enthusiast, and I'm always on the lookout for new and exciting prog
 
 - 🌍  I'm based in Nairobi Kenya
 - 🖥️  See my portfolio at [https://www.mulumia.com](https://www.mulumia.com)
-- ✉️  You can contact me at [barakamulumia@outlook.com](mailto:barakamulumia@outlook.com)
+- ✉️  You can contact me at [barakamulumia@gmail.com](mailto:barakamulumia@gmail.com)
 - 🤝  I'm open to collaborating on interesting SaaS projects to help solve real-world problems
 - ⚡  I'm secretly in love with JavaScript, But hey, don't tell anyone!!
 
