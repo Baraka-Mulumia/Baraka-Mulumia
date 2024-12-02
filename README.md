@@ -29,7 +29,7 @@ I'm a coding enthusiast, and I'm always on the lookout for new and exciting prog
 
 ### My GitHub Stats
 
-![BarakaMulumia's GitHub stats](https://iam-stats.mshindicreations.com/api?username=Baraka-Mulumia&show_icons=true&rank_icon=percentile&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&theme=tokyonight&bg_color=1c1917&hide_border=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+![BarakaMulumia's GitHub stats](https://iam-stats.mshindilabs.com/api?username=Baraka-Mulumia&show_icons=true&rank_icon=percentile&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&theme=tokyonight&bg_color=1c1917&hide_border=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
 
 <a href="http://www.github.com/Baraka-Mulumia"><img src="https://github-readme-streak-stats.herokuapp.com/?user=Baraka-Mulumia&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
 
