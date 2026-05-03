@@ -1,36 +1,70 @@
-# Holla 👋 I'm Baraka Mulumia
+# Hi, I'm Baraka Mulumia 👋
 
-Software Developer - A maestro of elegant, scalable solutions, I shape seamless web and mobile experiences. Thriving on innovation, I push the boundaries of development with a blend of creativity and precision.
+**Developer Experience Engineer focused on building tools, workflows, and AI-powered systems that help teams ship better software faster.**
 
-> Building digital solutions, one line of code at a time.
+I work across JavaScript, TypeScript, Python, React, Next.js, Node.js, and AI engineering to improve how developers build, test, automate, and deliver products. I care about clean interfaces, reliable systems, clear documentation, and tooling that removes friction from engineering teams.
 
-## About Me
+<p align="left">
+  <a href="https://www.mulumia.com" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Portfolio-mulumia.com-0891b2?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1c1917" alt="Portfolio" /></a>
+  <a href="mailto:barakamulumia@gmail.com"><img src="https://img.shields.io/badge/Email-barakamulumia%40gmail.com-0891b2?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1c1917" alt="Email Baraka Mulumia" /></a>
+  <a href="https://www.linkedin.com/in/baraka-mulumia/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/LinkedIn-Baraka%20Mulumia-0891b2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1c1917" alt="LinkedIn" /></a>
+  <a href="https://www.github.com/Baraka-Mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/followers/Baraka-Mulumia?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" alt="GitHub followers" /></a>
+</p>
 
-I'm a coding enthusiast, and I'm always on the lookout for new and exciting programming challenges. I'm also a lifelong learner and believe that continuous education is the key to staying up-to-date with the latest developments in the tech industry.
+## What I Bring
 
-> Me, Baraka Mulumia, Myself and I 💝💞❣️Coding,
+- **Developer experience:** Internal tools, automation, documentation, workflows, and engineering systems that make teams more effective.
+- **Frontend engineering:** React, Next.js, TypeScript, responsive UI, reusable components, and accessible user experiences.
+- **Backend development:** Node.js, Express, GraphQL, REST APIs, authentication flows, and data-driven applications.
+- **AI engineering:** Practical use of LLMs, AI-assisted development workflows, OpenAI Codex, Claude, Cursor, and automation-first engineering.
+- **Product mindset:** I build with usability, maintainability, performance, and real-world business value in mind.
+- **Collaboration:** Open to DX, developer tools, AI tooling, SaaS, web platform, startup, and product-focused engineering opportunities.
 
-- 🌍  I'm based in Nairobi Kenya
-- 🖥️  See my portfolio at [https://www.mulumia.com](https://www.mulumia.com)
-- ✉️  You can contact me at [barakamulumia@gmail.com](mailto:barakamulumia@gmail.com)
-- 🤝  I'm open to collaborating on interesting SaaS projects to help solve real-world problems
-- ⚡  I'm secretly in love with JavaScript, But hey, don't tell anyone!!
+## Quick Facts
 
-<a href="https://www.twitter.com/baraka-mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/twitter/follow/barakamulumia?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917"/>
-</a><a href="https://www.github.com/Baraka-Mulumia" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/followers/Baraka-Mulumia?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
+- 🌍 Based in Nairobi, Kenya
+- 🖥️ Portfolio: [mulumia.com](https://www.mulumia.com)
+- ✉️ Email: [barakamulumia@gmail.com](mailto:barakamulumia@gmail.com)
+- 🤝 Open to collaboration on developer tools, AI tooling, SaaS products, and platforms that solve practical problems
+- ⚡ Favorite work: developer experience, automation, AI-assisted engineering, JavaScript, TypeScript, Python, React, Next.js, and Node.js
 
-### Skills
+## Tech Stack
 
-<p align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a><a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="Typescript" /></a><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a><a href="https://nextjs.org/docs" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg" width="36" height="36" alt="NextJs" /></a><a href="https://redux.js.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/redux-colored.svg" width="36" height="36" alt="Redux" /></a><a href="https://webpack.js.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/webpack-colored.svg" width="36" height="36" alt="Webpack" /></a><a href="https://babeljs.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/babel-colored.svg" width="36" height="36" alt="Babel" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a><a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" width="36" height="36" alt="Sass" /></a><a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a><a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" width="36" height="36" alt="Bootstrap" /></a><a href="https://mui.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/materialui-colored.svg" width="36" height="36" alt="Material UI" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a><a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/express-colored.svg" width="36" height="36" alt="Express" /></a><a href="https://graphql.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/graphql-colored.svg" width="36" height="36" alt="GraphQL" /></a><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg" width="36" height="36" alt="MongoDB" /></a><a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" width="36" height="36" alt="MySQL" /></a></p>
+**Languages**
 
-### Socials
+[![Languages](https://skillicons.dev/icons?i=js,ts,py,html,css&theme=dark)](https://skillicons.dev)
 
-<p align="left"> <a href="https://www.codepen.io/baraka-mulumia" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/codepen.svg" width="32" height="32" /></a> <a href="https://discord.com/users/baraka#8204" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord.svg" width="32" height="32" /></a> <a href="https://www.github.com/Baraka-Mulumia" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /></a> <a href="https://www.linkedin.com/in/baraka-mulumia/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a> <a href="https://www.stackoverflow.com/users/16432770/baraka-m-mulumia" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/stackoverflow.svg" width="32" height="32" /></a> <a href="https://www.twitter.com/barakamulumia" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" /></a></p>
+**AI Engineering**
 
-### My GitHub Stats
+[![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-1c1917?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/codex)
+[![Claude](https://img.shields.io/badge/Claude-1c1917?style=for-the-badge&logo=anthropic&logoColor=white)](https://www.anthropic.com/claude)
+[![Cursor](https://img.shields.io/badge/Cursor-1c1917?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com/)
+![AI Engineering](https://img.shields.io/badge/AI%20Engineering-0891b2?style=for-the-badge&labelColor=1c1917)
 
-![BarakaMulumia's GitHub stats](https://iam-stats.mshindilabs.com/api?username=Baraka-Mulumia&show_icons=true&rank_icon=percentile&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&theme=tokyonight&bg_color=1c1917&hide_border=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+**Frontend**
 
-<a href="http://www.github.com/Baraka-Mulumia"><img src="https://github-readme-streak-stats.herokuapp.com/?user=Baraka-Mulumia&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
+[![Frontend](https://skillicons.dev/icons?i=react,nextjs,redux,tailwind,sass,materialui,bootstrap&theme=dark)](https://skillicons.dev)
 
-<a href="https://github.com/Baraka-Mulumia" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Baraka-Mulumia&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
+**Backend and Data**
+
+[![Backend and Data](https://skillicons.dev/icons?i=nodejs,express,graphql,mongodb,mysql&theme=dark)](https://skillicons.dev)
+
+**Tooling**
+
+[![Tooling](https://skillicons.dev/icons?i=webpack,babel&theme=dark)](https://skillicons.dev)
+
+## Connect
+
+[![GitHub](https://img.shields.io/badge/GitHub-Baraka--Mulumia-1c1917?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/Baraka-Mulumia)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Baraka%20Mulumia-0891b2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1c1917)](https://www.linkedin.com/in/baraka-mulumia/)
+[![Twitter](https://img.shields.io/badge/Twitter-barakamulumia-1c1917?style=for-the-badge&logo=x&logoColor=white)](https://www.twitter.com/barakamulumia)
+[![CodePen](https://img.shields.io/badge/CodePen-baraka--mulumia-1c1917?style=for-the-badge&logo=codepen&logoColor=white)](https://www.codepen.io/baraka-mulumia)
+[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-Baraka%20Mulumia-F58025?style=for-the-badge&logo=stackoverflow&logoColor=white)](https://www.stackoverflow.com/users/16432770/baraka-m-mulumia)
+
+## GitHub Activity
+
+![Baraka Mulumia's GitHub stats](https://iam-stats.mshindilabs.com/api?username=Baraka-Mulumia&show_icons=true&rank_icon=percentile&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&theme=tokyonight&bg_color=1c1917&hide_border=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+
+<a href="https://www.github.com/Baraka-Mulumia"><img src="https://github-readme-streak-stats.herokuapp.com/?user=Baraka-Mulumia&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" alt="Baraka Mulumia's GitHub streak" /></a>
+
+<a href="https://github.com/Baraka-Mulumia" align="left"><img src="https://iam-stats.mshindilabs.com/api/top-langs/?username=Baraka-Mulumia&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20Languages" alt="Top Languages" /></a>
